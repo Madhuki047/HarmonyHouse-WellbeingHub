@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harmony House | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Harmony House home page">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21s-6.716-4.283-9.192-8.26C.963 9.76 2.15 5.85 5.79 4.504c2.075-.769 4.086-.09 5.21 1.46 1.124-1.55 3.135-2.229 5.21-1.46 3.64 1.347 4.826 5.256 2.982 8.236C18.716 16.717 12 21 12 21z"/>
+          </svg>
+        </span>
+        <span>Harmony House</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="events.html">Events</a>
+        <a href="booking.html">Book Event</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+        <a href="account.html" class="account-link">My Account</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-links" aria-label="Mobile navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="events.html">Events</a>
+      <a href="booking.html">Book Event</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+      <a href="account.html" class="account-link">My Account</a>
+    </nav>
+
+    <div class="mobile-meta">
+      <div>
+        <h4>Contact Us</h4>
+        <p><a href="tel:+445551234567">(555) 123-4567</a></p>
+        <p><a href="mailto:info@harmonyhouse.org">info@harmonyhouse.org</a></p>
+        <p><a href="https://maps.google.com/?q=123%20Community%20Street%20City%20ST%2012345" target="_blank" rel="noopener">123 Community Street, City, ST 12345</a></p>
+      </div>
+
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">♡ Welcome to Your Community Hub</div>
+          <h1>Health, Connection, and Support for Everyone</h1>
+          <p>
+            Your local community wellbeing hub dedicated to supporting residents through accessible health services,
+            engaging events, and meaningful connections.
+          </p>
+          <p class="typing-text" id="typingText" aria-live="polite"></p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="services.html">Find a Service →</a>
+            <a class="btn btn-secondary" href="events.html">Upcoming Events ☐</a>
+          </div>
+        </div>
+
+        <div class="hero-media reveal">
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80" alt="A diverse group of community members smiling together" />
+          </div>
+          <div class="satisfaction-badge">
+            <div class="satisfaction-icon">◎</div>
+            <div>
+              <strong id="satisfactionCounter">98%</strong>
+              <span>Member Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid reveal" id="statsGrid">
+        <article class="stat-item">
+          <span class="stat-number" data-target="5000" data-suffix="+">0</span>
+          <span class="stat-label">Community Members</span>
+        </article>
+        <article class="stat-item">
+          <span class="stat-number" data-target="150" data-suffix="+">0</span>
+          <span class="stat-label">Monthly Events</span>
+        </article>
+        <article class="stat-item">
+          <span class="stat-number" data-target="25" data-suffix="+">0</span>
+          <span class="stat-label">Services Offered</span>
+        </article>
+        <article class="stat-item">
+          <span class="stat-number" data-target="100" data-suffix="%">0</span>
+          <span class="stat-label">Free Access</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-light">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>How We Support You</h2>
+          <p>Comprehensive support services designed to enhance your wellbeing.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card reveal">
+            <a href="services.html?service=mental-health" aria-label="View mental health support service">
+              <div class="card-media">
+                <img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?auto=format&fit=crop&w=900&q=80" alt="A counselling conversation taking place" />
+                <span class="icon-chip icon-pink">◔</span>
+              </div>
+              <div class="card-body">
+                <h3>Mental Health Support</h3>
+                <p>Access professional counselling and mental health resources.</p>
+                <span class="inline-link">Learn more →</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card reveal">
+            <a href="services.html?service=physical-wellbeing" aria-label="View physical wellbeing service">
+              <div class="card-media">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="People taking part in a yoga and mindfulness class" />
+                <span class="icon-chip icon-peach">✦</span>
+              </div>
+              <div class="card-body">
+                <h3>Physical Wellbeing</h3>
+                <p>Fitness classes, health screenings, and wellness programs.</p>
+                <span class="inline-link">Learn more →</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card reveal">
+            <a href="services.html?service=community-connection" aria-label="View community connection service">
+              <div class="card-media">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80" alt="Community members connecting together" />
+                <span class="icon-chip icon-teal">◌</span>
+              </div>
+              <div class="card-body">
+                <h3>Community Connection</h3>
+                <p>Build meaningful relationships through support networks.</p>
+                <span class="inline-link">Learn more →</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card reveal">
+            <a href="services.html?service=family-support" aria-label="View family support service">
+              <div class="card-media">
+                <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=80" alt="A family enjoying time together" />
+                <span class="icon-chip icon-pink">⌂</span>
+              </div>
+              <div class="card-body">
+                <h3>Family Support</h3>
+                <p>Resources and guidance for families at every stage.</p>
+                <span class="inline-link">Learn more →</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-teal">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Community Workshops</h2>
+          <p>Join hands-on workshops designed to build skills and connections.</p>
+        </div>
+
+        <div class="workshop-grid">
+          <article class="workshop-card reveal">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Yoga and mindfulness workshop session" />
+            </div>
+            <div class="card-body">
+              <h3>Yoga &amp; Mindfulness</h3>
+              <p>Weekly group workshops and calming activities.</p>
+              <a class="pill-link" href="booking.html?event=yoga-and-mindfulness">Register now</a>
+            </div>
+          </article>
+
+          <article class="workshop-card reveal">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=80" alt="Family wellbeing workshop" />
+            </div>
+            <div class="card-body">
+              <h3>Family Workshops</h3>
+              <p>Programs for all ages and family needs.</p>
+              <a class="pill-link" href="booking.html?event=family-workshops">Register now</a>
+            </div>
+          </article>
+
+          <article class="workshop-card reveal">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?auto=format&fit=crop&w=900&q=80" alt="Elderly support workshop session" />
+            </div>
+            <div class="card-body">
+              <h3>Elderly Support</h3>
+              <p>Social programs and wellness activities for older adults.</p>
+              <a class="pill-link" href="booking.html?event=elderly-support">Register now</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission">
+      <div class="container mission-grid">
+        <div class="reveal">
+          <h2>Our Mission</h2>
+          <p>Harmony House exists to create a welcoming space where every community member can access the resources, support, and connections they need to thrive.</p>
+          <p>We believe that health and wellbeing extend beyond physical health to include mental wellness, social connections, and access to supportive services.</p>
+
+          <ul class="mission-list">
+            <li><span class="check-icon">✓</span> Accessible for all</li>
+            <li><span class="check-icon">✓</span> Professional support</li>
+            <li><span class="check-icon">✓</span> Safe environment</li>
+            <li><span class="check-icon">✓</span> Community-led</li>
+          </ul>
+        </div>
+
+        <div class="mission-image reveal">
+          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80" alt="Community members smiling together in Harmony House" />
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container reveal">
+        <h2>Ready to Get Started?</h2>
+        <p>Join our community today and discover the support and resources available to you.</p>
+        <div class="cta-actions">
+          <a class="btn btn-secondary" href="booking.html">Book an Event →</a>
+          <a class="btn btn-secondary" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="brand" href="index.html">
+            <span class="brand-logo" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21s-6.716-4.283-9.192-8.26C.963 9.76 2.15 5.85 5.79 4.504c2.075-.769 4.086-.09 5.21 1.46 1.124-1.55 3.135-2.229 5.21-1.46 3.64 1.347 4.826 5.256 2.982 8.236C18.716 16.717 12 21 12 21z"/>
+              </svg>
+            </span>
+            <span>Harmony House</span>
+          </a>
+          <p style="margin-top: 1rem; max-width: 24ch;">Supporting residents through local health, wellbeing services, and community connection.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="services.html">Services Directory</a></li>
+            <li><a href="events.html">Events Calendar</a></li>
+            <li><a href="booking.html">Book an Event</a></li>
+            <li><a href="news.html">News &amp; Stories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="contact-list">
+            <a href="tel:+445551234567">☎ (555) 123-4567</a>
+            <a href="mailto:info@harmonyhouse.org">✉ info@harmonyhouse.org</a>
+            <a href="https://maps.google.com/?q=123%20Community%20Street%20City%20ST%2012345" target="_blank" rel="noopener">⌖ 123 Community Street, City, ST 12345</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-row">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2026 Harmony House. All rights reserved. | Committed to community wellbeing.</div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
