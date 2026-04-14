@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harmony House | Services</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Harmony House home page">
+        <img src="images/logo.png" alt="Harmony House Logo" class="nav-logo-img">
+        <span class="brand-text">Harmony House</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="events.html">Events</a>
+        <a href="booking.html">Book Event</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+        <a href="account.html" class="account-link">My Account</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-links" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="events.html">Events</a>
+      <a href="booking.html">Book Event</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+      <a href="account.html" class="account-link">My Account</a>
+    </nav>
+
+    <div class="mobile-meta">
+      <div>
+        <h4>Contact Us</h4>
+        <p><a href="tel:+445551234567">(555) 123-4567</a></p>
+        <p><a href="mailto:info@harmonyhouse.org">info@harmonyhouse.org</a></p>
+        <p><a href="https://maps.google.com/?q=123%20Community%20Street%20City%20ST%2012345" target="_blank" rel="noopener">123 Community Street, City, ST 12345</a></p>
+      </div>
+
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="services-page">
+    <section class="services-hero">
+      <div class="container services-hero-inner reveal">
+        <h1>Support Directory</h1>
+        <p>
+          Explore our community wellbeing services, support groups, family programmes,
+          youth activities, and social clubs. All services are designed to be welcoming,
+          inclusive, and accessible for every member of the community.
+        </p>
+      </div>
+    </section>
+
+    <section class="services-directory">
+      <div class="container">
+        <div class="accordion-list">
+
+          <!-- MENTAL HEALTH -->
+          <article class="accordion-item accordion-pink reveal" data-service="mental-health">
+            <button class="accordion-header" type="button">
+              <span class="accordion-title-wrap">
+                <span class="accordion-icon">◔</span>
+                <span class="accordion-title">Mental Health &amp; Wellness</span>
+              </span>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+
+            <div class="accordion-content">
+              <div class="service-card-grid">
+                <article class="service-card">
+                  <h3>Mindfulness Meditation Circle</h3>
+                  <p>Guided sessions to reduce stress, improve focus, and support emotional balance in a calm group setting.</p>
+                  <ul class="service-meta">
+                    <li>Wednesdays, 6:00 PM – 7:00 PM</li>
+                    <li>Quiet Room</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=mindfulness-meditation-circle&date=wednesday-6pm">Join This Group</a>
+                </article>
+
+                <article class="service-card">
+                  <h3>Mental Wellness Support Circle</h3>
+                  <p>A safe peer support group for sharing experiences, building resilience, and learning coping strategies.</p>
+                  <ul class="service-meta">
+                    <li>Tuesdays &amp; Thursdays, 6:00 PM – 7:30 PM</li>
+                    <li>Counselling Suite</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=mental-wellness-support-circle&date=tuesday-thursday-6pm">Join This Group</a>
+                </article>
+
+                <article class="service-card">
+                  <h3>Art Therapy Club</h3>
+                  <p>Use creative expression to support wellbeing, reflection, and emotional release. No artistic experience needed.</p>
+                  <ul class="service-meta">
+                    <li>Saturdays, 2:00 PM – 4:00 PM</li>
+                    <li>Art Studio</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=art-therapy-club&date=saturday-2pm">Join This Group</a>
+                </article>
+
+                <article class="service-card soon">
+                  <div class="service-badge">Opening Soon</div>
+                  <h3>Journaling &amp; Reflection Group</h3>
+                  <p>Guided reflection and journaling sessions to support emotional processing and personal growth.</p>
+                  <ul class="service-meta">
+                    <li>First &amp; Third Friday, 10:00 AM – 11:30 AM</li>
+                    <li>Library Corner</li>
+                  </ul>
+                  <button class="service-btn disabled" type="button" disabled>Opening Soon</button>
+                </article>
+              </div>
+            </div>
+          </article>
+
+          <!-- PHYSICAL -->
+          <article class="accordion-item accordion-peach reveal" data-service="physical-wellbeing">
+            <button class="accordion-header" type="button">
+              <span class="accordion-title-wrap">
+                <span class="accordion-icon">✦</span>
+                <span class="accordion-title">Physical Activity &amp; Fitness</span>
+              </span>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+
+            <div class="accordion-content">
+              <div class="service-card-grid">
+                <article class="service-card">
+                  <h3>Morning Yoga Club</h3>
+                  <p>A welcoming yoga session focused on flexibility, energy, and gentle movement for all experience levels.</p>
+                  <ul class="service-meta">
+                    <li>Monday, Wednesday, Friday, 7:00 AM – 8:00 AM</li>
+                    <li>Studio A</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=morning-yoga-club&date=mon-wed-fri-7am">Join This Group</a>
+                </article>
+
+                <article class="service-card">
+                  <h3>Zumba Dance Society</h3>
+                  <p>Fun, upbeat dance fitness sessions that help you stay active while enjoying music and movement.</p>
+                  <ul class="service-meta">
+                    <li>Wednesdays, 5:30 PM – 6:30 PM</li>
+                    <li>Studio A</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=zumba-dance-society&date=wednesday-530pm">Join This Group</a>
+                </article>
+
+                <article class="service-card">
+                  <h3>Community Walking Club</h3>
+                  <p>Join guided local walks, build healthy habits, and connect with others in a relaxed outdoor setting.</p>
+                  <ul class="service-meta">
+                    <li>Monday, Friday, 8:00 AM – 9:00 AM</li>
+                    <li>Meet at Main Entrance</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=community-walking-club&date=mon-fri-8am">Join This Group</a>
+                </article>
+
+                <article class="service-card soon">
+                  <div class="service-badge">Opening Soon</div>
+                  <h3>Strength Training Group</h3>
+                  <p>Build confidence and fitness through supervised strength sessions designed for beginners and returners.</p>
+                  <ul class="service-meta">
+                    <li>Tuesdays &amp; Thursdays, 6:00 PM – 7:00 PM</li>
+                    <li>Fitness Centre</li>
+                  </ul>
+                  <button class="service-btn disabled" type="button" disabled>Opening Soon</button>
+                </article>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAMILY -->
+          <article class="accordion-item accordion-teal reveal" data-service="family-support">
+            <button class="accordion-header" type="button">
+              <span class="accordion-title-wrap">
+                <span class="accordion-icon">◌</span>
+                <span class="accordion-title">Family &amp; Parenting</span>
+              </span>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+
+            <div class="accordion-content">
+              <div class="service-card-grid">
+                <article class="service-card">
+                  <h3>Parents Connect Group</h3>
+                  <p>A welcoming space for parents to share experiences, ask questions, and build a local support network.</p>
+                  <ul class="service-meta">
+                    <li>Second Saturday, 10:00 AM – 12:00 PM</li>
+                    <li>Conference Room B</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=parents-connect-group&date=second-saturday-10am">Join This Group</a>
+                </article>
+
+                <article class="service-card">
+                  <h3>Teen Parent Society</h3>
+                  <p>Support and resources for young parents, with practical guidance, confidence building, and community support.</p>
+                  <ul class="service-meta">
+                    <li>Every Friday, 4:00 PM – 5:30 PM</li>
+                    <li>Youth Centre</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=teen-parent-society&date=friday-4pm">Join This Group</a>
+                </article>
+
+                <article class="service-card">
+                  <h3>Family Game Night Club</h3>
+                  <p>Bring the family together for fun, games, and social connection in a relaxed and welcoming environment.</p>
+                  <ul class="service-meta">
+                    <li>Every Other Saturday, 2:00 PM – 5:00 PM</li>
+                    <li>Recreation Hall</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=family-game-night-club&date=alternate-saturday-2pm">Join This Group</a>
+                </article>
+
+                <article class="service-card">
+                  <h3>Financial Literacy Circle</h3>
+                  <p>Practical family budgeting and financial planning sessions to support stability and informed decision-making.</p>
+                  <ul class="service-meta">
+                    <li>Second Tuesday, 6:00 PM – 7:30 PM</li>
+                    <li>Conference Room A</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=financial-literacy-circle&date=second-tuesday-6pm">Join This Group</a>
+                </article>
+              </div>
+            </div>
+          </article>
+
+          <!-- YOUTH -->
+          <article class="accordion-item accordion-pink reveal" data-service="youth-support">
+            <button class="accordion-header" type="button">
+              <span class="accordion-title-wrap">
+                <span class="accordion-icon">◎</span>
+                <span class="accordion-title">Youth &amp; Teen Support</span>
+              </span>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+
+            <div class="accordion-content">
+              <div class="service-card-grid">
+                <article class="service-card">
+                  <h3>Youth Art Collective</h3>
+                  <p>Creative workshops for teens and young people to explore art, expression, and self-confidence.</p>
+                  <ul class="service-meta">
+                    <li>Wednesdays, 4:00 PM – 5:30 PM</li>
+                    <li>Art Studio</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=youth-art-collective&date=wednesday-4pm">Join This Group</a>
+                </article>
+
+                <article class="service-card">
+                  <h3>Teen Support Circle</h3>
+                  <p>A supportive group for discussing stress, friendships, school pressure, and emotional wellbeing.</p>
+                  <ul class="service-meta">
+                    <li>Fridays, 4:00 PM – 5:30 PM</li>
+                    <li>Youth Centre</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=teen-support-circle&date=friday-4pm">Join This Group</a>
+                </article>
+
+                <article class="service-card soon">
+                  <div class="service-badge">Opening Soon</div>
+                  <h3>Young Coders Club</h3>
+                  <p>Introductory coding and digital creativity workshops for young people interested in technology.</p>
+                  <ul class="service-meta">
+                    <li>Saturdays, 1:00 PM – 3:00 PM</li>
+                    <li>Computer Lab</li>
+                  </ul>
+                  <button class="service-btn disabled" type="button" disabled>Opening Soon</button>
+                </article>
+
+                <article class="service-card">
+                  <h3>Junior Sports League</h3>
+                  <p>Recreational sports activities that encourage movement, teamwork, and confidence building.</p>
+                  <ul class="service-meta">
+                    <li>Sundays, 3:00 PM – 5:00 PM</li>
+                    <li>Recreation Hall</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=junior-sports-league&date=sunday-3pm">Join This Group</a>
+                </article>
+              </div>
+            </div>
+          </article>
+
+          <!-- SENIORS -->
+          <article class="accordion-item accordion-teal reveal" data-service="elderly-support">
+            <button class="accordion-header" type="button">
+              <span class="accordion-title-wrap">
+                <span class="accordion-icon">♡</span>
+                <span class="accordion-title">Seniors &amp; Retirees</span>
+              </span>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+
+            <div class="accordion-content">
+              <div class="service-card-grid">
+                <article class="service-card">
+                  <h3>Senior Book Club</h3>
+                  <p>Enjoy meaningful discussion, shared reading, and social connection through our monthly book group.</p>
+                  <ul class="service-meta">
+                    <li>First Tuesday, 10:00 AM – 11:30 AM</li>
+                    <li>Library Corner</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=senior-book-club&date=first-tuesday-10am">Join This Group</a>
+                </article>
+
+                <article class="service-card">
+                  <h3>Chair Yoga for Seniors</h3>
+                  <p>Gentle seated movement sessions designed to support balance, flexibility, and comfort.</p>
+                  <ul class="service-meta">
+                    <li>Saturdays, 10:00 AM – 11:00 AM</li>
+                    <li>Studio B</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=chair-yoga-for-seniors&date=saturday-10am">Join This Group</a>
+                </article>
+
+                <article class="service-card">
+                  <h3>Memory Care Support Group</h3>
+                  <p>Supportive sessions for older adults and carers focused on practical help, discussion, and connection.</p>
+                  <ul class="service-meta">
+                    <li>Second &amp; Fourth Wednesday, 2:00 PM – 3:30 PM</li>
+                    <li>Conference Room C</li>
+                  </ul>
+                  <a class="service-btn" href="booking.html?event=memory-care-support-group&date=second-fourth-wednesday-2pm">Join This Group</a>
+                </article>
+
+                <article class="service-card soon">
+                  <div class="service-badge">Opening Soon</div>
+                  <h3>Senior Tech Club</h3>
+                  <p>Friendly sessions to help older adults feel more confident using smartphones, video calls, and online tools.</p>
+                  <ul class="service-meta">
+                    <li>Thursdays, 11:00 AM – 12:30 PM</li>
+                    <li>Computer Lab</li>
+                  </ul>
+                  <button class="service-btn disabled" type="button" disabled>Opening Soon</button>
+                </article>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="services-help">
+      <div class="container reveal">
+        <h2>Questions About Our Support Directory?</h2>
+        <p>Our team is here to help you find the right service, group, or activity for your needs.</p>
+
+        <div class="services-help-actions">
+          <a class="help-call-btn" href="tel:+445551234567">☎ Call (555) 123-4567</a>
+          <a class="help-outline-btn" href="booking.html">View Registration Page</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="brand" href="index.html">
+            <span class="brand-logo" aria-hidden="true">❤</span>
+            <span>Harmony House</span>
+          </a>
+          <p style="margin-top: 1rem; max-width: 24ch;">Supporting residents through local health, wellbeing services, and community connection.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="services.html">Services Directory</a></li>
+            <li><a href="events.html">Events Calendar</a></li>
+            <li><a href="booking.html">Book an Event</a></li>
+            <li><a href="news.html">News &amp; Stories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="contact-list">
+            <a href="tel:+445551234567">☎ (555) 123-4567</a>
+            <a href="mailto:info@harmonyhouse.org">✉ info@harmonyhouse.org</a>
+            <a href="https://maps.google.com/?q=123%20Community%20Street%20City%20ST%2012345" target="_blank" rel="noopener">⌖ 123 Community Street, City, ST 12345</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-row">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2026 Harmony House. All rights reserved. | Committed to community wellbeing.</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

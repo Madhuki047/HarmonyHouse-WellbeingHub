@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harmony House | My Account</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Harmony House home page">
+        <img src="images/logo.png" alt="Harmony House Logo" class="nav-logo-img">
+        <span class="brand-text">Harmony House</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="events.html">Events</a>
+        <a href="booking.html">Book Event</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+        <a href="account.html" class="account-link active">My Account</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-links" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="events.html">Events</a>
+      <a href="booking.html">Book Event</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+      <a href="account.html" class="account-link active">My Account</a>
+    </nav>
+
+    <div class="mobile-meta">
+      <div>
+        <h4>Contact Us</h4>
+        <p><a href="tel:+445551234567">(555) 123-4567</a></p>
+        <p><a href="mailto:info@harmonyhouse.org">info@harmonyhouse.org</a></p>
+        <p><a href="https://maps.google.com/?q=123%20Community%20Street%20City%20ST%2012345" target="_blank" rel="noopener">123 Community Street, City, ST 12345</a></p>
+      </div>
+
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="account-page">
+    <section class="account-hero">
+      <div class="container account-hero-inner reveal" id="accountHeroSignedOut">
+        <h1 id="accountHeroTitle">Welcome Back</h1>
+        <p id="accountHeroSubtitle">Sign in to access your personalized dashboard and track your wellbeing journey.</p>
+      </div>
+
+      <div class="container account-hero-inner reveal" id="accountHeroSignedIn" hidden>
+        <div class="account-hero-row">
+          <div>
+            <h1 id="dashboardWelcomeText">Welcome, friend!</h1>
+            <p>Your wellness journey at a glance.</p>
+          </div>
+          <button id="signOutBtn" class="account-signout-btn" type="button">↩ Sign Out</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="account-auth-section" id="accountAuthSection">
+      <div class="container">
+        <div class="account-auth-grid">
+          <div class="account-auth-main reveal">
+            <div class="account-auth-tabs">
+              <button id="signInTabBtn" class="account-tab active" type="button">Sign In</button>
+              <button id="signUpTabBtn" class="account-tab" type="button">Sign Up</button>
+            </div>
+
+            <div id="accountSignInView">
+              <form id="signInForm" class="account-form" novalidate>
+                <div>
+                  <label class="form-label" for="signInEmail">Email *</label>
+                  <input id="signInEmail" name="signInEmail" class="form-input" type="email" placeholder="you@example.com" required />
+                </div>
+
+                <div>
+                  <label class="form-label" for="signInPassword">Password *</label>
+                  <input id="signInPassword" name="signInPassword" class="form-input" type="password" placeholder="••••••••" required />
+                </div>
+
+                <p class="form-error-message" id="signInErrorMessage" hidden>We couldn’t sign you in with those details. Please check your email and password.</p>
+
+                <button class="submit-btn submit-btn-pink" type="submit">Sign In</button>
+              </form>
+
+              <div class="account-alt-hubs">
+                <h3>Want a more tailored experience?</h3>
+                <p>Already signed up through one of our age-specific hubs? Access your preferred hub below. For access across all categories, sign in here on the main site.</p>
+
+                <div class="account-hub-links">
+                  <a href="kidshub.html" class="account-hub-link kids-link">Kids Hub</a>
+                  <a href="teenhub.html" class="account-hub-link teens-link">Teen Hub</a>
+                  <a href="adulthub.html" class="account-hub-link adults-link">Adults Hub</a>
+                  <a href="seniorhub.html" class="account-hub-link seniors-link">Seniors Hub</a>
+                </div>
+              </div>
+
+              <div class="account-benefits">
+                <h3>Member Benefits</h3>
+                <div class="benefit-list">
+                  <div class="benefit-item"><span>◫</span><p>Easy event registration and calendar management</p></div>
+                  <div class="benefit-item"><span>👍</span><p>Save and like your favorite events and stories</p></div>
+                  <div class="benefit-item"><span>◉</span><p>Track your wellness journey and attended events</p></div>
+                  <div class="benefit-item"><span>♡</span><p>Personalized recommendations based on your interests</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="accountSignUpView" hidden>
+              <div class="account-alt-hubs account-alt-hubs-signup">
+                <h3>Want a more tailored experience?</h3>
+                <p>Sign up for your age-specific hub below, or create a general Harmony House account here for access across all categories.</p>
+
+                <div class="account-hub-links">
+                  <a href="kidshub.html" class="account-hub-link kids-link">Sign up for Kids Hub</a>
+                  <a href="teenhub.html" class="account-hub-link teens-link">Sign up for Teen Hub</a>
+                  <a href="adulthub.html" class="account-hub-link adults-link">Sign up for Adults Hub</a>
+                  <a href="seniorhub.html" class="account-hub-link seniors-link">Sign up for Seniors Hub</a>
+                </div>
+
+                <p class="account-general-note">
+                  For a general account covering all age groups and site-wide features, sign up below.
+                </p>
+              </div>
+
+              <form id="signUpForm" class="account-form" novalidate>
+                <div class="form-grid two-col">
+                  <div>
+                    <label class="form-label" for="signUpFirstName">First Name *</label>
+                    <input id="signUpFirstName" name="signUpFirstName" class="form-input" type="text" required />
+                  </div>
+
+                  <div>
+                    <label class="form-label" for="signUpLastName">Last Name *</label>
+                    <input id="signUpLastName" name="signUpLastName" class="form-input" type="text" required />
+                  </div>
+
+                  <div>
+                    <label class="form-label" for="signUpEmail">Email *</label>
+                    <input id="signUpEmail" name="signUpEmail" class="form-input" type="email" placeholder="you@example.com" required />
+                  </div>
+
+                  <div>
+                    <label class="form-label" for="signUpPhone">Phone *</label>
+                    <input id="signUpPhone" name="signUpPhone" class="form-input" type="tel" placeholder="(555) 123-4567" required />
+                  </div>
+
+                  <div>
+                    <label class="form-label" for="signUpDob">Date of Birth *</label>
+                    <input id="signUpDob" name="signUpDob" class="form-input" type="date" required />
+                  </div>
+
+                  <div>
+                    <label class="form-label" for="signUpEmergencyContact">Emergency Contact</label>
+                    <input id="signUpEmergencyContact" name="signUpEmergencyContact" class="form-input" type="text" placeholder="Optional" />
+                  </div>
+
+                  <div class="full-span">
+                    <label class="form-label" for="signUpAddress">Home Address</label>
+                    <input id="signUpAddress" name="signUpAddress" class="form-input" type="text" placeholder="Optional" />
+                  </div>
+
+                  <div>
+                    <label class="form-label" for="signUpPassword">Password *</label>
+                    <input id="signUpPassword" name="signUpPassword" class="form-input" type="password" placeholder="••••••••" required />
+                  </div>
+
+                  <div>
+                    <label class="form-label" for="signUpConfirmPassword">Confirm Password *</label>
+                    <input id="signUpConfirmPassword" name="signUpConfirmPassword" class="form-input" type="password" placeholder="••••••••" required />
+                  </div>
+                </div>
+
+                <p class="form-error-message" id="signUpErrorMessage" hidden>Please complete all required fields and make sure both passwords match.</p>
+
+                <button class="submit-btn submit-btn-pink" type="submit">Create Account</button>
+              </form>
+
+              <div class="account-benefits">
+                <h3>Member Benefits</h3>
+                <div class="benefit-list">
+                  <div class="benefit-item"><span>◫</span><p>Easy event registration and calendar management</p></div>
+                  <div class="benefit-item"><span>👍</span><p>Save and like your favorite events and stories</p></div>
+                  <div class="benefit-item"><span>◉</span><p>Track your wellness journey and attended events</p></div>
+                  <div class="benefit-item"><span>♡</span><p>Personalized recommendations based on your interests</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="account-auth-side reveal">
+            <h3>Quick Access</h3>
+            <div class="quick-access-list">
+              <a href="events.html">Browse Events</a>
+              <a href="services.html">Explore Services</a>
+              <a href="booking.html">Book an Event</a>
+              <a href="news.html">Read News &amp; Stories</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="account-dashboard-section" id="accountDashboardSection" hidden>
+      <div class="container">
+        <div class="account-stats-grid reveal">
+          <article class="account-stat-card">
+            <span class="account-stat-number" id="accountAttendedCount">0</span>
+            <span class="account-stat-label">Events Attended</span>
+          </article>
+
+          <article class="account-stat-card">
+            <span class="account-stat-number peach" id="accountUpcomingCount">0</span>
+            <span class="account-stat-label">Upcoming Events</span>
+          </article>
+
+          <article class="account-stat-card">
+            <span class="account-stat-number pink" id="accountLikedEventsCount">0</span>
+            <span class="account-stat-label">Liked Events</span>
+          </article>
+
+          <article class="account-stat-card">
+            <span class="account-stat-number teal" id="accountLikedStoriesCount">0</span>
+            <span class="account-stat-label">Liked Stories</span>
+          </article>
+        </div>
+
+        <div class="account-dashboard-block reveal">
+          <h2 class="account-section-title peach">◫ Your Upcoming Events</h2>
+          <div id="accountUpcomingEventsList" class="account-card-list"></div>
+          <div id="accountUpcomingEmpty" class="account-empty-card" hidden>
+            <div class="account-empty-icon">🗓</div>
+            <p>You haven’t registered for any events yet.</p>
+            <a href="events.html" class="tiny-action-btn peach-btn">Browse Events</a>
+          </div>
+        </div>
+
+        <div class="account-dashboard-block reveal">
+          <h2 class="account-section-title pink">👍 Events You Liked</h2>
+          <div id="accountLikedEventsList" class="account-card-list"></div>
+          <div id="accountLikedEventsEmpty" class="account-empty-card" hidden>
+            <div class="account-empty-icon">👍</div>
+            <p>You haven’t liked any events yet.</p>
+          </div>
+        </div>
+
+        <div class="account-dashboard-block reveal">
+          <h2 class="account-section-title teal">♡ Stories You Liked</h2>
+          <div id="accountLikedStoriesList" class="account-card-list"></div>
+          <div id="accountLikedStoriesEmpty" class="account-empty-card" hidden>
+            <div class="account-empty-icon">♡</div>
+            <p>You haven’t liked any stories yet.</p>
+            <a href="news.html" class="tiny-action-btn teal-btn">Read Stories</a>
+          </div>
+        </div>
+
+        <div class="account-dashboard-block reveal">
+          <h2 class="account-section-title peach">✧ Submitted Event Proposals</h2>
+          <div id="accountProposalsList" class="account-card-list"></div>
+          <div id="accountProposalsEmpty" class="account-empty-card" hidden>
+            <div class="account-empty-icon">✧</div>
+            <p>You haven’t submitted any event proposals yet.</p>
+            <a href="booking.html" class="tiny-action-btn peach-btn">Submit Proposal</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="brand" href="index.html">
+            <span class="brand-logo" aria-hidden="true">❤</span>
+            <span>Harmony House</span>
+          </a>
+          <p style="margin-top: 1rem; max-width: 24ch;">
+            Supporting residents through local health, wellbeing services, and community connection.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="services.html">Services Directory</a></li>
+            <li><a href="events.html">Events Calendar</a></li>
+            <li><a href="booking.html">Book an Event</a></li>
+            <li><a href="news.html">News &amp; Stories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="contact-list">
+            <a href="tel:+445551234567">☎ (555) 123-4567</a>
+            <a href="mailto:info@harmonyhouse.org">✉ info@harmonyhouse.org</a>
+            <a href="https://maps.google.com/?q=123%20Community%20Street%20City%20ST%2012345" target="_blank" rel="noopener">⌖ 123 Community Street, City, ST 12345</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-row">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2026 Harmony House. All rights reserved. | Committed to community wellbeing.</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

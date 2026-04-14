@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adults Hub</title>
+  <link rel="stylesheet" href="css/adults.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html" aria-label="Harmony House home page">
+        <img src="images/logo.png" alt="Harmony House Logo" class="nav-logo-img">
+        <span class="brand-text">Harmony House</span>
+      </a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="#about">Services</a>
+      <a href="#events">Events</a>
+      <a href="#events">Book Event</a>
+      <a href="#contact">Contact</a>
+      <a href="#account">👤 Sign In</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="circle-bg"></div>
+
+  <div class="hero-inner">
+    <div class="icon">💼</div>
+    <h1>Adults Hub</h1>
+    <p>Professional development, wellness programs, and community support for working adults (25–64)</p>
+
+    <div class="hero-actions">
+      <a href="#programs" class="btn primary">Explore Programs</a>
+      <a href="index.html" class="btn outline">Main Website</a>
+    </div>
+
+    <span class="sub">Part of <a href="index.html">Harmony House</a></span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section light" id="about">
+  <h2>Supporting Your Journey</h2>
+  <p>A dedicated space for working adults focused on career growth, work-life balance, and personal wellness.</p>
+
+  <div class="grid three">
+    <div class="card">
+      <span>📈</span>
+      <h3>Career Development</h3>
+      <p>Workshops, mentorship programs, and networking opportunities.</p>
+    </div>
+
+    <div class="card">
+      <span>🧘</span>
+      <h3>Wellness Programs</h3>
+      <p>Stress management, fitness classes, and mental health support.</p>
+    </div>
+
+    <div class="card">
+      <span>👥</span>
+      <h3>Community Network</h3>
+      <p>Connect with peers and build lasting professional relationships.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="section light" id="programs">
+  <h2>Programs & Services</h2>
+
+  <div class="grid two">
+    <div class="card big">
+      <h3>Professional Skills Workshops</h3>
+      <p>Leadership training, public speaking, and digital skills.</p>
+      <span>Tuesdays, 6:30 PM - 8:00 PM</span>
+    </div>
+
+    <div class="card big">
+      <h3>Financial Wellness Seminars</h3>
+      <p>Budgeting, investments, and retirement strategies.</p>
+      <span>Thursdays, 7:00 PM - 8:30 PM</span>
+    </div>
+
+    <div class="card big">
+      <h3>Work-Life Balance Programs</h3>
+      <p>Time management and stress reduction techniques.</p>
+      <span>Wednesdays, 12:00 PM - 1:00 PM</span>
+    </div>
+
+    <div class="card big">
+      <h3>Networking Events</h3>
+      <p>Professional mixers and industry meetups.</p>
+      <span>First Friday, 6:00 PM</span>
+    </div>
+  </div>
+
+  <div class="notice">
+    Looking for programs for other age groups? <a href="index.html">Visit the main Harmony House website</a>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="section light" id="events">
+  <h2>Upcoming Events</h2>
+
+  <div class="grid three">
+    <div class="event">
+      <img src="placeholder.jpg">
+      <h3>Leadership Excellence Workshop</h3>
+      <p>Develop leadership skills for career advancement.</p>
+      <button class="btn primary" data-open="registerModal">Register Now</button>
+    </div>
+
+    <div class="event">
+      <img src="placeholder.jpg">
+      <h3>Financial Planning Seminar</h3>
+      <p>Expert guidance on investments and financial planning.</p>
+      <button class="btn primary" data-open="registerModal">Register Now</button>
+    </div>
+
+    <div class="event">
+      <img src="placeholder.jpg">
+      <h3>Professional Networking Mixer</h3>
+      <p>Connect with professionals over refreshments.</p>
+      <button class="btn primary" data-open="registerModal">Register Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section teal" id="contact">
+  <h2>Get in Touch</h2>
+  <p>Have questions? We're here to help.</p>
+
+  <div class="grid three">
+    <div class="card contact">
+      📞
+      <strong>(555) 123-4567</strong>
+    </div>
+
+    <div class="card contact">
+      ✉️
+      <strong>adults@harmonyhouse.org</strong>
+    </div>
+
+    <div class="card contact">
+      📍
+      <strong>123 Community Way</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ACCOUNT -->
+<section class="section light center" id="account">
+  <h2>Your Account</h2>
+  <p>Sign in to manage your registrations</p>
+
+  <div class="account-box">
+    <button class="btn primary" data-open="signinModal">Sign In</button>
+    <button class="btn outline" data-open="signupModal">Create Account</button>
+  </div>
+</section>
+
+    <section class="section light center">
+  <div class="account-icon">👤</div>
+  <h2>Your Account</h2>
+  <p>Sign in to manage your registrations and track your progress</p>
+
+  <div class="account-box">
+    <button class="btn primary" data-open="signinModal">Sign In</button>
+    <button class="btn outline" data-open="signupModal">Create Account</button>
+    <div class="account-note">Looking for other age groups? <a href="index.html">Visit main site</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">💜 Harmony House</div>
+      <p>Supporting residents through local health, wellbeing services, and community connections.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#about">Services Directory</a>
+      <a href="#events">Events Calendar</a>
+      <a href="#events">Book an Event</a>
+      <a href="index.html">News &amp; Stories</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+
+    <div>
+      <h4>Age Groups</h4>
+      <a href="kids.html">Kids Hub</a>
+      <a href="teens.html">Teens Hub</a>
+      <a href="#">Adults Hub</a>
+      <a href="seniors.html">Seniors Hub</a>
+    </div>
+
+    <div>
+      <h4>Contact Us</h4>
+      <p>(555) 123-4567</p>
+      <p>info@harmonyhouse.org</p>
+      <p>123 Community Street, City, ST 12345</p>
+    </div>
+
+    <div>
+      <h4>Follow Us</h4>
+      <div class="socials">
+        <span>f</span>
+        <span>t</span>
+        <span>◎</span>
+      </div>
+      <button class="footer-account-btn" data-open="signinModal">My Account</button>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Harmony House. All rights reserved. | Committed to community wellbeing.
+  </div>
+</footer>
+
+<div class="modal" id="registerModal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close" data-close>&times;</button>
+    <div class="modal-icon">📝</div>
+    <h3 class="modal-title">Event Registration</h3>
+    <p class="modal-subtitle">Financial Planning Seminar</p>
+    <p class="modal-date">Thursday, Apr 17 at 7:00 PM</p>
+
+    <form class="modal-form">
+      <label>Full Name *
+        <input type="text" placeholder="John Smith">
+      </label>
+
+      <label>Email *
+        <input type="email" placeholder="john.smith@example.com">
+      </label>
+
+      <label>Phone *
+        <input type="text" placeholder="(555) 123-4567">
+      </label>
+
+      <label>Company/Organization (Optional)
+        <input type="text" placeholder="Your company name">
+      </label>
+
+      <label>Additional Information (Optional)
+        <textarea placeholder="Any questions or special requirements?"></textarea>
+      </label>
+
+      <button type="submit" class="btn primary full">Complete Registration</button>
+    </form>
+
+    <div class="tiny-note">Have an account? <a href="#signinModal" data-switch="signinModal">Sign in</a> to auto-fill your information</div>
+  </div>
+</div>
+
+<div class="modal" id="signupModal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close" data-close>&times;</button>
+    <div class="modal-icon">💼</div>
+    <h3 class="modal-title">Create Account</h3>
+    <p class="modal-subtitle">Join the Adults Hub community</p>
+
+    <div class="auth-toggle">
+      <button class="toggle-btn" data-switch="signinModal">Sign In</button>
+      <button class="toggle-btn active">Sign Up</button>
+    </div>
+
+    <form class="modal-form">
+      <label>First Name *
+        <input type="text" placeholder="John">
+      </label>
+
+      <label>Last Name *
+        <input type="text" placeholder="Smith">
+      </label>
+
+      <label>Email *
+        <input type="email" placeholder="john.smith@example.com">
+      </label>
+
+      <label>Password *
+        <input type="password" placeholder="••••••••" required minlength="8">
+      </label>
+
+      <button type="submit" class="btn primary full">Create Account</button>
+    </form>
+
+    <div class="tiny-note">Want access to all age groups? <a href="index.html">Sign up on main site</a></div>
+  </div>
+</div>
+
+<div class="modal" id="signinModal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close" data-close>&times;</button>
+    <div class="modal-icon">💼</div>
+    <h3 class="modal-title">Welcome Back</h3>
+    <p class="modal-subtitle">Sign in to your Adults Hub account</p>
+
+    <div class="auth-toggle">
+      <button class="toggle-btn active">Sign In</button>
+      <button class="toggle-btn" data-switch="signupModal">Sign Up</button>
+    </div>
+
+    <form class="modal-form">
+      <label>Email *
+        <input type="email" placeholder="john.smith@example.com">
+      </label>
+
+      <label>Password *
+        <input type="password" placeholder="••••••••">
+      </label>
+
+      <button type="submit" class="btn primary full">Sign In</button>
+    </form>
+
+    <div class="tiny-note">Want access to all age groups? <a href="index.html">Sign up on main site</a></div>
+  </div>
+</div>
+
+<script src="js/adults.js"></script>
+
+</body>
+</html>

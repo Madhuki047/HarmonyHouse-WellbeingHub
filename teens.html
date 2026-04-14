@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teens Hub | Harmony House</title>
+  <link rel="stylesheet" href="css/teens.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="nav-wrap">
+        <a class="brand" href="index.html" aria-label="Harmony House home page">
+        <img src="images/logo.png" alt="Harmony House Logo" class="nav-logo-img">
+        <span class="brand-text">Harmony House</span>
+      </a>
+
+        <nav class="nav">
+          <a href="#hero">Home</a>
+          <a href="#about">Services</a>
+          <a href="#events">Events</a>
+          <a href="#events">Book Event</a>
+          <a href="#contact">Contact</a>
+          <a href="#account">👤 Sign In</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav">
+        <a href="#hero">Home</a>
+        <a href="#about">Services</a>
+        <a href="#events">Events</a>
+        <a href="#events">Book Event</a>
+        <a href="#contact">Contact</a>
+        <button data-open="signinModal">My Account</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+
+        <div class="hero-inner">
+          <div class="hero-icon floaty">⚡</div>
+          <h1 class="gradient-title">TEENS HUB</h1>
+          <p class="hero-subtitle">Your space. Your voice. Your community. 🎨🤝🎵</p>
+
+          <div class="hero-actions">
+            <a href="#events" class="btn btn-primary">Explore Events ⚡</a>
+            <a href="index.html" class="btn btn-secondary">Main Site 🏠</a>
+          </div>
+
+          <p class="hero-note">Part of <a href="index.html">Harmony House</a></p>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="about">
+        <div class="section-head">
+          <h2 class="gradient-title small">What We're About 💫</h2>
+          <p>A safe, creative space for teens and young adults (13-25) to connect, express, and thrive.</p>
+        </div>
+
+        <div class="info-grid three">
+          <article class="glass-card pink-card hover-glow">
+            <div class="card-emoji">🎨</div>
+            <h3>Creative Expression</h3>
+            <p>Art, music, dance, digital media - express yourself your way.</p>
+          </article>
+
+          <article class="glass-card cyan-card hover-glow">
+            <div class="card-emoji">💬</div>
+            <h3>Mental Health Support</h3>
+            <p>Confidential counselling, peer support, and wellness resources.</p>
+          </article>
+
+          <article class="glass-card pink-card hover-glow">
+            <div class="card-emoji">🤝</div>
+            <h3>Real Connections</h3>
+            <p>Meet people who get it. Build genuine friendships.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-dark">
+        <div class="section-head">
+          <h2 class="gradient-title small">Programs &amp; Activities 🚀</h2>
+        </div>
+
+        <div class="program-grid two">
+          <article class="glass-card pink-card hover-glow">
+            <h3>🎵 Music &amp; Production Studio</h3>
+            <p>Professional recording equipment, music lessons, and open studio sessions. Create your sound.</p>
+            <span class="meta">Tuesdays &amp; Thursdays, 4:00 PM - 7:00 PM</span>
+          </article>
+
+          <article class="glass-card cyan-card hover-glow">
+            <h3>🎮 Gaming &amp; E-Sports</h3>
+            <p>Tournament play, casual gaming nights, and game development workshops. Level up your skills.</p>
+            <span class="meta">Wednesdays &amp; Saturdays, 5:00 PM - 9:00 PM</span>
+          </article>
+
+          <article class="glass-card pink-card hover-glow">
+            <h3>💻 Digital Arts &amp; Coding</h3>
+            <p>Learn graphic design, animation, web development, and app creation. Build your digital future.</p>
+            <span class="meta">Mondays, 4:00 PM - 6:00 PM</span>
+          </article>
+
+          <article class="glass-card cyan-card hover-glow">
+            <h3>🧘 Mindfulness &amp; Wellness</h3>
+            <p>Yoga, meditation, stress management, and mental health support groups in a judgment-free zone.</p>
+            <span class="meta">Fridays, 3:00 PM - 5:00 PM</span>
+          </article>
+        </div>
+
+        <div class="notice-bar pink-outline">
+          Looking for other age groups? <a href="index.html">Check out the main site</a>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="events">
+        <div class="section-head">
+          <h2 class="gradient-title small">Upcoming Events 🔥</h2>
+        </div>
+
+        <div class="event-grid three">
+          <article class="event-card pink-card hover-glow">
+            <div class="event-image">
+              <img src="springArt.jpeg" alt="Beat Making Workshop">
+            </div>
+            <div class="event-body">
+              <h3>🎵 Beat Making Workshop</h3>
+              <p>Learn music production from local artists. Bring your ideas, we'll help you create.</p>
+              <span class="meta">Saturday, Apr 12 • 2:00 PM</span>
+              <button class="btn btn-primary event-btn" data-open="registerModal" data-event="Beat Making Workshop" data-date="Saturday, Apr 12 at 2:00 PM">Register Now ⚡</button>
+            </div>
+          </article>
+
+          <article class="event-card cyan-card hover-glow">
+            <div class="event-image">
+              <img src="scienceDay.jpeg" alt="Gaming Tournament">
+            </div>
+            <div class="event-body">
+              <h3>🎮 Gaming Tournament</h3>
+              <p>Compete in our monthly e-sports tournament. Prizes, snacks, and bragging rights!</p>
+              <span class="meta">Friday, Apr 18 • 6:00 PM</span>
+              <button class="btn btn-primary event-btn" data-open="registerModal" data-event="Gaming Tournament" data-date="Friday, Apr 18 at 6:00 PM">Register Now ⚡</button>
+            </div>
+          </article>
+
+          <article class="event-card pink-card hover-glow">
+            <div class="event-image">
+              <img src="danceParty.jpeg" alt="Open Mic Night">
+            </div>
+            <div class="event-body">
+              <h3>🎤 Open Mic Night</h3>
+              <p>Showcase your talent! Music, poetry, comedy - all welcome. Supportive vibes only.</p>
+              <span class="meta">Thursday, Apr 24 • 7:00 PM</span>
+              <button class="btn btn-primary event-btn" data-open="registerModal" data-event="Open Mic Night" data-date="Thursday, Apr 24 at 7:00 PM">Register Now ⚡</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="notice-bar cyan-outline">
+          Looking for other age events? <a href="index.html">Check out other hubs</a>
+        </div>
+      </section>
+
+      <section class="section section-purple" id="contact">
+        <div class="section-head">
+          <h2 class="gradient-title small">Get in Touch 📱</h2>
+          <p>Questions? Ideas? We're here to listen.</p>
+        </div>
+
+        <div class="contact-grid three small-cards">
+          <article class="glass-card pink-card hover-glow compact">
+            <div class="mini-label">📞</div>
+            <span class="contact-title">Call/Text</span>
+            <strong>(555) 123-4567</strong>
+          </article>
+
+          <article class="glass-card cyan-card hover-glow compact">
+            <div class="mini-label">✉️</div>
+            <span class="contact-title">Email</span>
+            <strong>teens@harmonyhouse.org</strong>
+          </article>
+
+          <article class="glass-card pink-card hover-glow compact">
+            <div class="mini-label">📍</div>
+            <span class="contact-title">Location</span>
+            <strong>123 Community Way</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-black" id="account">
+        <div class="account-panel">
+          <div class="hero-icon small-float">🔐</div>
+          <h2 class="gradient-title small">Your Account</h2>
+          <p>Sign in to save your spot and track events</p>
+
+          <div class="account-box">
+            <button class="btn btn-primary full" data-open="signinModal">Sign In ⚡</button>
+            <button class="btn btn-secondary full" data-open="signupModal">Create Account ✨</button>
+            <div class="small-note">Want all age groups? <a href="index.html">Main site</a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">💜 Harmony House</div>
+          <p>Supporting residents through local health, wellbeing services, and community connections.</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <a href="#about">Services Directory</a>
+          <a href="#events">Events Calendar</a>
+          <a href="#events">Book an Event</a>
+          <a href="#contact">News &amp; Stories</a>
+        </div>
+
+        <div>
+          <h4>Age Groups</h4>
+          <a href="kids.html">Kids Hub</a>
+          <a href="#">Teens Hub</a>
+          <a href="adults.html">Adults Hub</a>
+          <a href="seniors.html">Seniors Hub</a>
+        </div>
+
+        <div>
+          <h4>Contact Us</h4>
+          <p>(555) 123-4567</p>
+          <p>info@harmonyhouse.org</p>
+          <p>123 Community Street, City, ST 12345</p>
+        </div>
+
+        <div>
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <span>f</span>
+            <span>t</span>
+            <span>◎</span>
+          </div>
+          <a class="footer-account-btn" href="#" data-open="signinModal">My Account</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal" id="registerModal" aria-hidden="true">
+    <div class="modal-card cyan-card">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-icon">📝</div>
+      <h3 class="modal-title">Register for Event 🎉</h3>
+      <p class="modal-subtitle" id="modalEventName">Gaming Tournament</p>
+      <p class="modal-date" id="modalEventDate">Friday, Apr 18 at 6:00 PM</p>
+
+      <form class="modal-form">
+        <label>Full Name *
+          <input type="text" placeholder="Alex Chen">
+        </label>
+        <label>Email *
+          <input type="email" placeholder="you@example.com">
+        </label>
+        <label>Phone *
+          <input type="text" placeholder="(555) 123-4567">
+        </label>
+        <label>Emergency Contact *
+          <input type="text" placeholder="Parent/Guardian: (555) 987-6543">
+        </label>
+        <label>Interests (Optional)
+          <textarea placeholder="What brings you to this event?"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary full">Complete Registration 🚀</button>
+      </form>
+
+      <div class="tiny-note">Have an account? <a href="#" data-switch="signinModal">Sign in</a> to auto-fill ✨</div>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div class="modal" id="signupModal" aria-hidden="true">
+    <div class="modal-card pink-card">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-icon">⚡</div>
+      <h3 class="modal-title">Join the Hub!</h3>
+      <p class="modal-subtitle">Create your Teens Hub account</p>
+
+      <div class="auth-toggle">
+        <button class="toggle-btn" data-switch="signinModal">Sign In</button>
+        <button class="toggle-btn active">Sign Up</button>
+      </div>
+
+      <form class="modal-form">
+        <label>First Name *
+          <input type="text" placeholder="Alex">
+        </label>
+        <label>Last Name *
+          <input type="text" placeholder="Chen">
+        </label>
+        <label>Email *
+          <input type="email" placeholder="you@example.com">
+        </label>
+        <label>Password *
+          <input type="password" placeholder="••••••••">
+        </label>
+        <button type="submit" class="btn btn-primary full">Create Account ✨</button>
+      </form>
+
+      <div class="tiny-note">Want all age groups? <a href="index.html">Sign up on main site</a></div>
+    </div>
+  </div>
+
+  <!-- Sign In Modal -->
+  <div class="modal" id="signinModal" aria-hidden="true">
+    <div class="modal-card pink-card">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-icon">⚡</div>
+      <h3 class="modal-title">Welcome Back!</h3>
+      <p class="modal-subtitle">Sign in to your Teens Hub account</p>
+
+      <div class="auth-toggle">
+        <button class="toggle-btn active">Sign In</button>
+        <button class="toggle-btn" data-switch="signupModal">Sign Up</button>
+      </div>
+
+      <form class="modal-form">
+        <label>Email *
+          <input type="email" placeholder="you@example.com">
+        </label>
+        <label>Password *
+          <input type="password" placeholder="••••••••">
+        </label>
+        <button type="submit" class="btn btn-primary full">Sign In ⚡</button>
+      </form>
+
+      <div class="tiny-note">No account yet? <a href="#" data-switch="signupModal">Create one</a></div>
+    </div>
+  </div>
+
+  <script src="js/teens.js"></script>
+</body>
+</html>

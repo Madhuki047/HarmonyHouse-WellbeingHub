@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harmony House | News</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Harmony House home page">
+        <img src="images/logo.png" alt="Harmony House Logo" class="nav-logo-img">
+        <span class="brand-text">Harmony House</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="events.html">Events</a>
+        <a href="booking.html">Book Event</a>
+        <a href="news.html" class="active">News</a>
+        <a href="contact.html">Contact</a>
+        <a href="account.html" class="account-link">My Account</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-links" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="events.html">Events</a>
+      <a href="booking.html">Book Event</a>
+      <a href="news.html" class="active">News</a>
+      <a href="contact.html">Contact</a>
+      <a href="account.html" class="account-link">My Account</a>
+    </nav>
+
+    <div class="mobile-meta">
+      <div>
+        <h4>Contact Us</h4>
+        <p><a href="tel:+445551234567">(555) 123-4567</a></p>
+        <p><a href="mailto:info@harmonyhouse.org">info@harmonyhouse.org</a></p>
+        <p><a href="https://maps.google.com/?q=123%20Community%20Street%20City%20ST%2012345" target="_blank" rel="noopener">123 Community Street, City, ST 12345</a></p>
+      </div>
+
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="news-page">
+    <section class="news-hero">
+      <div class="container news-hero-inner reveal">
+        <h1>Community Stories &amp; Updates</h1>
+        <p>
+          Celebrating our community’s achievements, sharing important updates, and highlighting the positive impact we’re making together.
+        </p>
+      </div>
+    </section>
+
+    <section class="news-featured-section">
+      <div class="container">
+        <div id="featuredStoryWrap" class="featured-story-card reveal"></div>
+      </div>
+    </section>
+
+    <section class="news-list-section">
+      <div class="container">
+        <div class="news-list-head reveal">
+          <h2>Recent Stories &amp; Updates</h2>
+        </div>
+
+        <div class="news-filter-bar reveal">
+          <div class="news-filter-chips">
+            <button class="news-filter-chip active" type="button" data-category="all">All</button>
+            <button class="news-filter-chip news-chip-pink" type="button" data-category="success-story">Success Story</button>
+            <button class="news-filter-chip news-chip-peach" type="button" data-category="announcement">Announcement</button>
+            <button class="news-filter-chip news-chip-purple" type="button" data-category="milestone">Milestone</button>
+            <button class="news-filter-chip news-chip-teal" type="button" data-category="program-update">Program Update</button>
+          </div>
+        </div>
+
+        <div id="newsGrid" class="news-grid reveal"></div>
+
+        <div id="newsEmptyState" class="news-empty-state" hidden>
+          <h3>No stories match this category.</h3>
+          <p>Try another filter to explore more updates.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter-section">
+      <div class="container reveal">
+        <h2>Stay Connected</h2>
+        <p>
+          Subscribe to our newsletter to receive the latest news, success stories, and updates about upcoming events.
+        </p>
+
+        <form id="newsletterForm" class="newsletter-form" novalidate>
+          <input
+            id="newsletterEmail"
+            class="newsletter-input"
+            type="email"
+            placeholder="Enter your email"
+            aria-label="Enter your email"
+          />
+          <button class="newsletter-btn" type="submit">Subscribe</button>
+        </form>
+
+        <p id="newsletterMessage" class="newsletter-message" hidden></p>
+      </div>
+    </section>
+
+    <section class="share-story-section">
+      <div class="container reveal">
+        <div class="share-story-icon">♡</div>
+        <h2>Share Your Story</h2>
+        <p>
+          Have a success story or positive experience to share? We’d love to hear how Harmony House has made a difference in your life.
+        </p>
+        <a href="contact.html?topic=submit-my-story" class="share-story-btn">Submit Your Story →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="brand" href="index.html">
+            <span class="brand-logo" aria-hidden="true">❤</span>
+            <span>Harmony House</span>
+          </a>
+          <p style="margin-top: 1rem; max-width: 24ch;">
+            Supporting residents through local health, wellbeing services, and community connection.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="services.html">Services Directory</a></li>
+            <li><a href="events.html">Events Calendar</a></li>
+            <li><a href="booking.html">Book an Event</a></li>
+            <li><a href="news.html">News &amp; Stories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="contact-list">
+            <a href="tel:+445551234567">☎ (555) 123-4567</a>
+            <a href="mailto:info@harmonyhouse.org">✉ info@harmonyhouse.org</a>
+            <a href="https://maps.google.com/?q=123%20Community%20Street%20City%20ST%2012345" target="_blank" rel="noopener">⌖ 123 Community Street, City, ST 12345</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-row">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2026 Harmony House. All rights reserved. | Committed to community wellbeing.</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

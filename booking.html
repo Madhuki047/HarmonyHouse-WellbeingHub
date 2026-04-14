@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harmony House | Book Event</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Harmony House home page">
+        <img src="images/logo.png" alt="Harmony House Logo" class="nav-logo-img">
+        <span class="brand-text">Harmony House</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="events.html">Events</a>
+        <a href="booking.html" class="active">Book Event</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+        <a href="account.html" class="account-link">My Account</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-links" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="events.html">Events</a>
+      <a href="booking.html" class="active">Book Event</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+      <a href="account.html" class="account-link">My Account</a>
+    </nav>
+
+    <div class="mobile-meta">
+      <div>
+        <h4>Contact Us</h4>
+        <p><a href="tel:+445551234567">(555) 123-4567</a></p>
+        <p><a href="mailto:info@harmonyhouse.org">info@harmonyhouse.org</a></p>
+        <p><a href="https://maps.google.com/?q=123%20Community%20Street%20City%20ST%2012345" target="_blank" rel="noopener">123 Community Street, City, ST 12345</a></p>
+      </div>
+
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="booking-page">
+    <section class="booking-hero">
+      <div class="container booking-hero-inner reveal">
+        <h1>Event Registration</h1>
+        <p>
+          Register for one of our community events. All events are free and open to community members.
+        </p>
+      </div>
+    </section>
+
+    <section class="booking-registration-section">
+      <div class="container">
+        <div id="registrationFormWrap" class="booking-card reveal">
+          <form id="eventRegistrationForm" novalidate>
+            <div class="booking-form-block">
+              <h2>Select Event</h2>
+
+              <label class="form-label" for="selectedEvent">Select Event or Society/Club *</label>
+              <select id="selectedEvent" name="selectedEvent" class="form-input" required>
+                <option value="">Select Event or Society/Club</option>
+                <option value="Morning Yoga for Beginners">Morning Yoga for Beginners</option>
+                <option value="Mindfulness Meditation">Mindfulness Meditation</option>
+                <option value="Parenting Workshop: Teen Communication">Parenting Workshop: Teen Communication</option>
+                <option value="Senior Book Club">Senior Book Club</option>
+                <option value="Zumba Dance Party">Zumba Dance Party</option>
+                <option value="Youth Art Workshop">Youth Art Workshop</option>
+                <option value="Financial Literacy Workshop">Financial Literacy Workshop</option>
+                <option value="Group Therapy: Managing Anxiety">Group Therapy: Managing Anxiety</option>
+                <option value="Community Walking Group">Community Walking Group</option>
+                <option value="Teen Support Circle">Teen Support Circle</option>
+                <option value="Senior Fitness: Chair Yoga">Senior Fitness: Chair Yoga</option>
+                <option value="Family Game Day">Family Game Day</option>
+                <option value="Mindfulness Meditation Circle">Mindfulness Meditation Circle</option>
+                <option value="Mental Wellness Support Circle">Mental Wellness Support Circle</option>
+                <option value="Art Therapy Club">Art Therapy Club</option>
+                <option value="Morning Yoga Club">Morning Yoga Club</option>
+                <option value="Zumba Dance Society">Zumba Dance Society</option>
+                <option value="Community Walking Club">Community Walking Club</option>
+                <option value="Parents Connect Group">Parents Connect Group</option>
+                <option value="Teen Parent Society">Teen Parent Society</option>
+                <option value="Family Game Night Club">Family Game Night Club</option>
+                <option value="Financial Literacy Circle">Financial Literacy Circle</option>
+                <option value="Youth Art Collective">Youth Art Collective</option>
+                <option value="Junior Sports League">Junior Sports League</option>
+                <option value="Chair Yoga for Seniors">Chair Yoga for Seniors</option>
+                <option value="Memory Care Support Group">Memory Care Support Group</option>
+              </select>
+
+              <label class="form-label" for="selectedDate">Selected Date</label>
+              <input id="selectedDate" name="selectedDate" class="form-input" type="text" placeholder="Date will appear here if selected from another page" />
+            </div>
+
+            <div class="booking-form-block">
+              <h2>Personal Information</h2>
+
+              <div class="form-grid two-col">
+                <div>
+                  <label class="form-label" for="firstName">First Name *</label>
+                  <input id="firstName" name="firstName" class="form-input" type="text" required />
+                </div>
+                <div>
+                  <label class="form-label" for="lastName">Last Name *</label>
+                  <input id="lastName" name="lastName" class="form-input" type="text" required />
+                </div>
+
+                <div>
+                  <label class="form-label" for="email">Email</label>
+                  <input id="email" name="email" class="form-input" type="email" />
+                </div>
+                <div>
+                  <label class="form-label" for="phone">Phone</label>
+                  <input id="phone" name="phone" class="form-input" type="tel" />
+                </div>
+
+                <div>
+                  <label class="form-label" for="participants">Number of Participants *</label>
+                  <input id="participants" name="participants" class="form-input" type="number" min="1" required />
+                </div>
+                <div>
+                  <label class="form-label" for="ageGroup">Age Group *</label>
+                  <select id="ageGroup" name="ageGroup" class="form-input" required>
+                    <option value="">Select age group</option>
+                    <option value="children">Children</option>
+                    <option value="teens">Teens</option>
+                    <option value="young-adults">Young Adults</option>
+                    <option value="adults">Adults</option>
+                    <option value="seniors">Seniors</option>
+                    <option value="mixed">Mixed Ages</option>
+                  </select>
+                </div>
+              </div>
+
+              <p class="field-note" id="contactRequirementNote">
+                Please provide at least one contact method: email or phone.
+              </p>
+            </div>
+
+            <div class="booking-form-block">
+              <h2>Emergency Contact (Optional)</h2>
+
+              <div class="form-grid two-col">
+                <div>
+                  <label class="form-label" for="emergencyName">Contact Name</label>
+                  <input id="emergencyName" name="emergencyName" class="form-input" type="text" placeholder="Emergency contact name" />
+                </div>
+                <div>
+                  <label class="form-label" for="emergencyPhone">Contact Phone</label>
+                  <input id="emergencyPhone" name="emergencyPhone" class="form-input" type="tel" placeholder="(555) 123-4567" />
+                </div>
+              </div>
+            </div>
+
+            <div class="booking-form-block">
+              <h2>Additional Information</h2>
+
+              <label class="form-label" for="dietaryNotes">Special Accommodation or Dietary Restrictions</label>
+              <textarea id="dietaryNotes" name="dietaryNotes" class="form-input form-textarea" placeholder="Please let us know if you require any accommodations or have dietary restrictions..."></textarea>
+            </div>
+
+            <label class="checkbox-row">
+              <input id="registrationAgreement" name="registrationAgreement" type="checkbox" required />
+              <span>
+                I agree to the terms and conditions and understand that Harmony House will use my information solely for event coordination. I confirm all information is accurate. *
+              </span>
+            </label>
+
+            <p class="form-error-message" id="registrationErrorMessage" hidden>
+              Please complete all required fields and provide either an email or a phone number.
+            </p>
+
+            <button class="submit-btn submit-btn-pink" type="submit">Complete Registration</button>
+            <p class="required-note">* Required fields</p>
+          </form>
+        </div>
+
+        <div id="registrationSuccessWrap" class="booking-success-card reveal" hidden>
+          <div class="success-icon success-icon-teal">✓</div>
+          <h2>Registration Successful!</h2>
+          <p id="registrationSuccessText">Thank you. Your registration has been confirmed.</p>
+
+          <div class="success-next-steps">
+            <h3>What’s Next?</h3>
+            <ul>
+              <li>You’ll receive a confirmation email if an email address was provided.</li>
+              <li>Check your details for the event date, time, and location.</li>
+              <li>Arrive 10 minutes early on the event day for check-in.</li>
+            </ul>
+          </div>
+
+          <div class="success-actions">
+            <a href="booking.html" class="btn btn-primary">Register for Another Event</a>
+            <a href="events.html" class="btn btn-secondary">View All Events</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proposal-section">
+      <div class="container">
+        <div class="proposal-heading reveal">
+          <div class="proposal-mini-icon">✧</div>
+          <h2>Want to Organize Your Own Event?</h2>
+          <p>
+            Have an idea for a workshop, class, or community gathering? Submit a proposal and we’ll work with you to bring it to life at Harmony House.
+          </p>
+        </div>
+
+        <div id="proposalLockedWrap" class="booking-card proposal-locked-card reveal" hidden>
+          <div class="locked-icon">🔒</div>
+          <h3>Sign in required to submit an event proposal</h3>
+          <p>
+            You need to be signed in with an account before you can submit and manage your own event proposals.
+          </p>
+          <div class="proposal-locked-actions">
+            <a href="account.html" class="btn btn-primary">Sign In / Create Account</a>
+          </div>
+        </div>
+
+        <div id="proposalFormWrap" class="booking-card proposal-card reveal" hidden>
+          <div class="proposal-progress">
+            <div class="proposal-progress-top">
+              <span id="proposalStepLabel">Step 1 of 3</span>
+              <span id="proposalStepTitle">Organizer Information</span>
+            </div>
+            <div class="proposal-progress-bar">
+              <div id="proposalProgressFill" class="proposal-progress-fill"></div>
+            </div>
+          </div>
+
+          <form id="eventProposalForm" novalidate>
+            <div class="proposal-step active" data-step="1">
+              <h3>Organizer Information</h3>
+
+              <div class="form-grid two-col">
+                <div>
+                  <label class="form-label" for="proposalFullName">Full Name *</label>
+                  <input id="proposalFullName" name="proposalFullName" class="form-input" type="text" required />
+                </div>
+                <div>
+                  <label class="form-label" for="proposalEmail">Email *</label>
+                  <input id="proposalEmail" name="proposalEmail" class="form-input" type="email" required />
+                </div>
+                <div>
+                  <label class="form-label" for="proposalPhone">Phone *</label>
+                  <input id="proposalPhone" name="proposalPhone" class="form-input" type="tel" required />
+                </div>
+                <div>
+                  <label class="form-label" for="organizationType">Organization Type *</label>
+                  <select id="organizationType" name="organizationType" class="form-input" required>
+                    <option value="">Select organization type</option>
+                    <option value="school">School</option>
+                    <option value="local-group">Local Community Group</option>
+                    <option value="small-business">Small Business</option>
+                    <option value="charity">Charity / Non-profit</option>
+                    <option value="individual">Individual / Independent</option>
+                    <option value="healthcare">Healthcare Provider</option>
+                    <option value="education">Education / Training Provider</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="proposal-step" data-step="2">
+              <h3>Event Proposal</h3>
+
+              <div class="form-grid two-col">
+                <div class="full-span">
+                  <label class="form-label" for="proposalEventTitle">Event Title *</label>
+                  <input id="proposalEventTitle" name="proposalEventTitle" class="form-input" type="text" required />
+                </div>
+
+                <div class="full-span">
+                  <label class="form-label" for="proposalDescription">Event Description *</label>
+                  <textarea id="proposalDescription" name="proposalDescription" class="form-input form-textarea" placeholder="Describe your event, its purpose, what participants will learn or experience..." required></textarea>
+                </div>
+
+                <div>
+                  <label class="form-label" for="proposalDate">Proposed Date *</label>
+                  <input id="proposalDate" name="proposalDate" class="form-input" type="date" required />
+                </div>
+                <div>
+                  <label class="form-label" for="proposalTime">Proposed Time *</label>
+                  <input id="proposalTime" name="proposalTime" class="form-input" type="time" required />
+                </div>
+
+                <div>
+                  <label class="form-label" for="proposalDuration">Duration *</label>
+                  <input id="proposalDuration" name="proposalDuration" class="form-input" type="text" placeholder="e.g. 90 minutes" required />
+                </div>
+                <div>
+                  <label class="form-label" for="expectedParticipants">Expected Participants *</label>
+                  <input id="expectedParticipants" name="expectedParticipants" class="form-input" type="number" min="1" required />
+                </div>
+              </div>
+            </div>
+
+            <div class="proposal-step" data-step="3">
+              <h3>Audience & Resources</h3>
+
+              <div class="form-grid">
+                <div>
+                  <label class="form-label" for="targetAudience">Target Audience *</label>
+                  <select id="targetAudience" name="targetAudience" class="form-input" required>
+                    <option value="">Select target audience</option>
+                    <option value="all-ages">All Ages</option>
+                    <option value="children">Children (Under 12)</option>
+                    <option value="teens">Teens (13–18)</option>
+                    <option value="young-adults">Young Adults (18–30)</option>
+                    <option value="adults">Adults</option>
+                    <option value="seniors">Seniors (60+)</option>
+                    <option value="families">Families</option>
+                    <option value="parents">Parents</option>
+                    <option value="professionals">Professionals</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="form-label" for="resourcesNeeded">Resources Needed</label>
+                  <textarea id="resourcesNeeded" name="resourcesNeeded" class="form-input form-textarea" placeholder="List any equipment, space requirements, materials needed (e.g. projector, tables, chairs, whiteboard, etc.)"></textarea>
+                </div>
+              </div>
+
+              <label class="checkbox-row proposal-checkbox">
+                <input id="proposalAgreement" name="proposalAgreement" type="checkbox" required />
+                <span>
+                  I understand this is a proposal that requires approval from Harmony House. I agree to work collaboratively with the events team and follow all facility guidelines. All events must align with Harmony House’s mission of community wellbeing. *
+                </span>
+              </label>
+
+              <div class="proposal-note">
+                <strong>Note:</strong> Event proposals are reviewed by our team to ensure they align with our community mission and facility capabilities. Approval typically takes 5–7 business days. We’ll contact you to discuss next steps.
+              </div>
+            </div>
+
+            <p class="form-error-message" id="proposalErrorMessage" hidden>
+              Please complete all required fields in this step before continuing.
+            </p>
+
+            <div class="proposal-actions">
+              <button id="proposalBackBtn" class="btn btn-secondary proposal-nav-btn" type="button">Back</button>
+              <button id="proposalNextBtn" class="btn btn-primary proposal-nav-btn" type="button">Next</button>
+              <button id="proposalSubmitBtn" class="submit-btn submit-btn-peach" type="submit" hidden>Submit Event Proposal</button>
+            </div>
+
+            <p class="required-note">* Required fields</p>
+          </form>
+        </div>
+
+        <div id="proposalSuccessWrap" class="booking-success-card proposal-success-card reveal" hidden>
+          <div class="success-icon success-icon-peach">✓</div>
+          <h2>Proposal Submitted!</h2>
+          <p id="proposalSuccessText">
+            Thank you for your interest in organizing an event at Harmony House. Your proposal has been received.
+          </p>
+
+          <div class="success-next-steps">
+            <h3>What Happens Next?</h3>
+            <ul>
+              <li>Our events team will review your proposal within 5–7 business days.</li>
+              <li>We’ll contact you at your provided email address to discuss next steps.</li>
+              <li>If approved, we’ll work with you to finalize dates, logistics, and promotional materials.</li>
+            </ul>
+          </div>
+
+          <div class="success-actions">
+            <a href="booking.html" class="btn btn-primary">Submit Another Proposal</a>
+            <a href="events.html" class="btn btn-secondary">View Current Events</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-help-section">
+      <div class="container reveal">
+        <div class="booking-help-icon">?</div>
+        <h2>Need Help?</h2>
+        <p>Have questions about registration or organizing an event? Our team is here to help.</p>
+        <div class="booking-help-actions">
+          <a href="contact.html" class="help-solid-btn">Contact Us</a>
+          <a href="tel:+445551234567" class="help-outline-btn-teal">Call (555) 123-4567</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="brand" href="index.html">
+            <span class="brand-logo" aria-hidden="true">❤</span>
+            <span>Harmony House</span>
+          </a>
+          <p style="margin-top: 1rem; max-width: 24ch;">
+            Supporting residents through local health, wellbeing services, and community connection.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="services.html">Services Directory</a></li>
+            <li><a href="events.html">Events Calendar</a></li>
+            <li><a href="booking.html">Book an Event</a></li>
+            <li><a href="news.html">News &amp; Stories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="contact-list">
+            <a href="tel:+445551234567">☎ (555) 123-4567</a>
+            <a href="mailto:info@harmonyhouse.org">✉ info@harmonyhouse.org</a>
+            <a href="https://maps.google.com/?q=123%20Community%20Street%20City%20ST%2012345" target="_blank" rel="noopener">⌖ 123 Community Street, City, ST 12345</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-row">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2026 Harmony House. All rights reserved. | Committed to community wellbeing.</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

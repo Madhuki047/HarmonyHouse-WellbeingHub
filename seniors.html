@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seniors Hub</title>
+  <link rel="stylesheet" href="css/seniors.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">💜 Harmony House</a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="#about">Services</a>
+      <a href="#events">Events</a>
+      <a href="#events">Book Event</a>
+      <a href="#contact">Contact</a>
+      <button type="button" data-open="signinModal">My Account</button>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" type="button">☰</button>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="#about">Services</a>
+    <a href="#events">Events</a>
+    <a href="#events">Book Event</a>
+    <a href="#contact">Contact</a>
+    <button type="button" data-open="signinModal">My Account</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="circle-bg"></div>
+
+    <div class="hero-inner">
+      <div class="hero-icon">❤️</div>
+      <h1>Seniors Hub</h1>
+      <p>Active living, social connections, and wellness programs for seniors 65 and over</p>
+
+      <div class="hero-actions">
+        <a href="#programs" class="btn primary">View Activities</a>
+        <a href="index.html" class="btn outline">Main Website</a>
+      </div>
+
+      <div class="hero-note">Part of <a href="index.html">Harmony House</a></div>
+    </div>
+  </section>
+
+  <section class="section light" id="about">
+    <div class="section-head">
+      <h2>Welcome to Your Community</h2>
+      <p>A warm, supportive space designed for seniors to stay active, engaged, and connected with friends.</p>
+    </div>
+
+    <div class="grid three">
+      <article class="card feature-card">
+        <div class="card-icon">🏃</div>
+        <h3>Stay Active</h3>
+        <p>Gentle exercise classes, walking groups, and activities to keep you moving.</p>
+      </article>
+
+      <article class="card feature-card">
+        <div class="card-icon">🤝</div>
+        <h3>Build Friendships</h3>
+        <p>Social gatherings, group activities, and opportunities to make new friends.</p>
+      </article>
+
+      <article class="card feature-card">
+        <div class="card-icon">💚</div>
+        <h3>Health Support</h3>
+        <p>Health screenings, nutrition education, and wellness resources.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section cream" id="programs">
+    <div class="section-head">
+      <h2>Programs &amp; Activities</h2>
+    </div>
+
+    <div class="grid two">
+      <article class="card program-card">
+        <h3>Gentle Exercise Classes</h3>
+        <p>Chair yoga, tai chi, and low-impact aerobics designed for senior fitness levels.</p>
+        <span class="meta">Mondays &amp; Thursdays, 10:00 AM - 11:00 AM</span>
+      </article>
+
+      <article class="card program-card">
+        <h3>Social Coffee Hours</h3>
+        <p>Relaxed gatherings with refreshments, conversation, and friendly faces.</p>
+        <span class="meta">Tuesdays &amp; Fridays, 2:00 PM - 3:30 PM</span>
+      </article>
+
+      <article class="card program-card">
+        <h3>Arts &amp; Crafts</h3>
+        <p>Painting, knitting, pottery, and other creative activities. All skill levels welcome.</p>
+        <span class="meta">Wednesdays, 1:00 PM - 3:00 PM</span>
+      </article>
+
+      <article class="card program-card">
+        <h3>Memory &amp; Brain Health</h3>
+        <p>Games, puzzles, and cognitive activities to keep your mind sharp and engaged.</p>
+        <span class="meta">Saturdays, 10:30 AM - 12:00 PM</span>
+      </article>
+    </div>
+
+    <div class="notice-bar">
+      Looking for programs for other age groups? <a href="index.html">Visit the main Harmony House website</a>
+    </div>
+  </section>
+
+  <section class="section light" id="events">
+    <div class="section-head">
+      <h2>Upcoming Events</h2>
+    </div>
+
+    <div class="grid three event-grid">
+      <article class="event-card">
+        <div class="event-image placeholder"></div>
+        <div class="event-body">
+          <h3>Gentle Yoga Workshop</h3>
+          <p>Learn relaxing yoga poses perfect for seniors. Improve flexibility and balance.</p>
+          <div class="event-date">🗓️ Monday, Apr 14 • 10:00 AM</div>
+          <button type="button" class="btn primary full" data-open="registerModal" data-event="Gentle Yoga Workshop" data-date="Monday, Apr 14 at 10:00 AM">Register Now</button>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-image">
+          <img src="images/seniors/springSocial.jpg" alt="Spring Social Luncheon">
+        </div>
+        <div class="event-body">
+          <h3>Spring Social Luncheon</h3>
+          <p>Join us for a delicious lunch, entertainment, and great conversation.</p>
+          <div class="event-date">🗓️ Wednesday, Apr 16 • 12:00 PM</div>
+          <button type="button" class="btn primary full" data-open="registerModal" data-event="Spring Social Luncheon" data-date="Wednesday, Apr 16 at 12:00 PM">Register Now</button>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-image">
+          <img src="images/seniors/watercolorClass.jpg" alt="Watercolor Painting Class">
+        </div>
+        <div class="event-body">
+          <h3>Watercolor Painting Class</h3>
+          <p>Explore watercolor techniques. All materials provided. No experience needed.</p>
+          <div class="event-date">🗓️ Saturday, Apr 19 • 1:00 PM</div>
+          <button type="button" class="btn primary full" data-open="registerModal" data-event="Watercolor Painting Class" data-date="Saturday, Apr 19 at 1:00 PM">Register Now</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="notice-bar">
+      Looking for events for other age groups? <a href="index.html">Check out other age-specific hubs</a>
+    </div>
+  </section>
+
+  <section class="section teal-section" id="contact">
+    <div class="section-head light-text">
+      <h2>Get in Touch</h2>
+      <p>We’re here to help and answer any questions you may have.</p>
+    </div>
+
+    <div class="grid three contact-grid">
+      <article class="contact-card">
+        <div class="contact-icon">📞</div>
+        <div class="contact-label">Phone</div>
+        <strong>(555) 123-4567</strong>
+      </article>
+
+      <article class="contact-card">
+        <div class="contact-icon">📧</div>
+        <div class="contact-label">Email</div>
+        <strong>seniors@harmonyhouse.org</strong>
+      </article>
+
+      <article class="contact-card">
+        <div class="contact-icon">📍</div>
+        <div class="contact-label">Location</div>
+        <strong>123 Community Way</strong>
+      </article>
+    </div>
+  </section>
+
+  <section class="section cream account-section" id="accountSection">
+      <div class="account-icon">👤</div>
+      <h2>Your Account</h2>
+      <p>Sign in to manage your event registrations</p>
+
+      <div id="accountGuestView" class="account-box">
+        <button type="button" class="btn primary full" data-open="signinModal">Sign In</button>
+        <button type="button" class="btn outline full" data-open="signupModal">Create Account</button>
+        <div class="account-note">Looking for other age groups? <a href="index.html">Visit main site</a></div>
+      </div>
+
+      <div id="accountUserView" class="account-box logged-in-box hidden">
+        <div class="welcome-message">Welcome back, <span id="accountUserName">mary</span>!</div>
+        <button type="button" class="btn outline full" id="signOutBtn">Sign Out</button>
+        <a href="#events" class="btn primary full">View Events</a>
+      </div>
+
+      <div id="registeredEventsWrap" class="registered-events hidden">
+        <h3 class="registered-title">Your Registered Events</h3>
+        <div id="registeredEventsList" class="registered-events-grid"></div>
+      </div>
+    </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">💜 Harmony House</div>
+      <p>Supporting residents through local health, wellbeing services, and community connections.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#about">Services Directory</a>
+      <a href="#events">Events Calendar</a>
+      <a href="#events">Book an Event</a>
+      <a href="index.html">News &amp; Stories</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+
+    <div>
+      <h4>Age Groups</h4>
+      <a href="index.html">Kids Hub</a>
+      <a href="index.html">Teens Hub</a>
+      <a href="index.html">Adults Hub</a>
+      <a href="seniors.html">Seniors Hub</a>
+    </div>
+
+    <div>
+      <h4>Contact Us</h4>
+      <p>(555) 123-4567</p>
+      <p>info@harmonyhouse.org</p>
+      <p>123 Community Street, City, ST 12345</p>
+    </div>
+
+    <div>
+      <h4>Follow Us</h4>
+      <div class="socials">
+        <span>f</span>
+        <span>t</span>
+        <span>◎</span>
+      </div>
+      <button type="button" class="footer-account-btn" data-open="signinModal">My Account</button>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Harmony House. All rights reserved. | Committed to community wellbeing.
+  </div>
+</footer>
+
+<div class="modal" id="registerModal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close" type="button" data-close>&times;</button>
+    <div class="modal-icon">📝</div>
+    <h3 class="modal-title">Event Registration</h3>
+    <p class="modal-subtitle" id="registerEventName">Spring Social Luncheon</p>
+    <p class="modal-date" id="registerEventDate">Wednesday, Apr 16 at 12:00 PM</p>
+
+    <form class="modal-form" id="registerForm" novalidate>
+      <label>Full Name *
+        <input type="text" name="fullName" placeholder="Mary Johnson" required>
+      </label>
+
+      <label>Email *
+        <input type="email" name="email" placeholder="mary.johnson@example.com" required>
+      </label>
+
+      <label>Phone *
+        <input type="tel" name="phone" placeholder="(555) 123-4567" required>
+      </label>
+
+      <label>Emergency Contact *
+        <input type="text" name="emergencyContact" placeholder="Contact name &amp; phone" required>
+      </label>
+
+      <label>Medical Information (Optional)
+        <textarea name="medicalInfo" placeholder="Any medical conditions or accommodations?"></textarea>
+      </label>
+
+      <button type="submit" class="btn primary full">Complete Registration</button>
+    </form>
+
+    <div class="tiny-note">Have an account? <a href="#" data-switch="signinModal">Sign in</a> to auto-fill your information</div>
+  </div>
+</div>
+
+<div class="modal" id="signinModal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close" type="button" data-close>&times;</button>
+    <div class="modal-icon">❤️</div>
+    <h3 class="modal-title">Welcome Back</h3>
+    <p class="modal-subtitle">Sign in to your Seniors Hub account</p>
+
+    <div class="auth-toggle">
+      <button type="button" class="toggle-btn active">Sign In</button>
+      <button type="button" class="toggle-btn" data-switch="signupModal">Sign Up</button>
+    </div>
+
+    <form class="modal-form" id="signinForm" novalidate>
+      <label>Email *
+        <input type="email" name="email" placeholder="mary.johnson@example.com" required>
+      </label>
+
+      <label>Password *
+        <input type="password" name="password" placeholder="••••••••" required minlength="8">
+      </label>
+
+      <button type="submit" class="btn primary full">Sign In</button>
+    </form>
+
+    <div class="tiny-note">Want access to all age groups? <a href="index.html">Sign up on main site</a></div>
+  </div>
+</div>
+
+<div class="modal" id="signupModal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close" type="button" data-close>&times;</button>
+    <div class="modal-icon">❤️</div>
+    <h3 class="modal-title">Create Account</h3>
+    <p class="modal-subtitle">Join the Seniors Hub community</p>
+
+    <div class="auth-toggle">
+      <button type="button" class="toggle-btn" data-switch="signinModal">Sign In</button>
+      <button type="button" class="toggle-btn active">Sign Up</button>
+    </div>
+
+    <form class="modal-form" id="signupForm" novalidate>
+      <label>First Name *
+        <input type="text" name="firstName" placeholder="Mary" required>
+      </label>
+
+      <label>Last Name *
+        <input type="text" name="lastName" placeholder="Johnson" required>
+      </label>
+
+      <label>Email *
+        <input type="email" name="email" placeholder="mary.johnson@example.com" required>
+      </label>
+
+      <label>Password *
+        <input type="password" name="password" placeholder="••••••••" required minlength="8">
+      </label>
+
+      <button type="submit" class="btn primary full">Create Account</button>
+    </form>
+
+    <div class="tiny-note">Want access to all age groups? <a href="index.html">Sign up on main site</a></div>
+  </div>
+</div>
+
+<script src="js/seniors.js"></script>
+</body>
+</html>

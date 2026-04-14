@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harmony House | Home</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="menu-overlay" id="menuOverlay"></div>
@@ -12,12 +12,8 @@
   <header class="site-header" id="siteHeader">
     <div class="container nav-wrap">
       <a class="brand" href="index.html" aria-label="Harmony House home page">
-        <span class="brand-logo" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 21s-6.716-4.283-9.192-8.26C.963 9.76 2.15 5.85 5.79 4.504c2.075-.769 4.086-.09 5.21 1.46 1.124-1.55 3.135-2.229 5.21-1.46 3.64 1.347 4.826 5.256 2.982 8.236C18.716 16.717 12 21 12 21z"/>
-          </svg>
-        </span>
-        <span>Harmony House</span>
+        <img src="images/logo.png" alt="Harmony House Logo" class="nav-logo-img">
+        <span class="brand-text">Harmony House</span>
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
@@ -79,22 +75,90 @@
           <p class="typing-text" id="typingText" aria-live="polite"></p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="services.html">Find a Service →</a>
-            <a class="btn btn-secondary" href="events.html">Upcoming Events ☐</a>
+            <a class="btn btn-secondary" href="events.html">Upcoming Events 📆</a>
           </div>
         </div>
 
         <div class="hero-media reveal">
           <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80" alt="A diverse group of community members smiling together" />
+            <img src="images/imageHeroSection.jpg" alt="A diverse group of community members smiling together"/>
           </div>
           <div class="satisfaction-badge">
-            <div class="satisfaction-icon">◎</div>
+            <div class="satisfaction-icon">
+              <img src="images/logoC.png" alt="Harmony House logo">
+            </div>
             <div>
               <strong id="satisfactionCounter">98%</strong>
               <span>Member Satisfaction</span>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="programs-section section-light">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Find Your Perfect Program</h2>
+          <p>Explore our age-specific hubs with programs tailored to every stage of life.</p>
+        </div>
+
+        <div class="programs-grid">
+          <article class="program-card kids-card reveal">
+            <a href="kids.html" aria-label="Explore Kids Hub">
+              <div class="program-card-icon-wrap">
+                <span class="program-card-icon">☺</span>
+                <span class="program-card-corner">🎨</span>
+              </div>
+              <h3>Kids Hub 🌈</h3>
+              <p>Super fun activities for children under 12! Art, games, and adventures!</p>
+              <span class="program-link">Explore Fun Programs →</span>
+            </a>
+          </article>
+
+          <article class="program-card teens-card reveal">
+            <a href="teens.html" aria-label="Explore Teen Hub">
+              <div class="program-card-icon-wrap">
+                <span class="program-card-icon">⚡</span>
+                <span class="program-card-corner">⚡</span>
+              </div>
+              <h3>Teen Hub ⚡</h3>
+              <p>Creative spaces and support for ages 13–25. Express yourself!</p>
+              <span class="program-link">Explore Programs →</span>
+            </a>
+          </article>
+
+          <article class="program-card adults-card reveal">
+            <a href="adults.html" aria-label="Explore Adults Hub">
+              <div class="program-card-icon-wrap">
+                <span class="program-card-icon">▣</span>
+                <span class="program-card-corner">💼</span>
+              </div>
+              <h3>Adults Hub</h3>
+              <p>Career development and wellness for working adults ages 25–64.</p>
+              <span class="program-link">Explore Programs →</span>
+            </a>
+          </article>
+
+          <article class="program-card seniors-card reveal">
+            <a href="seniors.html" aria-label="Explore Seniors Hub">
+              <div class="program-card-icon-wrap">
+                <span class="program-card-icon">♡</span>
+                <span class="program-card-corner">❤️</span>
+              </div>
+              <h3>Seniors Hub</h3>
+              <p>Active living and social connection for seniors ages 65+.</p>
+              <span class="program-link">Explore Programs →</span>
+            </a>
+          </article>
+        </div>
+
+        <p class="programs-helper reveal">
+          Can't decide?
+          <a href="services.html">Browse all programs here</a>
+          or
+          <a href="contact.html">contact us for guidance</a>
+        </p>
       </div>
     </section>
 
@@ -156,7 +220,7 @@
           </article>
 
           <article class="card reveal">
-            <a href="services.html?service=community-connection" aria-label="View community connection service">
+            <a href="services.html?service=youth-support" aria-label="View community connection service">
               <div class="card-media">
                 <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80" alt="Community members connecting together" />
                 <span class="icon-chip icon-teal">◌</span>
@@ -310,6 +374,6 @@
       <div class="footer-bottom">© 2026 Harmony House. All rights reserved. | Committed to community wellbeing.</div>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

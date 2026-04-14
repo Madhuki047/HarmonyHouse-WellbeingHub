@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harmony House | Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Harmony House home page">
+        <img src="images/logo.png" alt="Harmony House Logo" class="nav-logo-img">
+        <span class="brand-text">Harmony House</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="events.html">Events</a>
+        <a href="booking.html">Book Event</a>
+        <a href="news.html">News</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="account.html" class="account-link">My Account</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-links" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="events.html">Events</a>
+      <a href="booking.html">Book Event</a>
+      <a href="news.html">News</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="account.html" class="account-link">My Account</a>
+    </nav>
+
+    <div class="mobile-meta">
+      <div>
+        <h4>Contact Us</h4>
+        <p><a href="tel:+445551234567">(555) 123-4567</a></p>
+        <p><a href="mailto:info@harmonyhouse.org">info@harmonyhouse.org</a></p>
+        <p><a href="https://maps.google.com/?q=123%20Community%20Street%20City%20ST%2012345" target="_blank" rel="noopener">123 Community Street, City, ST 12345</a></p>
+      </div>
+
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="contact-page">
+    <section class="contact-hero">
+      <div class="container contact-hero-inner reveal">
+        <h1>Contact &amp; Support</h1>
+        <p>
+          We’re here to help! Reach out with questions, feedback, or to learn more about our services.
+          Our team is ready to support you.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-info-section">
+      <div class="container">
+        <div class="contact-info-grid reveal">
+          <article class="contact-info-card contact-peach">
+            <div class="contact-info-icon">☎</div>
+            <h3>Phone</h3>
+            <p>Main: <a href="tel:+445551234567">(555) 123-4567</a></p>
+            <p>Crisis Line: <a href="tel:+445559990000">(555) 999-0000</a></p>
+          </article>
+
+          <article class="contact-info-card contact-pink">
+            <div class="contact-info-icon">✉</div>
+            <h3>Email</h3>
+            <p><a href="mailto:info@harmonyhouse.org">info@harmonyhouse.org</a></p>
+            <p><a href="mailto:support@harmonyhouse.org">support@harmonyhouse.org</a></p>
+          </article>
+
+          <article class="contact-info-card contact-teal">
+            <div class="contact-info-icon">⌖</div>
+            <h3>Address</h3>
+            <p>123 Community Street</p>
+            <p>City, ST 12345</p>
+          </article>
+
+          <article class="contact-info-card contact-peach">
+            <div class="contact-info-icon">◔</div>
+            <h3>Hours</h3>
+            <p>Mon–Sat: 8:00 AM – 8:00 PM</p>
+            <p>Sunday: 9:00 AM - 3:00 PM</p>
+          </article>
+        </div>
+
+        <div class="contact-main-grid">
+          <div class="contact-left-column">
+            <div id="contactFormWrap" class="contact-card reveal">
+              <h2>◫ Send us a Message</h2>
+
+              <form id="contactForm" class="contact-form" novalidate>
+                <div>
+                  <label class="form-label" for="contactName">Name *</label>
+                  <input id="contactName" name="contactName" class="form-input" type="text" placeholder="Your full name" required />
+                </div>
+
+                <div>
+                  <label class="form-label" for="contactEmail">Email *</label>
+                  <input id="contactEmail" name="contactEmail" class="form-input" type="email" placeholder="your.email@example.com" required />
+                </div>
+
+                <div>
+                  <label class="form-label" for="contactPhone">Phone</label>
+                  <input id="contactPhone" name="contactPhone" class="form-input" type="tel" placeholder="(555) 123-4567" />
+                </div>
+
+                <div>
+                  <label class="form-label" for="contactTopic">What are you contacting us about? *</label>
+                  <select id="contactTopic" name="contactTopic" class="form-input" required>
+                    <option value="">Select a topic</option>
+                    <option value="general-enquiry">General enquiry</option>
+                    <option value="support-services">Support / services</option>
+                    <option value="event-question">Event question</option>
+                    <option value="submit-my-story">Submit my story</option>
+                    <option value="partnership-collaboration">Partnership / collaboration</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="donation-question">Donation question</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="form-label" for="contactSubject">Subject *</label>
+                  <input id="contactSubject" name="contactSubject" class="form-input" type="text" />
+                </div>
+
+                <div>
+                  <label class="form-label" for="contactMessage">Message *</label>
+                  <textarea id="contactMessage" name="contactMessage" class="form-input form-textarea" placeholder="Tell us how we can help..." required></textarea>
+                </div>
+
+                <p id="contactFormError" class="form-error-message" hidden>Please complete all required fields.</p>
+
+                <button class="submit-btn submit-btn-pink" type="submit">⌲ Send Message</button>
+              </form>
+            </div>
+
+            <div id="contactSuccessWrap" class="contact-success-card reveal" hidden>
+              <div class="contact-success-icon">✈</div>
+              <h3>Message Sent!</h3>
+              <p>We’ll get back to you within 24 hours.</p>
+            </div>
+          </div>
+
+          <div class="contact-right-column">
+            <div class="contact-map-card reveal">
+              <div class="contact-map-icon">⌖</div>
+              <p>123 Community Street</p>
+              <p>City, ST 12345</p>
+              <a
+                href="https://maps.google.com/?q=123%20Community%20Street%20City%20ST%2012345"
+                target="_blank"
+                rel="noopener"
+                class="contact-mini-btn"
+              >
+                Get Directions
+              </a>
+            </div>
+
+            <div class="contact-support-card reveal">
+              <h3>Immediate Support</h3>
+              <p>If you're experiencing a crisis, please reach out immediately:</p>
+
+              <div class="support-alert-box">
+                <span>24/7 Crisis Hotline</span>
+                <a href="tel:+445559990000">(555) 999-0000</a>
+              </div>
+
+              <div class="support-call-box">
+                <span>Emergency Services</span>
+                <a href="tel:911">Call 911</a>
+              </div>
+            </div>
+
+            <div class="contact-faq-card reveal">
+              <h3>Have Questions?</h3>
+              <p>Check out our frequently asked questions or visit us in person during open hours.</p>
+              <button id="viewFaqBtn" class="contact-outline-btn" type="button">View FAQ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit-section">
+      <div class="container reveal">
+        <h2>Visit Us in Person</h2>
+        <p>
+          Stop by during our open hours. No appointment necessary for general inquiries and information about our services.
+        </p>
+        <div class="visit-meta">
+          <span>◔ Monday-Saturday: 8am–8pm</span>
+          <span>⌖ 123 Community Street</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="donation-hero">
+      <div class="container reveal">
+        <h2>Make a Donation</h2>
+        <p>
+          Your support is crucial in helping us continue our mission. Every donation makes a difference.
+        </p>
+      </div>
+    </section>
+
+    <section class="donation-section">
+      <div class="container">
+        <div class="donation-main-grid">
+          <div class="donation-left-column">
+            <div id="donationFormWrap" class="contact-card reveal">
+              <h2>♡ Donate to Harmony House</h2>
+
+              <form id="donationForm" class="contact-form" novalidate>
+                <div>
+                  <label class="form-label" for="donationName">Name *</label>
+                  <input id="donationName" name="donationName" class="form-input" type="text" placeholder="Your full name" required />
+                </div>
+
+                <div>
+                  <label class="form-label" for="donationEmail">Email *</label>
+                  <input id="donationEmail" name="donationEmail" class="form-input" type="email" placeholder="your.email@example.com" required />
+                </div>
+
+                <div>
+                  <label class="form-label" for="donationPhone">Phone</label>
+                  <input id="donationPhone" name="donationPhone" class="form-input" type="tel" placeholder="(555) 123-4567" />
+                </div>
+
+                <div>
+                  <label class="form-label" for="donationAmount">Donation Amount *</label>
+                  <input id="donationAmount" name="donationAmount" class="form-input" type="number" min="1" placeholder="Enter amount" required />
+                </div>
+
+                <div>
+                  <label class="form-label" for="donationPurpose">Purpose of Donation *</label>
+                  <select id="donationPurpose" name="donationPurpose" class="form-input" required>
+                    <option value="">Select donation purpose</option>
+                    <option value="general-support">General support</option>
+                    <option value="mental-health-programs">Mental health programs</option>
+                    <option value="family-support-services">Family support services</option>
+                    <option value="youth-programs">Youth programs</option>
+                    <option value="senior-wellbeing">Senior wellbeing</option>
+                    <option value="community-events">Community events</option>
+                    <option value="facilities-equipment">Facilities & equipment</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="form-label" for="donationReference">Payment Reference / Transaction ID</label>
+                  <input id="donationReference" name="donationReference" class="form-input" type="text" placeholder="Optional - add after donating through our payment partner" />
+                </div>
+
+                <div>
+                  <label class="form-label" for="donationMessage">Message</label>
+                  <textarea id="donationMessage" name="donationMessage" class="form-input form-textarea" placeholder="Add a message..."></textarea>
+                </div>
+
+                <p id="donationFormError" class="form-error-message" hidden>Please complete all required fields.</p>
+
+                <button class="submit-btn submit-btn-pink" type="submit">$ Make Donation Record</button>
+              </form>
+            </div>
+
+            <div id="donationSuccessWrap" class="contact-success-card reveal" hidden>
+              <div class="contact-success-icon">✈</div>
+              <h3>Donation Record Saved!</h3>
+              <p>Thank you for sharing your donation details. You can now continue to our secure payment partner if needed.</p>
+            </div>
+          </div>
+
+          <div class="donation-right-column">
+            <div class="donation-highlight-card reveal">
+              <div class="donation-highlight-icon">♡</div>
+              <p>Support Our Mission</p>
+              <strong>Every donation counts.</strong><br>
+              <a
+                href="https://www.paypal.com/"
+                target="_blank"
+                rel="noopener"
+                class="contact-mini-btn"
+              >
+                Donate Now
+              </a>
+            </div>
+
+            <div class="donation-info-card reveal">
+              <h3>Donation Information</h3>
+              <p>Your donation will be used to support our programs and services. We are a 501(c)(3) organization.</p>
+
+              <div class="donation-info-box donation-tax-box">
+                <span>Tax Deductible</span>
+                <strong>Yes</strong>
+              </div>
+
+              <div class="donation-info-box donation-receipt-box">
+                <span>Donation Receipt</span>
+                <strong>Provided</strong>
+              </div>
+            </div>
+
+            <div class="contact-faq-card reveal">
+              <h3>Donation Questions?</h3>
+              <p>Check out our donation FAQ or contact us for more information.</p>
+              <button id="viewDonationFaqBtn" class="contact-outline-btn" type="button">View Donation FAQ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-faq-section" id="contactFaqSection">
+      <div class="container">
+        <div class="faq-group reveal" id="generalFaqGroup">
+          <div class="section-heading">
+            <h2>Frequently Asked Questions</h2>
+            <p>Quick answers to common support and contact queries.</p>
+          </div>
+
+          <div class="faq-accordion-list">
+            <article class="faq-item">
+              <button class="faq-header" type="button">
+                <span>How quickly will I receive a response?</span>
+                <span class="faq-arrow">⌄</span>
+              </button>
+              <div class="faq-content">
+                <div>
+                  <p>We aim to respond to all general enquiries within 24–48 hours during our normal working week.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-header" type="button">
+                <span>Can I visit without an appointment?</span>
+                <span class="faq-arrow">⌄</span>
+              </button>
+              <div class="faq-content">
+                <div>
+                  <p>Yes. For general enquiries and information, you can visit during our open hours without an appointment.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-header" type="button">
+                <span>Can I contact you about submitting my story?</span>
+                <span class="faq-arrow">⌄</span>
+              </button>
+              <div class="faq-content">
+                <div>
+                  <p>Yes. Select “Submit my story” from the contact form dropdown and our team will guide you through the next steps.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="faq-group reveal" id="donationFaqGroup">
+          <div class="section-heading">
+            <h2>Donation FAQ</h2>
+            <p>Helpful information about how donations work at Harmony House.</p>
+          </div>
+
+          <div class="faq-accordion-list">
+            <article class="faq-item">
+              <button class="faq-header" type="button">
+                <span>How do I make a secure payment?</span>
+                <span class="faq-arrow">⌄</span>
+              </button>
+              <div class="faq-content">
+                <div>
+                  <p>Use the “Donate Now” button to continue to our secure external payment partner. This keeps payment processing safe and verified.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-header" type="button">
+                <span>Do I need to enter a payment reference?</span>
+                <span class="faq-arrow">⌄</span>
+              </button>
+              <div class="faq-content">
+                <div>
+                  <p>No. The payment reference is optional, but it can be helpful if you want to match your donation details with an external payment confirmation.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-header" type="button">
+                <span>Will I receive a donation receipt?</span>
+                <span class="faq-arrow">⌄</span>
+              </button>
+              <div class="faq-content">
+                <div>
+                  <p>Yes. Donation receipts can be provided after your donation is completed through our secure payment partner.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="brand" href="index.html">
+            <span class="brand-logo" aria-hidden="true">❤</span>
+            <span>Harmony House</span>
+          </a>
+          <p style="margin-top: 1rem; max-width: 24ch;">
+            Supporting residents through local health, wellbeing services, and community connection.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="services.html">Services Directory</a></li>
+            <li><a href="events.html">Events Calendar</a></li>
+            <li><a href="booking.html">Book an Event</a></li>
+            <li><a href="news.html">News &amp; Stories</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Age Groups</h4>
+          <ul>
+            <li><a href="kidshub.html">Kids Hub</a></li>
+            <li><a href="teenhub.html">Teens Hub</a></li>
+            <li><a href="adulthub.html">Adults Hub</a></li>
+            <li><a href="seniorhub.html">Seniors Hub</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="contact-list">
+            <a href="tel:+445551234567">☎ (555) 123-4567</a>
+            <a href="mailto:info@harmonyhouse.org">✉ info@harmonyhouse.org</a>
+            <a href="https://maps.google.com/?q=123%20Community%20Street%20City%20ST%2012345" target="_blank" rel="noopener">⌖ 123 Community Street, City, ST 12345</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-row">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2026 Harmony House. All rights reserved. | Committed to community wellbeing.</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
