@@ -17,24 +17,24 @@
         <span class="brand-text">Harmony House</span>
       </a>
 
-      <nav class="desktop-nav">
+      <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#hero">Home</a>
         <a href="#programs">Services</a>
         <a href="#events">Events</a>
-        <a href="#" class="open-booking" data-event="General Event Registration">Book Event</a>
+        <a href="#" class="open-booking" data-event="General Event Registration" data-date="Choose from available event dates">Book Event</a>
         <a href="#">News</a>
         <a href="#">Contact</a>
-        <a href="#account">👤 Sign In</a>
+        <a href="#account">Sign In</a>
       </nav>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
     </div>
 
-    <nav class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
       <a href="#hero">Home</a>
       <a href="#programs">Services</a>
       <a href="#events">Events</a>
-      <a href="#" class="open-booking" data-event="General Event Registration">Book Event</a>
+      <a href="#" class="open-booking" data-event="General Event Registration" data-date="Choose from available event dates">Book Event</a>
       <a href="#">News</a>
       <a href="#">Contact</a>
       <a href="#account">Sign In</a>
@@ -48,7 +48,6 @@
       <div class="hero-orb orb-1"></div>
       <div class="hero-orb orb-2"></div>
       <div class="hero-orb orb-3"></div>
-      <div class="hero-orb orb-4"></div>
 
       <div class="hero-bubble bubble-1"></div>
       <div class="hero-bubble bubble-2"></div>
@@ -56,15 +55,6 @@
       <div class="hero-bubble bubble-4"></div>
       <div class="hero-bubble bubble-5"></div>
       <div class="hero-bubble bubble-6"></div>
-      <div class="hero-bubble bubble-7"></div>
-      <div class="hero-bubble bubble-8"></div>
-      <div class="hero-bubble bubble-9"></div>
-      <div class="hero-bubble bubble-10"></div>
-      <div class="hero-bubble bubble-11"></div>
-      <div class="hero-bubble bubble-12"></div>
-
-      <div class="hero-bubble bubble-13 big-bubble"></div>
-      <div class="hero-bubble bubble-14 big-bubble"></div>
 
       <div class="hero-sparkle sparkle-1">✦</div>
       <div class="hero-sparkle sparkle-2">✧</div>
@@ -74,69 +64,51 @@
       <div class="hero-sparkle sparkle-6">✧</div>
       <div class="hero-sparkle sparkle-7">✦</div>
       <div class="hero-sparkle sparkle-8">✧</div>
-      <div class="hero-sparkle sparkle-9">✦</div>
-      <div class="hero-sparkle sparkle-10">✧</div>
-      <div class="hero-sparkle sparkle-11">✦</div>
-      <div class="hero-sparkle sparkle-12">✧</div>
-      <div class="hero-sparkle sparkle-13">✦</div>
-      <div class="hero-sparkle sparkle-14">✧</div>
-      <div class="hero-sparkle sparkle-15">✦</div>
-      <div class="hero-sparkle sparkle-16">✧</div>
-      <div class="hero-sparkle sparkle-17">✦</div>
-      <div class="hero-sparkle sparkle-18">✧</div>
-
-      <div class="hero-sparkle sparkle-big-1">✦</div>
-      <div class="hero-sparkle sparkle-big-2">✧</div>
-      <div class="hero-sparkle sparkle-big-3">✦</div>
-
-      <div class="hero-spin-star spin-star-1">✦</div>
-      <div class="hero-spin-star spin-star-2">✧</div>
-      <div class="hero-spin-star spin-star-3">✦</div>
-
-      <div class="shooting-star shooting-star-1"></div>
-      <div class="shooting-star shooting-star-2"></div>
-
-      <div class="hero-bubble bubble-13 big-bubble"></div>
-      <div class="hero-bubble bubble-14 big-bubble"></div>
-      <div class="hero-bubble bubble-15 big-bubble"></div>
-
-      <div class="hero-star-dot star-dot-1"></div>
-      <div class="hero-star-dot star-dot-2"></div>
-      <div class="hero-star-dot star-dot-3"></div>
-      <div class="hero-star-dot star-dot-4"></div>
-      <div class="hero-star-dot star-dot-5"></div>
-      <div class="hero-star-dot star-dot-6"></div>
-      <div class="hero-star-dot star-dot-7"></div>
-      <div class="hero-star-dot star-dot-8"></div>
-      <div class="hero-star-dot star-dot-9"></div>
-      <div class="hero-star-dot star-dot-10"></div>
-      <div class="hero-star-dot star-dot-11"></div>
-      <div class="hero-star-dot star-dot-12"></div>
-      <div class="hero-star-dot star-dot-13"></div>
-      <div class="hero-star-dot star-dot-14"></div>
-      <div class="hero-star-dot star-dot-15"></div>
-      <div class="hero-star-dot star-dot-16"></div>
-      <div class="hero-star-dot star-dot-17"></div>
-      <div class="hero-star-dot star-dot-18"></div>
-
-      <div class="hero-top-stars">
-        <div class="top-star star-main">✦</div>
-        <div class="top-star star-secondary">✧</div>
-        <div class="top-star star-small">✦</div>
-      </div>
 
       <div class="hero-fun-icon fun-icon-1">🎨</div>
-      <div class="hero-fun-icon fun-icon-2">⚽</div>
+      <div class="hero-fun-icon fun-icon-2">🎈</div>
       <div class="hero-fun-icon fun-icon-3">🧸</div>
-      <div class="hero-fun-icon fun-icon-4">🪁</div>
-      <div class="hero-fun-icon fun-icon-5">🎈</div>
-      <div class="hero-fun-icon fun-icon-6">🧩</div>
+
+      <div class="hero-characters" aria-hidden="true">
+        <div class="hero-fairy">
+          <img src="images/kids/fairy.png" alt="">
+          <span class="fairy-dust dust-1">✦</span>
+          <span class="fairy-dust dust-2">✧</span>
+          <span class="fairy-dust dust-3">✦</span>
+          <span class="fairy-dust dust-4">✧</span>
+          <span class="fairy-dust dust-5">✦</span>
+
+          <span class="fairy-burst burst-1">✦</span>
+          <span class="fairy-burst burst-2">✧</span>
+          <span class="fairy-burst burst-3">✦</span>
+          <span class="fairy-burst burst-4">✧</span>
+          <span class="fairy-burst burst-5">✦</span>
+          <span class="fairy-burst burst-6">✧</span>
+        </div>
+
+        <div class="hero-car">
+          <img src="images/kids/car.png" alt="">
+          <span class="car-bubble car-bubble-1"></span>
+          <span class="car-bubble car-bubble-2"></span>
+          <span class="car-bubble car-bubble-3"></span>
+          <span class="car-bubble car-bubble-4"></span>
+          <span class="car-bubble car-bubble-5"></span>
+        </div>
+      </div>
 
       <div class="container hero-inner">
         <h1>Kids Hub! 🌈</h1>
 
+        <div class="title-glitter" aria-hidden="true">
+          <span>✦</span>
+          <span>✧</span>
+          <span>✦</span>
+          <span>✧</span>
+          <span>✦</span>
+        </div>
+
         <p class="hero-subtitle">
-          Super Fun Activities &amp; Amazing<br />
+          Super Fun Activities &amp; Amazing<br>
           Adventures! ✨
         </p>
 
@@ -154,29 +126,28 @@
     <section id="welcome" class="welcome-section">
       <div class="container">
         <div class="section-title">
-          <div class="title-top balloon-main">🎈</div>
+          <div class="title-top">🎈</div>
           <h2>Welcome Friends! 👋</h2>
           <p>
             A super cool place just for kids where you can play, create,
             learn, and make lots of new friends! 🎨 🎮 📚
           </p>
-          <div class="title-side-balloon">🎈</div>
         </div>
 
         <div class="welcome-cards">
-          <article class="welcome-card yellow-card tilt-card searchable" data-title="Creative Play" data-section="welcome">
+          <article class="welcome-card yellow-card tilt-card">
             <div class="card-icon flicker-soft">🎨</div>
             <h3>Creative Play!</h3>
-            <p>Art, crafts, music, and drama - let your imagination go wild! 🌟</p>
+            <p>Art, crafts, music, and drama — let your imagination go wild! 🌟</p>
           </article>
 
-          <article class="welcome-card blue-card tilt-card searchable" data-title="Learning Fun" data-section="welcome">
+          <article class="welcome-card blue-card tilt-card">
             <div class="card-icon bounce-center">📚</div>
             <h3>Learning Fun!</h3>
             <p>Cool stories, awesome science, and fun activities that make learning super exciting! 🚀</p>
           </article>
 
-          <article class="welcome-card pink-card tilt-card searchable" data-title="Make Friends" data-section="welcome">
+          <article class="welcome-card pink-card tilt-card">
             <div class="card-icon flicker-soft">🕺</div>
             <h3>Make Friends!</h3>
             <p>Play games and have fun with other awesome kids just like you! 🎉</p>
@@ -194,7 +165,7 @@
         </div>
 
         <div class="program-grid">
-          <article class="program-card peach-dash grow-card searchable" data-title="Art & Creativity Club" data-section="programs">
+          <article class="program-card peach-dash grow-card">
             <h3>🎨 Art &amp; Creativity Club</h3>
             <p>
               Painting, drawing, sculpture, and mixed media projects.
@@ -203,7 +174,7 @@
             <span>🗓 Wednesdays, 4:00 PM - 5:30 PM</span>
           </article>
 
-          <article class="program-card blue-dash grow-card searchable" data-title="Story Time Adventures" data-section="programs">
+          <article class="program-card blue-dash grow-card">
             <h3>📚 Story Time Adventures</h3>
             <p>
               Interactive storytelling with songs, games, and activities based on beloved children’s books! 📖 ✨
@@ -211,7 +182,7 @@
             <span>🗓 Fridays, 10:00 AM - 11:00 AM</span>
           </article>
 
-          <article class="program-card pink-dash grow-card searchable" data-title="Junior Sports & Games" data-section="programs">
+          <article class="program-card pink-dash grow-card">
             <h3>⚽ Junior Sports &amp; Games</h3>
             <p>
               Fun physical activities, team games, and basic sports skills in a supportive environment! 🏃
@@ -219,7 +190,7 @@
             <span>🗓 Saturdays, 2:00 PM - 3:30 PM</span>
           </article>
 
-          <article class="program-card peach-dash grow-card searchable" data-title="Drama & Performance" data-section="programs">
+          <article class="program-card peach-dash grow-card">
             <h3>🎭 Drama &amp; Performance</h3>
             <p>
               Acting games, improvisation, and small performances to build confidence and creativity! 🌟
@@ -244,44 +215,37 @@
         </div>
 
         <div class="event-grid">
-          <article class="event-card event-peach tilt-grow-card searchable" data-title="Spring Art Workshop" data-section="events">
+          <article class="event-card event-peach tilt-grow-card">
             <div class="event-image">
               <img src="images/kids/springArt.jpeg" alt="Spring Art Workshop">
             </div>
             <div class="event-content">
               <h3>🌸 Spring Art Workshop</h3>
-              <p>
-                Create beautiful spring-themed artwork with flowers, butterflies,
-                and sunshine! 🦋 🌻
-              </p>
+              <p>Create beautiful spring-themed artwork with flowers, butterflies, and sunshine! 🦋 🌻</p>
               <span>🗓 Saturday, Apr 11 • 2:00 PM</span>
               <button class="event-btn peach-btn btn-pop open-booking" data-event="Spring Art Workshop" data-date="Saturday, Apr 11 at 2:00 PM">🎨 Register Now!</button>
             </div>
           </article>
 
-          <article class="event-card event-blue tilt-grow-card searchable" data-title="Science Fun Day" data-section="events">
+          <article class="event-card event-blue tilt-grow-card">
             <div class="event-image">
               <img src="images/kids/scienceDay.jpeg" alt="Science Fun Day">
             </div>
             <div class="event-content event-blue-bg">
               <h3>🔬 Science Fun Day</h3>
-              <p>
-                Exciting experiments, hands-on activities, and discoveries for young scientists! 🧪 ✨
-              </p>
+              <p>Exciting experiments, hands-on activities, and discoveries for young scientists! 🧪 ✨</p>
               <span>🗓 Saturday, Apr 18 • 10:00 AM</span>
               <button class="event-btn blue-btn btn-pop open-booking" data-event="Science Fun Day" data-date="Saturday, Apr 18 at 10:00 AM">🚀 Register Now!</button>
             </div>
           </article>
 
-          <article class="event-card event-pink tilt-grow-card searchable" data-title="Dance Party" data-section="events">
+          <article class="event-card event-pink tilt-grow-card">
             <div class="event-image">
               <img src="images/kids/danceParty.jpeg" alt="Dance Party">
             </div>
             <div class="event-content event-pink-bg">
               <h3>💃 Dance Party</h3>
-              <p>
-                Move, groove, and have fun! Age-appropriate music and games included! 🎵 🕺
-              </p>
+              <p>Move, groove, and have fun! Age-appropriate music and games included! 🎵 🕺</p>
               <span>🗓 Friday, Apr 24 • 4:00 PM</span>
               <button class="event-btn pink-btn btn-pop open-booking" data-event="Dance Party" data-date="Friday, Apr 24 at 4:00 PM">🎉 Register Now!</button>
             </div>
@@ -375,38 +339,43 @@
   </footer>
 
   <!-- Register Modal -->
-  <div class="modal" id="bookingModal">
+  <div class="modal" id="bookingModal" aria-hidden="true">
     <div class="modal-panel register-panel">
-      <button class="close-btn" data-close="bookingModal">×</button>
+      <button class="close-btn" data-close="bookingModal" aria-label="Close register form">×</button>
       <div class="modal-top-icon">📝</div>
       <h2>Register for Event! 🎪</h2>
       <p class="modal-subtext" id="bookingEventLabel">Selected Event</p>
       <p class="event-date-line" id="bookingEventDate">Choose from available event dates</p>
 
-      <form class="modal-form">
+      <form class="modal-form" id="bookingForm" novalidate>
         <div class="field-group">
-          <label>Child's Full Name *</label>
-          <input type="text" placeholder="Emma Smith" required />
+          <label for="childFullName">Child's Full Name *</label>
+          <input id="childFullName" name="childFullName" type="text" placeholder="Emma Smith" required>
+          <small class="error-message"></small>
         </div>
 
         <div class="field-group">
-          <label>Parent/Guardian Name *</label>
-          <input type="text" placeholder="Jane Smith" required />
+          <label for="guardianName">Parent/Guardian Name *</label>
+          <input id="guardianName" name="guardianName" type="text" placeholder="Jane Smith" required>
+          <small class="error-message"></small>
         </div>
 
         <div class="field-group">
-          <label>Parent Email *</label>
-          <input type="email" placeholder="parent@example.com" required />
+          <label for="parentEmail">Parent Email *</label>
+          <input id="parentEmail" name="parentEmail" type="email" placeholder="parent@example.com" required>
+          <small class="error-message"></small>
         </div>
 
         <div class="field-group">
-          <label>Parent Phone *</label>
-          <input type="tel" placeholder="(555) 123-4567" required />
+          <label for="parentPhone">Parent Phone *</label>
+          <input id="parentPhone" name="parentPhone" type="tel" placeholder="07123 456789" required>
+          <small class="error-message"></small>
         </div>
 
         <div class="field-group">
-          <label>Special Needs/Allergies (Optional)</label>
-          <textarea placeholder="Any allergies or special accommodations we should know about?"></textarea>
+          <label for="specialNotes">Special Needs/Allergies (Optional)</label>
+          <textarea id="specialNotes" name="specialNotes" placeholder="Any allergies or special accommodations we should know about?"></textarea>
+          <small class="error-message"></small>
         </div>
 
         <button type="submit" class="modal-submit-btn teal-submit">🎪 Complete Registration!</button>
@@ -421,9 +390,9 @@
   </div>
 
   <!-- Sign Up Modal -->
-  <div class="modal" id="signupModal">
+  <div class="modal" id="signupModal" aria-hidden="true">
     <div class="modal-panel auth-panel">
-      <button class="close-btn" data-close="signupModal">×</button>
+      <button class="close-btn" data-close="signupModal" aria-label="Close sign up form">×</button>
       <div class="modal-top-icon">🎉</div>
       <h2>Join Kids Hub!</h2>
       <p class="modal-subtext">Create a Kids Hub account (Parent info required)</p>
@@ -433,35 +402,41 @@
         <button type="button" class="modal-switch-btn active">Sign Up</button>
       </div>
 
-      <form class="modal-form">
+      <form class="modal-form" id="signupForm" novalidate>
         <div class="field-group">
-          <label>Child's First Name *</label>
-          <input type="text" placeholder="Emma" required />
+          <label for="childFirstName">Child's First Name *</label>
+          <input id="childFirstName" name="childFirstName" type="text" placeholder="Emma" required>
+          <small class="error-message"></small>
         </div>
 
         <div class="field-group">
-          <label>Child's Last Name (Optional)</label>
-          <input type="text" placeholder="Smith" />
+          <label for="childLastName">Child's Last Name (Optional)</label>
+          <input id="childLastName" name="childLastName" type="text" placeholder="Smith">
+          <small class="error-message"></small>
         </div>
 
         <div class="field-group">
-          <label>Parent/Guardian First Name *</label>
-          <input type="text" placeholder="Jane" required />
+          <label for="parentFirstName">Parent/Guardian First Name *</label>
+          <input id="parentFirstName" name="parentFirstName" type="text" placeholder="Jane" required>
+          <small class="error-message"></small>
         </div>
 
         <div class="field-group">
-          <label>Parent/Guardian Last Name *</label>
-          <input type="text" placeholder="Smith" required />
+          <label for="parentLastName">Parent/Guardian Last Name *</label>
+          <input id="parentLastName" name="parentLastName" type="text" placeholder="Smith" required>
+          <small class="error-message"></small>
         </div>
 
         <div class="field-group">
-          <label>Email *</label>
-          <input type="email" placeholder="parent@example.com" required />
+          <label for="signupEmail">Email *</label>
+          <input id="signupEmail" name="signupEmail" type="email" placeholder="parent@example.com" required>
+          <small class="error-message"></small>
         </div>
 
         <div class="field-group">
-          <label>Password *</label>
-          <input type="password" placeholder="••••••••" required />
+          <label for="signupPassword">Password *</label>
+          <input id="signupPassword" name="signupPassword" type="password" placeholder="At least 8 characters" required>
+          <small class="error-message"></small>
         </div>
 
         <button type="submit" class="modal-submit-btn">✨ Create Account</button>
@@ -475,9 +450,9 @@
   </div>
 
   <!-- Sign In Modal -->
-  <div class="modal" id="signinModal">
+  <div class="modal" id="signinModal" aria-hidden="true">
     <div class="modal-panel auth-panel">
-      <button class="close-btn" data-close="signinModal">×</button>
+      <button class="close-btn" data-close="signinModal" aria-label="Close sign in form">×</button>
       <div class="modal-top-icon">🎉</div>
       <h2>Welcome Back!</h2>
       <p class="modal-subtext">Sign in to your Kids Hub account</p>
@@ -487,15 +462,17 @@
         <button type="button" class="modal-switch-btn open-signup-switch">Sign Up</button>
       </div>
 
-      <form class="modal-form">
+      <form class="modal-form" id="signinForm" novalidate>
         <div class="field-group">
-          <label>Email *</label>
-          <input type="email" placeholder="parent@example.com" required />
+          <label for="signinEmail">Email *</label>
+          <input id="signinEmail" name="signinEmail" type="email" placeholder="parent@example.com" required>
+          <small class="error-message"></small>
         </div>
 
         <div class="field-group">
-          <label>Password *</label>
-          <input type="password" placeholder="••••••••" required />
+          <label for="signinPassword">Password *</label>
+          <input id="signinPassword" name="signinPassword" type="password" placeholder="••••••••" required>
+          <small class="error-message"></small>
         </div>
 
         <button type="submit" class="modal-submit-btn">🔐 Sign In</button>
@@ -503,7 +480,7 @@
 
       <p class="modal-bottom-link">
         Want access to all age groups?
-        <a href="index.html#signup">Sign up on main site</a>
+        <a href="account.html">Sign up on main site</a>
       </p>
     </div>
   </div>
