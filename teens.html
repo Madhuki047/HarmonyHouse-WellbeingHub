@@ -11,9 +11,9 @@
     <header class="topbar">
       <div class="nav-wrap">
         <a class="brand" href="index.html" aria-label="Harmony House home page">
-        <img src="images/logo.png" alt="Harmony House Logo" class="nav-logo-img">
-        <span class="brand-text">Harmony House</span>
-      </a>
+          <img src="images/logo.png" alt="Harmony House Logo" class="nav-logo-img" />
+          <span class="brand-text">Harmony House</span>
+        </a>
 
         <nav class="nav">
           <a href="#hero">Home</a>
@@ -24,7 +24,32 @@
           <a href="#account">👤 Sign In</a>
         </nav>
 
-        <button class="menu-btn" id="menuBtn">☰</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
+      </div>
+
+      <div class="search-bar-wrap">
+        <form class="site-search" id="siteSearchForm" novalidate>
+          <label for="siteSearchInput" class="sr-only">Search this website</label>
+          <input
+            type="search"
+            id="siteSearchInput"
+            name="siteSearchInput"
+            placeholder="Search events, services, contact info..."
+            aria-label="Search this website"
+          />
+          <button type="submit" class="search-btn">Search</button>
+        </form>
+      </div>
+
+      <div class="search-results" id="searchResults" aria-live="polite" hidden>
+        <div class="search-results-inner">
+          <h3>Search Results</h3>
+          <ul id="searchResultsList"></ul>
+          <p class="search-helper">
+            If you can’t find what you are looking for here, check the
+            <a href="index.html">main site</a>.
+          </p>
+        </div>
       </div>
 
       <div class="mobile-nav" id="mobileNav">
@@ -33,11 +58,11 @@
         <a href="#events">Events</a>
         <a href="#events">Book Event</a>
         <a href="#contact">Contact</a>
-        <button data-open="signinModal">My Account</button>
+        <button type="button" data-open="signinModal">My Account</button>
       </div>
     </header>
 
-    <main>
+    <main id="mainContent">
       <section id="hero" class="hero">
         <div class="glow glow-1"></div>
         <div class="glow glow-2"></div>
@@ -57,26 +82,26 @@
         </div>
       </section>
 
-      <section class="section section-dark" id="about">
+      <section class="section section-dark searchable-section" id="about">
         <div class="section-head">
           <h2 class="gradient-title small">What We're About 💫</h2>
           <p>A safe, creative space for teens and young adults (13-25) to connect, express, and thrive.</p>
         </div>
 
         <div class="info-grid three">
-          <article class="glass-card pink-card hover-glow">
+          <article class="glass-card pink-card hover-glow searchable-item">
             <div class="card-emoji">🎨</div>
             <h3>Creative Expression</h3>
             <p>Art, music, dance, digital media - express yourself your way.</p>
           </article>
 
-          <article class="glass-card cyan-card hover-glow">
+          <article class="glass-card cyan-card hover-glow searchable-item">
             <div class="card-emoji">💬</div>
             <h3>Mental Health Support</h3>
             <p>Confidential counselling, peer support, and wellness resources.</p>
           </article>
 
-          <article class="glass-card pink-card hover-glow">
+          <article class="glass-card pink-card hover-glow searchable-item">
             <div class="card-emoji">🤝</div>
             <h3>Real Connections</h3>
             <p>Meet people who get it. Build genuine friendships.</p>
@@ -84,31 +109,31 @@
         </div>
       </section>
 
-      <section class="section section-dark">
+      <section class="section section-dark searchable-section" id="programs">
         <div class="section-head">
           <h2 class="gradient-title small">Programs &amp; Activities 🚀</h2>
         </div>
 
         <div class="program-grid two">
-          <article class="glass-card pink-card hover-glow">
+          <article class="glass-card pink-card hover-glow searchable-item">
             <h3>🎵 Music &amp; Production Studio</h3>
             <p>Professional recording equipment, music lessons, and open studio sessions. Create your sound.</p>
             <span class="meta">Tuesdays &amp; Thursdays, 4:00 PM - 7:00 PM</span>
           </article>
 
-          <article class="glass-card cyan-card hover-glow">
+          <article class="glass-card cyan-card hover-glow searchable-item">
             <h3>🎮 Gaming &amp; E-Sports</h3>
             <p>Tournament play, casual gaming nights, and game development workshops. Level up your skills.</p>
             <span class="meta">Wednesdays &amp; Saturdays, 5:00 PM - 9:00 PM</span>
           </article>
 
-          <article class="glass-card pink-card hover-glow">
+          <article class="glass-card pink-card hover-glow searchable-item">
             <h3>💻 Digital Arts &amp; Coding</h3>
             <p>Learn graphic design, animation, web development, and app creation. Build your digital future.</p>
             <span class="meta">Mondays, 4:00 PM - 6:00 PM</span>
           </article>
 
-          <article class="glass-card cyan-card hover-glow">
+          <article class="glass-card cyan-card hover-glow searchable-item">
             <h3>🧘 Mindfulness &amp; Wellness</h3>
             <p>Yoga, meditation, stress management, and mental health support groups in a judgment-free zone.</p>
             <span class="meta">Fridays, 3:00 PM - 5:00 PM</span>
@@ -120,45 +145,69 @@
         </div>
       </section>
 
-      <section class="section section-dark" id="events">
+      <section class="section section-dark searchable-section" id="events">
         <div class="section-head">
           <h2 class="gradient-title small">Upcoming Events 🔥</h2>
         </div>
 
         <div class="event-grid three">
-          <article class="event-card pink-card hover-glow">
+          <article class="event-card pink-card hover-glow searchable-item">
             <div class="event-image">
-              <img src="springArt.jpeg" alt="Beat Making Workshop">
+              <img src="springArt.jpeg" alt="Beat Making Workshop" />
             </div>
             <div class="event-body">
               <h3>🎵 Beat Making Workshop</h3>
               <p>Learn music production from local artists. Bring your ideas, we'll help you create.</p>
               <span class="meta">Saturday, Apr 12 • 2:00 PM</span>
-              <button class="btn btn-primary event-btn" data-open="registerModal" data-event="Beat Making Workshop" data-date="Saturday, Apr 12 at 2:00 PM">Register Now ⚡</button>
+              <button
+                type="button"
+                class="btn btn-primary event-btn"
+                data-open="registerModal"
+                data-event="Beat Making Workshop"
+                data-date="Saturday, Apr 12 at 2:00 PM"
+              >
+                Register Now ⚡
+              </button>
             </div>
           </article>
 
-          <article class="event-card cyan-card hover-glow">
+          <article class="event-card cyan-card hover-glow searchable-item">
             <div class="event-image">
-              <img src="scienceDay.jpeg" alt="Gaming Tournament">
+              <img src="scienceDay.jpeg" alt="Gaming Tournament" />
             </div>
             <div class="event-body">
               <h3>🎮 Gaming Tournament</h3>
               <p>Compete in our monthly e-sports tournament. Prizes, snacks, and bragging rights!</p>
               <span class="meta">Friday, Apr 18 • 6:00 PM</span>
-              <button class="btn btn-primary event-btn" data-open="registerModal" data-event="Gaming Tournament" data-date="Friday, Apr 18 at 6:00 PM">Register Now ⚡</button>
+              <button
+                type="button"
+                class="btn btn-primary event-btn"
+                data-open="registerModal"
+                data-event="Gaming Tournament"
+                data-date="Friday, Apr 18 at 6:00 PM"
+              >
+                Register Now ⚡
+              </button>
             </div>
           </article>
 
-          <article class="event-card pink-card hover-glow">
+          <article class="event-card pink-card hover-glow searchable-item">
             <div class="event-image">
-              <img src="danceParty.jpeg" alt="Open Mic Night">
+              <img src="danceParty.jpeg" alt="Open Mic Night" />
             </div>
             <div class="event-body">
               <h3>🎤 Open Mic Night</h3>
               <p>Showcase your talent! Music, poetry, comedy - all welcome. Supportive vibes only.</p>
               <span class="meta">Thursday, Apr 24 • 7:00 PM</span>
-              <button class="btn btn-primary event-btn" data-open="registerModal" data-event="Open Mic Night" data-date="Thursday, Apr 24 at 7:00 PM">Register Now ⚡</button>
+              <button
+                type="button"
+                class="btn btn-primary event-btn"
+                data-open="registerModal"
+                data-event="Open Mic Night"
+                data-date="Thursday, Apr 24 at 7:00 PM"
+              >
+                Register Now ⚡
+              </button>
             </div>
           </article>
         </div>
@@ -168,26 +217,26 @@
         </div>
       </section>
 
-      <section class="section section-purple" id="contact">
+      <section class="section section-purple searchable-section" id="contact">
         <div class="section-head">
           <h2 class="gradient-title small">Get in Touch 📱</h2>
           <p>Questions? Ideas? We're here to listen.</p>
         </div>
 
         <div class="contact-grid three small-cards">
-          <article class="glass-card pink-card hover-glow compact">
+          <article class="glass-card pink-card hover-glow compact searchable-item">
             <div class="mini-label">📞</div>
             <span class="contact-title">Call/Text</span>
             <strong>(555) 123-4567</strong>
           </article>
 
-          <article class="glass-card cyan-card hover-glow compact">
+          <article class="glass-card cyan-card hover-glow compact searchable-item">
             <div class="mini-label">✉️</div>
             <span class="contact-title">Email</span>
             <strong>teens@harmonyhouse.org</strong>
           </article>
 
-          <article class="glass-card pink-card hover-glow compact">
+          <article class="glass-card pink-card hover-glow compact searchable-item">
             <div class="mini-label">📍</div>
             <span class="contact-title">Location</span>
             <strong>123 Community Way</strong>
@@ -196,15 +245,53 @@
       </section>
 
       <section class="section section-black" id="account">
-        <div class="account-panel">
-          <div class="hero-icon small-float">🔐</div>
-          <h2 class="gradient-title small">Your Account</h2>
-          <p>Sign in to save your spot and track events</p>
+        <div class="account-panel dashboard-panel">
+          <div id="guestView">
+            <div class="hero-icon small-float">🔐</div>
+            <h2 class="gradient-title small">Your Account</h2>
+            <p>Sign in to save your spot and track events</p>
 
-          <div class="account-box">
-            <button class="btn btn-primary full" data-open="signinModal">Sign In ⚡</button>
-            <button class="btn btn-secondary full" data-open="signupModal">Create Account ✨</button>
-            <div class="small-note">Want all age groups? <a href="index.html">Main site</a></div>
+            <div class="account-box">
+              <button type="button" class="btn btn-primary full" data-open="signinModal">Sign In ⚡</button>
+              <button type="button" class="btn btn-secondary full" data-open="signupModal">Create Account ✨</button>
+              <div class="small-note">Want all age groups? <a href="index.html">Main site</a></div>
+            </div>
+          </div>
+
+          <div id="dashboardView" class="dashboard-view" hidden>
+            <div class="dashboard-hero">
+              <div>
+                <p class="dashboard-eyebrow">✨ Your account</p>
+                <h2 class="dashboard-title" id="dashboardWelcome">Welcome!</h2>
+                <p class="dashboard-subtitle">Your teens hub activity at a glance.</p>
+              </div>
+
+              <button type="button" class="btn btn-secondary dashboard-signout" id="signOutBtn">Sign Out</button>
+            </div>
+
+            <div class="dashboard-stats">
+              <article class="dashboard-stat-card">
+                <span class="dashboard-stat-number" id="statRegistered">0</span>
+                <span class="dashboard-stat-label">Registered Events</span>
+              </article>
+
+              <article class="dashboard-stat-card">
+                <span class="dashboard-stat-number" id="statUpcoming">0</span>
+                <span class="dashboard-stat-label">Upcoming Events</span>
+              </article>
+
+              <article class="dashboard-stat-card">
+                <span class="dashboard-stat-number" id="statAccount">1</span>
+                <span class="dashboard-stat-label">Active Account</span>
+              </article>
+            </div>
+
+            <div class="dashboard-section">
+              <h3 class="dashboard-section-title">🎟 Your Registered Events</h3>
+              <div class="dashboard-cards" id="registeredEventsList">
+                <div class="dashboard-empty">You have not registered for any events yet.</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -253,31 +340,43 @@
     </footer>
   </div>
 
+  <div class="toast-message" id="toastMessage" aria-live="polite" aria-atomic="true"></div>
+
   <!-- Register Modal -->
   <div class="modal" id="registerModal" aria-hidden="true">
     <div class="modal-card cyan-card">
-      <button class="modal-close" data-close>&times;</button>
+      <button type="button" class="modal-close" data-close aria-label="Close modal">&times;</button>
       <div class="modal-icon">📝</div>
       <h3 class="modal-title">Register for Event 🎉</h3>
       <p class="modal-subtitle" id="modalEventName">Gaming Tournament</p>
       <p class="modal-date" id="modalEventDate">Friday, Apr 18 at 6:00 PM</p>
 
-      <form class="modal-form">
-        <label>Full Name *
-          <input type="text" placeholder="Alex Chen">
-        </label>
-        <label>Email *
-          <input type="email" placeholder="you@example.com">
-        </label>
-        <label>Phone *
-          <input type="text" placeholder="(555) 123-4567">
-        </label>
-        <label>Emergency Contact *
-          <input type="text" placeholder="Parent/Guardian: (555) 987-6543">
-        </label>
-        <label>Interests (Optional)
-          <textarea placeholder="What brings you to this event?"></textarea>
-        </label>
+      <form class="modal-form" id="registerForm" novalidate>
+        <label for="registerName">Full Name *</label>
+        <input type="text" id="registerName" name="fullName" placeholder="Alex Chen" />
+        <span class="form-error" data-error-for="fullName"></span>
+
+        <label for="registerEmail">Email *</label>
+        <input type="email" id="registerEmail" name="email" placeholder="you@example.com" />
+        <span class="form-error" data-error-for="email"></span>
+
+        <label for="registerPhone">Phone *</label>
+        <input type="tel" id="registerPhone" name="phone" placeholder="(555) 123-4567" />
+        <span class="form-error" data-error-for="phone"></span>
+
+        <label for="registerEmergency">Emergency Contact *</label>
+        <input
+          type="text"
+          id="registerEmergency"
+          name="emergencyContact"
+          placeholder="Parent/Guardian: (555) 987-6543"
+        />
+        <span class="form-error" data-error-for="emergencyContact"></span>
+
+        <label for="registerInterests">Interests (Optional)</label>
+        <textarea id="registerInterests" name="interests" placeholder="What brings you to this event?"></textarea>
+        <span class="form-error" data-error-for="interests"></span>
+
         <button type="submit" class="btn btn-primary full">Complete Registration 🚀</button>
       </form>
 
@@ -288,29 +387,33 @@
   <!-- Sign Up Modal -->
   <div class="modal" id="signupModal" aria-hidden="true">
     <div class="modal-card pink-card">
-      <button class="modal-close" data-close>&times;</button>
+      <button type="button" class="modal-close" data-close aria-label="Close modal">&times;</button>
       <div class="modal-icon">⚡</div>
       <h3 class="modal-title">Join the Hub!</h3>
       <p class="modal-subtitle">Create your Teens Hub account</p>
 
       <div class="auth-toggle">
-        <button class="toggle-btn" data-switch="signinModal">Sign In</button>
-        <button class="toggle-btn active">Sign Up</button>
+        <button type="button" class="toggle-btn" data-switch="signinModal">Sign In</button>
+        <button type="button" class="toggle-btn active">Sign Up</button>
       </div>
 
-      <form class="modal-form">
-        <label>First Name *
-          <input type="text" placeholder="Alex">
-        </label>
-        <label>Last Name *
-          <input type="text" placeholder="Chen">
-        </label>
-        <label>Email *
-          <input type="email" placeholder="you@example.com">
-        </label>
-        <label>Password *
-          <input type="password" placeholder="••••••••">
-        </label>
+      <form class="modal-form" id="signupForm" novalidate>
+        <label for="signupFirstName">First Name *</label>
+        <input type="text" id="signupFirstName" name="firstName" placeholder="Alex" />
+        <span class="form-error" data-error-for="firstName"></span>
+
+        <label for="signupLastName">Last Name *</label>
+        <input type="text" id="signupLastName" name="lastName" placeholder="Chen" />
+        <span class="form-error" data-error-for="lastName"></span>
+
+        <label for="signupEmail">Email *</label>
+        <input type="email" id="signupEmail" name="email" placeholder="you@example.com" />
+        <span class="form-error" data-error-for="email"></span>
+
+        <label for="signupPassword">Password *</label>
+        <input type="password" id="signupPassword" name="password" placeholder="••••••••" />
+        <span class="form-error" data-error-for="password"></span>
+
         <button type="submit" class="btn btn-primary full">Create Account ✨</button>
       </form>
 
@@ -321,23 +424,25 @@
   <!-- Sign In Modal -->
   <div class="modal" id="signinModal" aria-hidden="true">
     <div class="modal-card pink-card">
-      <button class="modal-close" data-close>&times;</button>
+      <button type="button" class="modal-close" data-close aria-label="Close modal">&times;</button>
       <div class="modal-icon">⚡</div>
       <h3 class="modal-title">Welcome Back!</h3>
       <p class="modal-subtitle">Sign in to your Teens Hub account</p>
 
       <div class="auth-toggle">
-        <button class="toggle-btn active">Sign In</button>
-        <button class="toggle-btn" data-switch="signupModal">Sign Up</button>
+        <button type="button" class="toggle-btn active">Sign In</button>
+        <button type="button" class="toggle-btn" data-switch="signupModal">Sign Up</button>
       </div>
 
-      <form class="modal-form">
-        <label>Email *
-          <input type="email" placeholder="you@example.com">
-        </label>
-        <label>Password *
-          <input type="password" placeholder="••••••••">
-        </label>
+      <form class="modal-form" id="signinForm" novalidate>
+        <label for="signinEmail">Email *</label>
+        <input type="email" id="signinEmail" name="email" placeholder="you@example.com" />
+        <span class="form-error" data-error-for="email"></span>
+
+        <label for="signinPassword">Password *</label>
+        <input type="password" id="signinPassword" name="password" placeholder="••••••••" />
+        <span class="form-error" data-error-for="password"></span>
+
         <button type="submit" class="btn btn-primary full">Sign In ⚡</button>
       </form>
 

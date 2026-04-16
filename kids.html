@@ -24,7 +24,8 @@
         <a href="#" class="open-booking" data-event="General Event Registration" data-date="Choose from available event dates">Book Event</a>
         <a href="#">News</a>
         <a href="#">Contact</a>
-        <a href="#account">Sign In</a>
+        <button type="button" class="open-signin">Sign In</button>
+        <button type="button" class="search-btn-nav" id="openSearchBtn" aria-label="Open search">🔎</button>
       </nav>
 
       <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
@@ -37,12 +38,38 @@
       <a href="#" class="open-booking" data-event="General Event Registration" data-date="Choose from available event dates">Book Event</a>
       <a href="#">News</a>
       <a href="#">Contact</a>
-      <a href="#account">Sign In</a>
+      <button type="button" class="open-signin">Sign In</button>
+      <button type="button" class="search-btn-nav" id="openSearchBtnMobile">🔎 Search</button>
     </nav>
+
+    <div class="search-panel" id="searchPanel" aria-hidden="true">
+      <div class="search-panel-box">
+        <div class="search-panel-top">
+          <form class="site-search-form" id="siteSearchForm" novalidate>
+            <label class="sr-only" for="siteSearchInput">Search this site</label>
+            <input
+              id="siteSearchInput"
+              type="search"
+              placeholder="Search programs, events, accounts, and more..."
+              aria-label="Search this site"
+            >
+            <button type="submit" class="site-search-submit">Search</button>
+          </form>
+
+          <button type="button" class="search-close-btn" id="closeSearchBtn" aria-label="Close search">×</button>
+        </div>
+
+        <div class="search-results" id="searchResults" aria-live="polite">
+          <p class="search-placeholder">
+            Try searching for things like <strong>art</strong>, <strong>science</strong>, <strong>story time</strong>, or <strong>account</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section id="hero" class="hero">
+    <section id="hero" class="hero" data-search-item data-search-title="Home" data-search-text="Kids Hub home welcome super fun activities amazing adventures main website harmony house">
       <div class="hero-bg"></div>
 
       <div class="hero-orb orb-1"></div>
@@ -70,7 +97,7 @@
       <div class="hero-fun-icon fun-icon-3">🧸</div>
 
       <div class="hero-characters" aria-hidden="true">
-        <div class="hero-fairy">
+        <div class="hero-fairy" id="heroFairy">
           <img src="images/kids/fairy.png" alt="">
           <span class="fairy-dust dust-1">✦</span>
           <span class="fairy-dust dust-2">✧</span>
@@ -86,7 +113,7 @@
           <span class="fairy-burst burst-6">✧</span>
         </div>
 
-        <div class="hero-car">
+        <div class="hero-car" id="heroCar">
           <img src="images/kids/car.png" alt="">
           <span class="car-bubble car-bubble-1"></span>
           <span class="car-bubble car-bubble-2"></span>
@@ -123,7 +150,7 @@
       </div>
     </section>
 
-    <section id="welcome" class="welcome-section">
+    <section id="welcome" class="welcome-section" data-search-item data-search-title="Welcome Friends" data-search-text="Welcome friends creative play learning fun make friends games stories science activities kids">
       <div class="container">
         <div class="section-title">
           <div class="title-top">🎈</div>
@@ -135,19 +162,19 @@
         </div>
 
         <div class="welcome-cards">
-          <article class="welcome-card yellow-card tilt-card">
+          <article class="welcome-card yellow-card tilt-card" data-search-item data-search-title="Creative Play" data-search-text="creative play art crafts music drama imagination">
             <div class="card-icon flicker-soft">🎨</div>
             <h3>Creative Play!</h3>
             <p>Art, crafts, music, and drama — let your imagination go wild! 🌟</p>
           </article>
 
-          <article class="welcome-card blue-card tilt-card">
+          <article class="welcome-card blue-card tilt-card" data-search-item data-search-title="Learning Fun" data-search-text="learning fun cool stories science activities books exciting">
             <div class="card-icon bounce-center">📚</div>
             <h3>Learning Fun!</h3>
             <p>Cool stories, awesome science, and fun activities that make learning super exciting! 🚀</p>
           </article>
 
-          <article class="welcome-card pink-card tilt-card">
+          <article class="welcome-card pink-card tilt-card" data-search-item data-search-title="Make Friends" data-search-text="make friends games fun kids social play">
             <div class="card-icon flicker-soft">🕺</div>
             <h3>Make Friends!</h3>
             <p>Play games and have fun with other awesome kids just like you! 🎉</p>
@@ -156,7 +183,7 @@
       </div>
     </section>
 
-    <section id="programs" class="programs-section">
+    <section id="programs" class="programs-section" data-search-item data-search-title="Kids Programs and Activities" data-search-text="kids programs activities art story time sports drama learning">
       <div class="container">
         <div class="programs-heading">
           <span>🌟</span>
@@ -165,7 +192,7 @@
         </div>
 
         <div class="program-grid">
-          <article class="program-card peach-dash grow-card">
+          <article class="program-card peach-dash grow-card" data-search-item data-search-title="Art and Creativity Club" data-search-text="art creativity club painting drawing sculpture mixed media materials wednesdays 4pm 5:30pm">
             <h3>🎨 Art &amp; Creativity Club</h3>
             <p>
               Painting, drawing, sculpture, and mixed media projects.
@@ -174,7 +201,7 @@
             <span>🗓 Wednesdays, 4:00 PM - 5:30 PM</span>
           </article>
 
-          <article class="program-card blue-dash grow-card">
+          <article class="program-card blue-dash grow-card" data-search-item data-search-title="Story Time Adventures" data-search-text="story time adventures interactive storytelling songs games books fridays 10am">
             <h3>📚 Story Time Adventures</h3>
             <p>
               Interactive storytelling with songs, games, and activities based on beloved children’s books! 📖 ✨
@@ -182,7 +209,7 @@
             <span>🗓 Fridays, 10:00 AM - 11:00 AM</span>
           </article>
 
-          <article class="program-card pink-dash grow-card">
+          <article class="program-card pink-dash grow-card" data-search-item data-search-title="Junior Sports and Games" data-search-text="junior sports games physical activities team games sports skills saturdays 2pm">
             <h3>⚽ Junior Sports &amp; Games</h3>
             <p>
               Fun physical activities, team games, and basic sports skills in a supportive environment! 🏃
@@ -190,7 +217,7 @@
             <span>🗓 Saturdays, 2:00 PM - 3:30 PM</span>
           </article>
 
-          <article class="program-card peach-dash grow-card">
+          <article class="program-card peach-dash grow-card" data-search-item data-search-title="Drama and Performance" data-search-text="drama performance acting improvisation confidence creativity thursdays 4:30pm">
             <h3>🎭 Drama &amp; Performance</h3>
             <p>
               Acting games, improvisation, and small performances to build confidence and creativity! 🌟
@@ -206,7 +233,7 @@
       </div>
     </section>
 
-    <section id="events" class="events-section">
+    <section id="events" class="events-section" data-search-item data-search-title="Upcoming Kids Events" data-search-text="kids events workshops science fun day dance party spring art workshop">
       <div class="container">
         <div class="events-heading">
           <span>🎉</span>
@@ -215,7 +242,7 @@
         </div>
 
         <div class="event-grid">
-          <article class="event-card event-peach tilt-grow-card">
+          <article class="event-card event-peach tilt-grow-card" data-search-item data-search-title="Spring Art Workshop" data-search-text="spring art workshop flowers butterflies sunshine saturday april 11 2pm">
             <div class="event-image">
               <img src="images/kids/springArt.jpeg" alt="Spring Art Workshop">
             </div>
@@ -223,11 +250,11 @@
               <h3>🌸 Spring Art Workshop</h3>
               <p>Create beautiful spring-themed artwork with flowers, butterflies, and sunshine! 🦋 🌻</p>
               <span>🗓 Saturday, Apr 11 • 2:00 PM</span>
-              <button class="event-btn peach-btn btn-pop open-booking" data-event="Spring Art Workshop" data-date="Saturday, Apr 11 at 2:00 PM">🎨 Register Now!</button>
+              <button type="button" class="event-btn peach-btn btn-pop open-booking" data-event="Spring Art Workshop" data-date="Saturday, Apr 11 at 2:00 PM">🎨 Register Now!</button>
             </div>
           </article>
 
-          <article class="event-card event-blue tilt-grow-card">
+          <article class="event-card event-blue tilt-grow-card" data-search-item data-search-title="Science Fun Day" data-search-text="science fun day experiments activities discoveries young scientists saturday april 18 10am">
             <div class="event-image">
               <img src="images/kids/scienceDay.jpeg" alt="Science Fun Day">
             </div>
@@ -235,11 +262,11 @@
               <h3>🔬 Science Fun Day</h3>
               <p>Exciting experiments, hands-on activities, and discoveries for young scientists! 🧪 ✨</p>
               <span>🗓 Saturday, Apr 18 • 10:00 AM</span>
-              <button class="event-btn blue-btn btn-pop open-booking" data-event="Science Fun Day" data-date="Saturday, Apr 18 at 10:00 AM">🚀 Register Now!</button>
+              <button type="button" class="event-btn blue-btn btn-pop open-booking" data-event="Science Fun Day" data-date="Saturday, Apr 18 at 10:00 AM">🚀 Register Now!</button>
             </div>
           </article>
 
-          <article class="event-card event-pink tilt-grow-card">
+          <article class="event-card event-pink tilt-grow-card" data-search-item data-search-title="Dance Party" data-search-text="dance party music games fun friday april 24 4pm">
             <div class="event-image">
               <img src="images/kids/danceParty.jpeg" alt="Dance Party">
             </div>
@@ -247,7 +274,7 @@
               <h3>💃 Dance Party</h3>
               <p>Move, groove, and have fun! Age-appropriate music and games included! 🎵 🕺</p>
               <span>🗓 Friday, Apr 24 • 4:00 PM</span>
-              <button class="event-btn pink-btn btn-pop open-booking" data-event="Dance Party" data-date="Friday, Apr 24 at 4:00 PM">🎉 Register Now!</button>
+              <button type="button" class="event-btn pink-btn btn-pop open-booking" data-event="Dance Party" data-date="Friday, Apr 24 at 4:00 PM">🎉 Register Now!</button>
             </div>
           </article>
         </div>
@@ -259,21 +286,59 @@
       </div>
     </section>
 
-    <section id="account" class="account-section">
+    <section id="account" class="account-section" data-search-item data-search-title="Kids Hub Account" data-search-text="account sign in create account registrations parent info kids hub account">
       <div class="container">
-        <div class="account-heading">
-          <div class="account-emoji">👤</div>
-          <h2>Kids Hub Account</h2>
-          <p>Sign in to track your child’s registrations! 📝</p>
+        <div id="guestView">
+          <div class="account-heading">
+            <div class="account-emoji">👤</div>
+            <h2>Kids Hub Account</h2>
+            <p>Sign in to track your child’s registrations! 📝</p>
+          </div>
+
+          <div class="account-box">
+            <button type="button" class="account-btn peach-btn btn-pop open-signin">🔐 Sign In</button>
+            <button type="button" class="account-btn outline-btn btn-pop open-signup">✨ Create Account</button>
+            <p>
+              Looking for other age groups?
+              <a href="index.html">Visit main site</a> 🏡
+            </p>
+          </div>
         </div>
 
-        <div class="account-box">
-          <button class="account-btn peach-btn btn-pop open-signin">🔐 Sign In</button>
-          <button class="account-btn outline-btn btn-pop open-signup">✨ Create Account</button>
-          <p>
-            Looking for other age groups?
-            <a href="index.html">Visit main site</a> 🏡
-          </p>
+        <div id="dashboardView" class="dashboard-view" hidden>
+          <div class="dashboard-hero">
+            <div>
+              <p class="dashboard-eyebrow">✨ Your account</p>
+              <h2 class="dashboard-title" id="dashboardWelcome">Welcome!</h2>
+              <p class="dashboard-subtitle">Track your child’s event registrations here.</p>
+            </div>
+
+            <button type="button" class="account-btn outline-btn btn-pop dashboard-signout" id="signOutBtn">Sign Out</button>
+          </div>
+
+          <div class="dashboard-stats">
+            <article class="dashboard-stat-card">
+              <span class="dashboard-stat-number" id="statRegistered">0</span>
+              <span class="dashboard-stat-label">Registered Events</span>
+            </article>
+
+            <article class="dashboard-stat-card">
+              <span class="dashboard-stat-number" id="statUpcoming">0</span>
+              <span class="dashboard-stat-label">Upcoming Events</span>
+            </article>
+
+            <article class="dashboard-stat-card">
+              <span class="dashboard-stat-number">1</span>
+              <span class="dashboard-stat-label">Active Account</span>
+            </article>
+          </div>
+
+          <div class="dashboard-section">
+            <h3 class="dashboard-section-title">🎟 Your Registered Events</h3>
+            <div class="dashboard-cards" id="registeredEventsList">
+              <div class="dashboard-empty">You have not registered for any events yet.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -329,7 +394,7 @@
           <span>🐦</span>
           <span>◎</span>
         </div>
-        <a href="#account" class="footer-account-btn">My Account</a>
+        <button type="button" class="footer-account-btn open-signin">My Account</button>
       </div>
     </div>
 
@@ -480,7 +545,7 @@
 
       <p class="modal-bottom-link">
         Want access to all age groups?
-        <a href="account.html">Sign up on main site</a>
+        <a href="index.html">Sign up on main site</a>
       </p>
     </div>
   </div>
