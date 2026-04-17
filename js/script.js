@@ -1350,11 +1350,17 @@ window.addEventListener("DOMContentLoaded", () => {
       if (contactPhoneInput && currentUser.phone) {
         contactPhoneInput.value = currentUser.phone;
       }
+
+      const sentParam = contactParams.get("sent");
+
+      if (sentParam === "1" && contactFormWrap && contactSuccessWrap) {
+        contactFormWrap.hidden = true;
+        contactSuccessWrap.hidden = false;
+        contactSuccessWrap.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
     }
 
     contactForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-
       const name = document.getElementById("contactName").value.trim();
       const email = document.getElementById("contactEmail").value.trim();
       const phone = document.getElementById("contactPhone").value.trim();
@@ -1363,6 +1369,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const message = document.getElementById("contactMessage").value.trim();
 
       if (!name || !email || !topic || !subject || !message) {
+        event.preventDefault();
         contactFormError.hidden = false;
         return;
       }
@@ -1382,10 +1389,6 @@ window.addEventListener("DOMContentLoaded", () => {
       });
 
       localStorage.setItem("harmonyContactMessages", JSON.stringify(savedContacts));
-
-      contactFormWrap.hidden = true;
-      contactSuccessWrap.hidden = false;
-      contactSuccessWrap.scrollIntoView({ behavior: "smooth", block: "center" });
     });
   }
 

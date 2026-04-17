@@ -110,25 +110,30 @@
             <div id="contactFormWrap" class="contact-card reveal">
               <h2>◫ Send us a Message</h2>
 
-              <form id="contactForm" class="contact-form" novalidate>
+              <form
+                id="contactForm"
+                class="contact-form"
+                action="https://formsubmit.co/rajapak37@culonuni.coventry.ac.uk"
+                method="POST"
+              >
                 <div>
                   <label class="form-label" for="contactName">Name *</label>
-                  <input id="contactName" name="contactName" class="form-input" type="text" placeholder="Your full name" required />
+                  <input id="contactName" name="name" class="form-input" type="text" placeholder="Your full name" required />
                 </div>
 
                 <div>
                   <label class="form-label" for="contactEmail">Email *</label>
-                  <input id="contactEmail" name="contactEmail" class="form-input" type="email" placeholder="your.email@example.com" required />
+                  <input id="contactEmail" name="email" class="form-input" type="email" placeholder="your.email@example.com" required />
                 </div>
 
                 <div>
                   <label class="form-label" for="contactPhone">Phone</label>
-                  <input id="contactPhone" name="contactPhone" class="form-input" type="tel" placeholder="(555) 123-4567" />
+                  <input id="contactPhone" name="phone" class="form-input" type="tel" placeholder="(555) 123-4567" />
                 </div>
 
                 <div>
                   <label class="form-label" for="contactTopic">What are you contacting us about? *</label>
-                  <select id="contactTopic" name="contactTopic" class="form-input" required>
+                  <select id="contactTopic" name="topic" class="form-input" required>
                     <option value="">Select a topic</option>
                     <option value="general-enquiry">General enquiry</option>
                     <option value="support-services">Support / services</option>
@@ -143,15 +148,19 @@
 
                 <div>
                   <label class="form-label" for="contactSubject">Subject *</label>
-                  <input id="contactSubject" name="contactSubject" class="form-input" type="text" />
+                  <input id="contactSubject" name="subject" class="form-input" type="text" required />
                 </div>
 
                 <div>
                   <label class="form-label" for="contactMessage">Message *</label>
-                  <textarea id="contactMessage" name="contactMessage" class="form-input form-textarea" placeholder="Tell us how we can help..." required></textarea>
+                  <textarea id="contactMessage" name="message" class="form-input form-textarea" placeholder="Tell us how we can help..." required></textarea>
                 </div>
 
                 <p id="contactFormError" class="form-error-message" hidden>Please complete all required fields.</p>
+
+                <input type="hidden" name="_subject" value="New Harmony House contact form submission">
+                <input type="hidden" name="_autoresponse" value="Thank you for contacting Harmony House. We have received your message and will get back to you as soon as possible.">
+                <input type="hidden" name="_next" value="https://madhuki047.github.io/HarmonyHouse-WellbeingHub/contact.html">
 
                 <button class="submit-btn submit-btn-pink" type="submit">⌲ Send Message</button>
               </form>

@@ -110,6 +110,16 @@
       gap: 1rem;
     }
 
+    .highlight-word {
+      color: #4f959d;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px rgba(79,149,157,0.3); }
+      to { text-shadow: 0 0 15px rgba(79,149,157,0.7); }
+    }
+
     .brand {
       display: inline-flex;
       align-items: center;
