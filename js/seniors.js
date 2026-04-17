@@ -2,6 +2,7 @@ const modals = document.querySelectorAll(".modal");
 const openButtons = document.querySelectorAll("[data-open]");
 const closeButtons = document.querySelectorAll("[data-close]");
 const switchButtons = document.querySelectorAll("[data-switch]");
+
 const menuBtn = document.getElementById("menuBtn");
 const mobileNav = document.getElementById("mobileNav");
 
@@ -12,60 +13,131 @@ const signinForm = document.getElementById("signinForm");
 const registerEventName = document.getElementById("registerEventName");
 const registerEventDate = document.getElementById("registerEventDate");
 
-const accountGuestView = document.getElementById("accountGuestView");
-const accountUserView = document.getElementById("accountUserView");
-const accountUserName = document.getElementById("accountUserName");
+const guestView = document.getElementById("accountGuestView");
+const dashboardView = document.getElementById("accountUserView");
+const dashboardWelcome = document.getElementById("accountUserName");
 const signOutBtn = document.getElementById("signOutBtn");
 const registeredEventsWrap = document.getElementById("registeredEventsWrap");
 const registeredEventsList = document.getElementById("registeredEventsList");
+const statRegistered = document.getElementById("statRegistered");
+const statUpcoming = document.getElementById("statUpcoming");
+
+const searchForm = document.getElementById("siteSearchForm");
+const searchInput = document.getElementById("siteSearchInput");
+const mobileSearchForm = document.getElementById("mobileSearchForm");
+const mobileSearchInput = document.getElementById("mobileSearchInput");
+const searchResults = document.getElementById("searchResults");
+const searchResultsList = document.getElementById("searchResultsList");
+const searchStatus = document.getElementById("searchStatus");
+const clearSearchBtn = document.getElementById("clearSearchBtn");
 
 const STORAGE_KEYS = {
   user: "seniorsHubUser",
-  session: "seniorsHubCurrentUser",
   events: "seniorsHubRegisteredEvents"
 };
 
+const formTemplates = new Map();
+[registerForm, signupForm, signinForm].forEach((form) => {
+  if (form) {
+    formTemplates.set(form.id, form.innerHTML);
+  }
+});
+
+/* -------------------------- MOBILE NAV -------------------------- */
+function closeMobileNav() {
+  if (!mobileNav || !menuBtn) return;
+  mobileNav.classList.remove("open");
+  menuBtn.setAttribute("aria-expanded", "false");
+}
+
 if (menuBtn) {
   menuBtn.addEventListener("click", () => {
-    mobileNav.classList.toggle("open");
+    const isOpen = mobileNav.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
   });
 }
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener("click", e => {
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
     const targetId = link.getAttribute("href");
     const target = document.querySelector(targetId);
     if (!target) return;
+
     e.preventDefault();
-    if (mobileNav) mobileNav.classList.remove("open");
-    target.scrollIntoView({ behavior: "smooth" });
+    closeMobileNav();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
 
+if (mobileNav) {
+  mobileNav.querySelectorAll('a[href^="#"], button[data-open]').forEach((item) => {
+    item.addEventListener("click", () => {
+      closeMobileNav();
+    });
+  });
+}
+
+document.addEventListener("click", (e) => {
+  const clickedInsideMobileMenu =
+    mobileNav?.contains(e.target) ||
+    menuBtn?.contains(e.target);
+
+  if (!clickedInsideMobileMenu) {
+    closeMobileNav();
+  }
+});
+
+/* -------------------------- MODALS -------------------------- */
+function restoreFormState(form) {
+  if (!form) return;
+  const originalMarkup = formTemplates.get(form.id);
+  if (!originalMarkup) return;
+
+  if (form.dataset.successState === "true") {
+    form.innerHTML = originalMarkup;
+    delete form.dataset.successState;
+  }
+}
+
+function restoreAllForms() {
+  restoreFormState(registerForm);
+  restoreFormState(signupForm);
+  restoreFormState(signinForm);
+  attachClearErrorListeners();
+}
+
 function openModal(id) {
-  modals.forEach(modal => {
+  modals.forEach((modal) => {
     modal.classList.remove("open");
     modal.setAttribute("aria-hidden", "true");
   });
+
+  restoreAllForms();
 
   const target = document.getElementById(id);
   if (target) {
     target.classList.add("open");
     target.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
+
+    if (id === "registerModal") {
+      autofillRegisterForm();
+    }
   }
 }
 
 function closeAllModals() {
-  modals.forEach(modal => {
+  modals.forEach((modal) => {
     modal.classList.remove("open");
     modal.setAttribute("aria-hidden", "true");
   });
   document.body.style.overflow = "";
 }
 
-openButtons.forEach(button => {
-  button.addEventListener("click", () => {
+openButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+
     const modalId = button.getAttribute("data-open");
 
     if (modalId === "registerModal") {
@@ -74,50 +146,33 @@ openButtons.forEach(button => {
 
       if (registerEventName) registerEventName.textContent = eventName;
       if (registerEventDate) registerEventDate.textContent = eventDate;
-
-      const currentUser = getCurrentUser();
-      if (currentUser && registerForm) {
-        const fullNameInput = registerForm.querySelector('[name="fullName"]');
-        const emailInput = registerForm.querySelector('[name="email"]');
-
-        if (fullNameInput) {
-          fullNameInput.value = `${currentUser.firstName} ${currentUser.lastName}`;
-        }
-
-        if (emailInput) {
-          emailInput.value = currentUser.email;
-        }
-      }
     }
 
     if (modalId) openModal(modalId);
   });
 });
 
-closeButtons.forEach(button => {
+closeButtons.forEach((button) => {
   button.addEventListener("click", closeAllModals);
 });
 
-switchButtons.forEach(button => {
-  button.addEventListener("click", e => {
+switchButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
     e.preventDefault();
     const targetModal = button.getAttribute("data-switch");
     if (targetModal) openModal(targetModal);
   });
 });
 
-modals.forEach(modal => {
-  modal.addEventListener("click", e => {
+modals.forEach((modal) => {
+  modal.addEventListener("click", (e) => {
     if (e.target === modal) {
       closeAllModals();
     }
   });
 });
 
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeAllModals();
-});
-
+/* -------------------------- FORM ERRORS -------------------------- */
 function showFieldError(input, message) {
   clearFieldError(input);
   const error = document.createElement("div");
@@ -128,13 +183,22 @@ function showFieldError(input, message) {
 }
 
 function clearFieldError(input) {
+  if (!input) return;
   input.classList.remove("input-error");
   const oldError = input.parentElement.querySelector(".field-error");
   if (oldError) oldError.remove();
 }
 
 function clearFormErrors(form) {
-  form.querySelectorAll("input, textarea").forEach(field => clearFieldError(field));
+  form.querySelectorAll("input, textarea").forEach((field) => clearFieldError(field));
+}
+
+function attachClearErrorListeners() {
+  document.querySelectorAll(".modal-form input, .modal-form textarea").forEach((field) => {
+    field.addEventListener("input", () => {
+      clearFieldError(field);
+    });
+  });
 }
 
 function isValidEmail(email) {
@@ -145,6 +209,7 @@ function isValidPhone(phone) {
   return /^[0-9+\-\s()]{7,20}$/.test(phone.trim());
 }
 
+/* -------------------------- STORAGE -------------------------- */
 function saveUser(user) {
   localStorage.setItem(STORAGE_KEYS.user, JSON.stringify(user));
 }
@@ -154,17 +219,8 @@ function getSavedUser() {
   return raw ? JSON.parse(raw) : null;
 }
 
-function setCurrentUser(user) {
-  localStorage.setItem(STORAGE_KEYS.session, JSON.stringify(user));
-}
-
-function getCurrentUser() {
-  const raw = localStorage.getItem(STORAGE_KEYS.session);
-  return raw ? JSON.parse(raw) : null;
-}
-
-function clearCurrentUser() {
-  localStorage.removeItem(STORAGE_KEYS.session);
+function clearSavedUser() {
+  localStorage.removeItem(STORAGE_KEYS.user);
 }
 
 function getRegisteredEvents() {
@@ -176,10 +232,157 @@ function saveRegisteredEvents(events) {
   localStorage.setItem(STORAGE_KEYS.events, JSON.stringify(events));
 }
 
+/* -------------------------- SEARCH -------------------------- */
+function hideSearchResults() {
+  if (searchResults) searchResults.hidden = true;
+}
+
+function performSearch(query) {
+  if (!searchResults || !searchResultsList || !searchStatus) return;
+
+  const trimmedQuery = query.trim().toLowerCase();
+  searchResultsList.innerHTML = "";
+
+  if (!trimmedQuery) {
+    hideSearchResults();
+    return;
+  }
+
+  const searchableItems = document.querySelectorAll(".searchable-section, .searchable-card");
+  const matches = [];
+
+  searchableItems.forEach((item) => {
+    const text = item.textContent.toLowerCase();
+    if (!text.includes(trimmedQuery)) return;
+
+    let title = "";
+    let link = "#";
+
+    if (item.classList.contains("searchable-section")) {
+      const heading = item.querySelector("h2, h3");
+      title = heading ? heading.textContent.trim() : "Section";
+      link = item.id ? `#${item.id}` : "#";
+    } else {
+      const heading = item.querySelector("h3, h4, strong");
+      title = heading ? heading.textContent.trim() : "Result";
+      const parentSection = item.closest("section");
+      link = parentSection && parentSection.id ? `#${parentSection.id}` : "#";
+    }
+
+    matches.push({ title, link });
+  });
+
+  const uniqueMatches = matches.filter(
+    (item, index, self) =>
+      index === self.findIndex((entry) => entry.title === item.title && entry.link === item.link)
+  );
+
+  if (uniqueMatches.length === 0) {
+    searchStatus.innerHTML = `No results found for "<strong>${query}</strong>".`;
+    searchResultsList.innerHTML = "";
+    searchResults.hidden = false;
+    return;
+  }
+
+  searchStatus.innerHTML = `${uniqueMatches.length} result${uniqueMatches.length === 1 ? "" : "s"} found for "<strong>${query}</strong>".`;
+
+  uniqueMatches.forEach((match) => {
+    const item = document.createElement("div");
+    item.className = "search-result-item";
+    item.innerHTML = `<a href="${match.link}">${match.title}</a>`;
+    searchResultsList.appendChild(item);
+  });
+
+  searchResults.hidden = false;
+}
+
+if (searchForm) {
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    performSearch(searchInput ? searchInput.value : "");
+  });
+}
+
+if (mobileSearchForm) {
+  mobileSearchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    performSearch(mobileSearchInput ? mobileSearchInput.value : "");
+    closeMobileNav();
+  });
+}
+
+if (searchInput) {
+  searchInput.addEventListener("input", () => {
+    if (!searchInput.value.trim()) {
+      hideSearchResults();
+    }
+  });
+}
+
+if (mobileSearchInput) {
+  mobileSearchInput.addEventListener("input", () => {
+    if (!mobileSearchInput.value.trim()) {
+      hideSearchResults();
+    }
+  });
+}
+
+if (clearSearchBtn) {
+  clearSearchBtn.addEventListener("click", () => {
+    if (searchInput) searchInput.value = "";
+    if (mobileSearchInput) mobileSearchInput.value = "";
+    hideSearchResults();
+  });
+}
+
+document.addEventListener("click", (e) => {
+  const isInsideSearch =
+    searchForm?.contains(e.target) ||
+    mobileSearchForm?.contains(e.target) ||
+    searchResults?.contains(e.target);
+
+  if (!isInsideSearch) {
+    hideSearchResults();
+  }
+});
+
+if (searchResultsList) {
+  searchResultsList.addEventListener("click", (e) => {
+    const link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+
+    const targetId = link.getAttribute("href");
+    const target = document.querySelector(targetId);
+    if (!target) return;
+
+    e.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    hideSearchResults();
+    if (searchInput) searchInput.value = "";
+    if (mobileSearchInput) mobileSearchInput.value = "";
+  });
+}
+
+/* -------------------------- SUCCESS -------------------------- */
+function showFormSuccess(form, title, message) {
+  if (!form) return;
+
+  form.innerHTML = `
+    <div class="form-success-message">
+      <div class="form-success-icon">✓</div>
+      <h3>${title}</h3>
+      <p>${message}</p>
+    </div>
+  `;
+  form.dataset.successState = "true";
+}
+
+/* -------------------------- ACCOUNT / DASHBOARD -------------------------- */
 function renderRegisteredEvents() {
   if (!registeredEventsList || !registeredEventsWrap) return;
 
-  const currentUser = getCurrentUser();
+  const currentUser = getSavedUser();
   const events = getRegisteredEvents();
 
   if (!currentUser) {
@@ -188,13 +391,14 @@ function renderRegisteredEvents() {
     return;
   }
 
-  const userEvents = events.filter(
-    event => event.userEmail === currentUser.email
-  );
+  const userEvents = events.filter((event) => event.userEmail === currentUser.email);
+
+  if (statRegistered) statRegistered.textContent = String(userEvents.length);
+  if (statUpcoming) statUpcoming.textContent = String(userEvents.length);
 
   if (userEvents.length === 0) {
-    registeredEventsWrap.classList.add("hidden");
-    registeredEventsList.innerHTML = "";
+    registeredEventsWrap.classList.remove("hidden");
+    registeredEventsList.innerHTML = `<div class="dashboard-empty">You have not registered for any events yet.</div>`;
     return;
   }
 
@@ -210,7 +414,7 @@ function renderRegisteredEvents() {
     </div>
   `).join("");
 
-  document.querySelectorAll(".remove-registration-btn").forEach(button => {
+  document.querySelectorAll(".remove-registration-btn").forEach((button) => {
     button.addEventListener("click", () => {
       const visibleIndex = Number(button.getAttribute("data-index"));
       const allEvents = getRegisteredEvents();
@@ -218,30 +422,31 @@ function renderRegisteredEvents() {
 
       const matchingIndexes = allEvents
         .map((event, idx) => ({ event, idx }))
-        .filter(item => item.event.userEmail === userEmail);
+        .filter((item) => item.event.userEmail === userEmail);
 
       const actualIndex = matchingIndexes[visibleIndex]?.idx;
-
       if (actualIndex === undefined) return;
 
       allEvents.splice(actualIndex, 1);
       saveRegisteredEvents(allEvents);
-      renderRegisteredEvents();
+      updateAccountUI();
     });
   });
 }
 
 function updateAccountUI() {
-  const currentUser = getCurrentUser();
+  const currentUser = getSavedUser();
 
   if (currentUser) {
-    if (accountGuestView) accountGuestView.classList.add("hidden");
-    if (accountUserView) accountUserView.classList.remove("hidden");
-    if (accountUserName) accountUserName.textContent = currentUser.firstName.toLowerCase();
+    if (guestView) guestView.classList.add("hidden");
+    if (dashboardView) dashboardView.classList.remove("hidden");
+    if (dashboardWelcome) dashboardWelcome.textContent = currentUser.firstName;
   } else {
-    if (accountGuestView) accountGuestView.classList.remove("hidden");
-    if (accountUserView) accountUserView.classList.add("hidden");
+    if (guestView) guestView.classList.remove("hidden");
+    if (dashboardView) dashboardView.classList.add("hidden");
     if (registeredEventsWrap) registeredEventsWrap.classList.add("hidden");
+    if (statRegistered) statRegistered.textContent = "0";
+    if (statUpcoming) statUpcoming.textContent = "0";
   }
 
   renderRegisteredEvents();
@@ -249,13 +454,31 @@ function updateAccountUI() {
 
 if (signOutBtn) {
   signOutBtn.addEventListener("click", () => {
-    clearCurrentUser();
+    clearSavedUser();
     updateAccountUI();
   });
 }
 
+/* -------------------------- REGISTER AUTOFILL -------------------------- */
+function autofillRegisterForm() {
+  const currentUser = getSavedUser();
+  if (!currentUser || !registerForm) return;
+
+  const fullNameInput = registerForm.querySelector('[name="fullName"]');
+  const emailInput = registerForm.querySelector('[name="email"]');
+
+  if (fullNameInput && !fullNameInput.value.trim()) {
+    fullNameInput.value = `${currentUser.firstName} ${currentUser.lastName}`;
+  }
+
+  if (emailInput && !emailInput.value.trim()) {
+    emailInput.value = currentUser.email;
+  }
+}
+
+/* -------------------------- SIGN UP -------------------------- */
 if (signupForm) {
-  signupForm.addEventListener("submit", e => {
+  signupForm.addEventListener("submit", (e) => {
     e.preventDefault();
     clearFormErrors(signupForm);
 
@@ -302,17 +525,20 @@ if (signupForm) {
     };
 
     saveUser(user);
-    setCurrentUser(user);
 
-    alert("Account created successfully.");
-    signupForm.reset();
-    closeAllModals();
+    showFormSuccess(
+      signupForm,
+      "Account created!",
+      "Your Seniors Hub account has been created successfully."
+    );
+
     updateAccountUI();
   });
 }
 
+/* -------------------------- SIGN IN -------------------------- */
 if (signinForm) {
-  signinForm.addEventListener("submit", e => {
+  signinForm.addEventListener("submit", (e) => {
     e.preventDefault();
     clearFormErrors(signinForm);
 
@@ -350,17 +576,19 @@ if (signinForm) {
       return;
     }
 
-    setCurrentUser(savedUser);
+    showFormSuccess(
+      signinForm,
+      "Signed in successfully!",
+      `Welcome back, ${savedUser.firstName}!`
+    );
 
-    alert(`Welcome back, ${savedUser.firstName}!`);
-    signinForm.reset();
-    closeAllModals();
     updateAccountUI();
   });
 }
 
+/* -------------------------- REGISTER EVENT -------------------------- */
 if (registerForm) {
-  registerForm.addEventListener("submit", e => {
+  registerForm.addEventListener("submit", (e) => {
     e.preventDefault();
     clearFormErrors(registerForm);
 
@@ -399,7 +627,13 @@ if (registerForm) {
 
     if (!valid) return;
 
-    const currentUser = getCurrentUser();
+    const currentUser = getSavedUser();
+    if (!currentUser) {
+      closeAllModals();
+      openModal("signinModal");
+      return;
+    }
+
     const allEvents = getRegisteredEvents();
 
     const registration = {
@@ -410,17 +644,40 @@ if (registerForm) {
       phone: phone.value.trim(),
       emergencyContact: emergencyContact.value.trim(),
       medicalInfo: registerForm.querySelector('[name="medicalInfo"]')?.value.trim() || "",
-      userEmail: currentUser ? currentUser.email : email.value.trim().toLowerCase()
+      userEmail: currentUser.email
     };
 
-    allEvents.push(registration);
-    saveRegisteredEvents(allEvents);
+    const alreadyRegistered = allEvents.some(
+      (event) =>
+        event.userEmail === currentUser.email &&
+        event.eventName === registration.eventName &&
+        event.eventDate === registration.eventDate
+    );
 
-    alert("Registration completed successfully.");
-    registerForm.reset();
-    closeAllModals();
+    if (!alreadyRegistered) {
+      allEvents.push(registration);
+      saveRegisteredEvents(allEvents);
+    }
+
+    showFormSuccess(
+      registerForm,
+      "Registration confirmed!",
+      `You are successfully registered for ${registration.eventName}.`
+    );
+
     updateAccountUI();
   });
 }
 
+/* -------------------------- ESC -------------------------- */
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeAllModals();
+    hideSearchResults();
+    closeMobileNav();
+  }
+});
+
+/* -------------------------- INIT -------------------------- */
+attachClearErrorListeners();
 updateAccountUI();

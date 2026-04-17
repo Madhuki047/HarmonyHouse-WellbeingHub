@@ -3,39 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seniors Hub</title>
+  <title>Seniors Hub | Harmony House</title>
   <link rel="stylesheet" href="css/seniors.css" />
 </head>
 <body>
 
 <header class="topbar">
   <div class="nav-wrap">
-    <a href="index.html" class="brand">💜 Harmony House</a>
+    <a href="index.html" class="brand" aria-label="Harmony House home page">
+      <img src="images/logo.png" alt="Harmony House Logo" class="nav-logo-img">
+      <span class="brand-text">Harmony House</span>
+    </a>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
+    <nav class="nav" id="desktopNav">
+      <a href="#hero">Home</a>
       <a href="#about">Services</a>
       <a href="#events">Events</a>
-      <a href="#events">Book Event</a>
       <a href="#contact">Contact</a>
-      <button type="button" data-open="signinModal">My Account</button>
+      <a href="#accountSection">My Account</a>
     </nav>
 
-    <button class="menu-btn" id="menuBtn" type="button">☰</button>
+    <form class="site-search desktop-search" id="siteSearchForm" role="search" novalidate>
+      <label class="sr-only" for="siteSearchInput">Search this website</label>
+      <input
+        type="search"
+        id="siteSearchInput"
+        name="siteSearchInput"
+        placeholder="Search programs, events, contact..."
+        aria-label="Search this website"
+      />
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
   </div>
 
   <div class="mobile-nav" id="mobileNav">
-    <a href="index.html">Home</a>
+    <a href="#hero">Home</a>
     <a href="#about">Services</a>
     <a href="#events">Events</a>
-    <a href="#events">Book Event</a>
     <a href="#contact">Contact</a>
     <button type="button" data-open="signinModal">My Account</button>
+
+    <form class="site-search mobile-search" id="mobileSearchForm" role="search" novalidate>
+      <label class="sr-only" for="mobileSearchInput">Search this website</label>
+      <input
+        type="search"
+        id="mobileSearchInput"
+        name="mobileSearchInput"
+        placeholder="Search programs, events, contact..."
+        aria-label="Search this website"
+      />
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+  </div>
+
+  <div class="search-results" id="searchResults" aria-live="polite" hidden>
+    <div class="search-results-inner">
+      <div class="search-results-head">
+        <h3>Search Results</h3>
+        <button type="button" class="clear-search-btn" id="clearSearchBtn">Clear</button>
+      </div>
+      <p class="search-status" id="searchStatus"></p>
+      <div class="search-results-list" id="searchResultsList"></div>
+      <p class="search-helper">
+        If you can’t find what you are looking for here, check the
+        <a href="index.html">main site</a>.
+      </p>
+    </div>
   </div>
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero searchable-section" id="hero">
     <div class="circle-bg"></div>
 
     <div class="hero-inner">
@@ -52,26 +92,26 @@
     </div>
   </section>
 
-  <section class="section light" id="about">
+  <section class="section light searchable-section" id="about">
     <div class="section-head">
       <h2>Welcome to Your Community</h2>
       <p>A warm, supportive space designed for seniors to stay active, engaged, and connected with friends.</p>
     </div>
 
     <div class="grid three">
-      <article class="card feature-card">
+      <article class="card feature-card searchable-card">
         <div class="card-icon">🏃</div>
         <h3>Stay Active</h3>
         <p>Gentle exercise classes, walking groups, and activities to keep you moving.</p>
       </article>
 
-      <article class="card feature-card">
+      <article class="card feature-card searchable-card">
         <div class="card-icon">🤝</div>
         <h3>Build Friendships</h3>
         <p>Social gatherings, group activities, and opportunities to make new friends.</p>
       </article>
 
-      <article class="card feature-card">
+      <article class="card feature-card searchable-card">
         <div class="card-icon">💚</div>
         <h3>Health Support</h3>
         <p>Health screenings, nutrition education, and wellness resources.</p>
@@ -79,31 +119,31 @@
     </div>
   </section>
 
-  <section class="section cream" id="programs">
+  <section class="section cream searchable-section" id="programs">
     <div class="section-head">
       <h2>Programs &amp; Activities</h2>
     </div>
 
     <div class="grid two">
-      <article class="card program-card">
+      <article class="card program-card searchable-card">
         <h3>Gentle Exercise Classes</h3>
         <p>Chair yoga, tai chi, and low-impact aerobics designed for senior fitness levels.</p>
         <span class="meta">Mondays &amp; Thursdays, 10:00 AM - 11:00 AM</span>
       </article>
 
-      <article class="card program-card">
+      <article class="card program-card searchable-card">
         <h3>Social Coffee Hours</h3>
         <p>Relaxed gatherings with refreshments, conversation, and friendly faces.</p>
         <span class="meta">Tuesdays &amp; Fridays, 2:00 PM - 3:30 PM</span>
       </article>
 
-      <article class="card program-card">
+      <article class="card program-card searchable-card">
         <h3>Arts &amp; Crafts</h3>
         <p>Painting, knitting, pottery, and other creative activities. All skill levels welcome.</p>
         <span class="meta">Wednesdays, 1:00 PM - 3:00 PM</span>
       </article>
 
-      <article class="card program-card">
+      <article class="card program-card searchable-card">
         <h3>Memory &amp; Brain Health</h3>
         <p>Games, puzzles, and cognitive activities to keep your mind sharp and engaged.</p>
         <span class="meta">Saturdays, 10:30 AM - 12:00 PM</span>
@@ -115,13 +155,13 @@
     </div>
   </section>
 
-  <section class="section light" id="events">
+  <section class="section light searchable-section" id="events">
     <div class="section-head">
       <h2>Upcoming Events</h2>
     </div>
 
     <div class="grid three event-grid">
-      <article class="event-card">
+      <article class="event-card searchable-card">
         <div class="event-image placeholder"></div>
         <div class="event-body">
           <h3>Gentle Yoga Workshop</h3>
@@ -131,7 +171,7 @@
         </div>
       </article>
 
-      <article class="event-card">
+      <article class="event-card searchable-card">
         <div class="event-image">
           <img src="images/seniors/springSocial.jpg" alt="Spring Social Luncheon">
         </div>
@@ -143,7 +183,7 @@
         </div>
       </article>
 
-      <article class="event-card">
+      <article class="event-card searchable-card">
         <div class="event-image">
           <img src="images/seniors/watercolorClass.jpg" alt="Watercolor Painting Class">
         </div>
@@ -161,26 +201,26 @@
     </div>
   </section>
 
-  <section class="section teal-section" id="contact">
+  <section class="section teal-section searchable-section" id="contact">
     <div class="section-head light-text">
       <h2>Get in Touch</h2>
       <p>We’re here to help and answer any questions you may have.</p>
     </div>
 
     <div class="grid three contact-grid">
-      <article class="contact-card">
+      <article class="contact-card searchable-card">
         <div class="contact-icon">📞</div>
         <div class="contact-label">Phone</div>
         <strong>(555) 123-4567</strong>
       </article>
 
-      <article class="contact-card">
+      <article class="contact-card searchable-card">
         <div class="contact-icon">📧</div>
         <div class="contact-label">Email</div>
         <strong>seniors@harmonyhouse.org</strong>
       </article>
 
-      <article class="contact-card">
+      <article class="contact-card searchable-card">
         <div class="contact-icon">📍</div>
         <div class="contact-label">Location</div>
         <strong>123 Community Way</strong>
@@ -188,34 +228,61 @@
     </div>
   </section>
 
-  <section class="section cream account-section" id="accountSection">
+  <section class="section cream account-section searchable-section" id="accountSection">
+    <div id="accountGuestView">
       <div class="account-icon">👤</div>
       <h2>Your Account</h2>
       <p>Sign in to manage your event registrations</p>
 
-      <div id="accountGuestView" class="account-box">
+      <div class="account-box">
         <button type="button" class="btn primary full" data-open="signinModal">Sign In</button>
         <button type="button" class="btn outline full" data-open="signupModal">Create Account</button>
         <div class="account-note">Looking for other age groups? <a href="index.html">Visit main site</a></div>
       </div>
+    </div>
 
-      <div id="accountUserView" class="account-box logged-in-box hidden">
-        <div class="welcome-message">Welcome back, <span id="accountUserName">mary</span>!</div>
-        <button type="button" class="btn outline full" id="signOutBtn">Sign Out</button>
-        <a href="#events" class="btn primary full">View Events</a>
+    <div id="accountUserView" class="dashboard-view hidden">
+      <div class="dashboard-hero">
+        <div>
+          <p class="dashboard-eyebrow">✨ Your account</p>
+          <h2 class="dashboard-title">Welcome back, <span id="accountUserName">Mary</span>!</h2>
+          <p class="dashboard-subtitle">Manage your event registrations and stay connected.</p>
+        </div>
+        <button type="button" class="btn outline" id="signOutBtn">Sign Out</button>
+      </div>
+
+      <div class="dashboard-stats">
+        <article class="dashboard-stat-card">
+          <span class="dashboard-stat-number" id="statRegistered">0</span>
+          <span class="dashboard-stat-label">Registered Events</span>
+        </article>
+
+        <article class="dashboard-stat-card">
+          <span class="dashboard-stat-number" id="statUpcoming">0</span>
+          <span class="dashboard-stat-label">Upcoming Events</span>
+        </article>
+
+        <article class="dashboard-stat-card">
+          <span class="dashboard-stat-number">1</span>
+          <span class="dashboard-stat-label">Active Account</span>
+        </article>
       </div>
 
       <div id="registeredEventsWrap" class="registered-events hidden">
         <h3 class="registered-title">Your Registered Events</h3>
         <div id="registeredEventsList" class="registered-events-grid"></div>
       </div>
-    </section>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
   <div class="footer-grid">
     <div>
-      <div class="footer-brand">💜 Harmony House</div>
+      <div class="footer-brand">
+        <img src="images/logo11.png" alt="Harmony House Logo" class="footer-logo">
+        <span class="footer-brand-text">Harmony House</span>
+      </div>
       <p>Supporting residents through local health, wellbeing services, and community connections.</p>
     </div>
 
@@ -230,9 +297,9 @@
 
     <div>
       <h4>Age Groups</h4>
-      <a href="index.html">Kids Hub</a>
-      <a href="index.html">Teens Hub</a>
-      <a href="index.html">Work Life Hub</a>
+      <a href="kids.html">Kids Hub</a>
+      <a href="teens.html">Teens Hub</a>
+      <a href="adults.html">Work Life Hub</a>
       <a href="seniors.html">Seniors Hub</a>
     </div>
 

@@ -845,6 +845,23 @@
       font-size: 0.92rem;
     }
 
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-logo {
+      height: 40px;
+      width: auto;
+    }
+
+    .footer-brand-text {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
     .reveal {
       opacity: 0;
       transform: translateY(34px);

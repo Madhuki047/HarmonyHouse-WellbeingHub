@@ -662,6 +662,23 @@ section {
   margin-bottom: 12px;
 }
 
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+}
+
+.footer-brand-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
 .footer h4 {
   margin: 0 0 14px;
   font-size: 1rem;
