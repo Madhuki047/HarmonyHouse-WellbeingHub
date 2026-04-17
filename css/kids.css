@@ -978,6 +978,77 @@ textarea {
   text-decoration: underline;
 }
 
+
+/* CONTACT SECTION */
+.contact-section {
+  background: var(--white-bg);
+  padding: 84px 0 92px;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.contact-card {
+  border-radius: var(--radius-xl);
+  padding: 34px 28px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease;
+}
+
+.contact-card-icon {
+  font-size: 2.8rem;
+  margin-bottom: 14px;
+}
+
+.contact-card h3 {
+  font-size: 2rem;
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+
+.contact-card p {
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.contact-pink {
+  background: #f8d8e8;
+  border: 5px dashed var(--pink);
+}
+
+.contact-pink h3 {
+  color: var(--pink);
+}
+
+.contact-blue {
+  background: #dff0f3;
+  border: 5px dashed var(--teal);
+}
+
+.contact-blue h3 {
+  color: var(--teal);
+}
+
+.contact-yellow {
+  background: #f6e9bd;
+  border: 5px dashed var(--peach);
+}
+
+.contact-yellow h3 {
+  color: var(--peach);
+}
+
+@media (max-width: 768px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* ACCOUNT */
 .account-section {
   padding: 86px 0 92px;
@@ -1163,43 +1234,49 @@ textarea {
   align-items: start;
 }
 
-.footer-logo-row {
+.footer-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-
-.footer-brand-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--pink);
-  display: grid;
-  place-items: center;
-  font-size: 1.2rem;
-}
-
-.footer-brand h3,
-.site-footer h4 {
-  font-size: 1.35rem;
+  gap: 10px;
   margin-bottom: 12px;
 }
 
+.footer-logo {
+  height: 40px;
+  width: auto;
+}
+
+.footer-brand-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.site-footer h4 {
+  font-size: 1.35rem;
+  margin: 0 0 12px;
+}
+
 .site-footer p,
-.site-footer li,
 .site-footer a,
 .site-footer button {
+  display: block;
+  margin: 0 0 10px;
   font-size: 1rem;
   line-height: 1.45;
 }
 
-.site-footer ul {
-  list-style: none;
+.site-footer a {
+  color: rgba(255, 255, 255, 0.94);
+  text-decoration: none;
 }
 
-.site-footer li + li {
-  margin-top: 8px;
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer p {
+  color: rgba(255, 255, 255, 0.94);
 }
 
 .social-icons {
@@ -1234,6 +1311,12 @@ textarea {
   text-align: center;
   padding: 18px;
   font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* MODALS */
