@@ -349,7 +349,7 @@ window.addEventListener("DOMContentLoaded", () => {
         location: "Library Corner",
         spots: 15,
         left: 3,
-        image: "https://images.unsplash.com/photo-1516589091380-5d60138fdf6d?auto=format&fit=crop&w=900&q=80",
+        image: "https://images.stockcake.com/public/4/2/6/42622bfe-06f5-4432-a621-354367dbc038_large/seniors-book-club-stockcake.jpg",
         description: "Discussion of this month’s featured book with light refreshments."
       },
       {
@@ -468,6 +468,19 @@ window.addEventListener("DOMContentLoaded", () => {
         left: 20,
         image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80",
         description: "Start your week with gentle yoga suitable for all levels."
+      },
+      {
+        id: "kids-dance-party-apr-11",
+        title: "Kids Dance Night",
+        category: "youth",
+        date: "2026-04-11",
+        time: "4:00 PM - 6:00 PM",
+        dayLabel: "Sat, Apr 11",
+        location: "Studio C",
+        spots: 50,
+        left: 18,
+        image: "https://www.funkidslive.com/wp-content/uploads/2022/01/family-dance-party.png",
+        description: "A fun night of dancing for little ones."
       },
       {
         id: "zumba-dance-party-apr-15",

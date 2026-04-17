@@ -5,6 +5,8 @@ const toastMessage = document.getElementById("toastMessage");
 
 const siteSearchForm = document.getElementById("siteSearchForm");
 const siteSearchInput = document.getElementById("siteSearchInput");
+const mobileSearchForm = document.getElementById("mobileSearchForm");
+const mobileSearchInput = document.getElementById("mobileSearchInput");
 const searchResults = document.getElementById("searchResults");
 const searchResultsList = document.getElementById("searchResultsList");
 
@@ -627,9 +629,26 @@ if (siteSearchForm) {
   });
 }
 
+if (mobileSearchForm) {
+  mobileSearchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    performSearch(mobileSearchInput ? mobileSearchInput.value : "");
+    mobileNav.classList.remove("open");
+    if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
+  });
+}
+
 if (siteSearchInput) {
   siteSearchInput.addEventListener("input", () => {
     if (!siteSearchInput.value.trim()) {
+      if (searchResults) searchResults.hidden = true;
+    }
+  });
+}
+
+if (mobileSearchInput) {
+  mobileSearchInput.addEventListener("input", () => {
+    if (!mobileSearchInput.value.trim()) {
       if (searchResults) searchResults.hidden = true;
     }
   });
@@ -658,14 +677,11 @@ if (searchResultsList) {
 
     e.preventDefault();
 
-    // scroll to section
     target.scrollIntoView({ behavior: "smooth", block: "start" });
 
-    // ✅ hide search results
     if (searchResults) searchResults.hidden = true;
-
-    // ✅ clear input (optional but nice UX)
     if (siteSearchInput) siteSearchInput.value = "";
+    if (mobileSearchInput) mobileSearchInput.value = "";
   });
 }
 
