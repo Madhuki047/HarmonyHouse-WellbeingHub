@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adults Hub</title>
+  <title>Work Life Hub | Harmony House</title>
   <link rel="stylesheet" href="css/adults.css">
 </head>
 <body>
@@ -11,175 +11,257 @@
 <header class="topbar">
   <div class="nav-wrap">
     <a class="brand" href="index.html" aria-label="Harmony House home page">
-        <img src="images/logo.png" alt="Harmony House Logo" class="nav-logo-img">
-        <span class="brand-text">Harmony House</span>
-      </a>
+      <img src="images/logo.png" alt="Harmony House Logo" class="nav-logo-img">
+      <span class="brand-text">Harmony House</span>
+    </a>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
+    <nav class="nav" id="desktopNav">
+      <a href="#hero">Home</a>
       <a href="#about">Services</a>
       <a href="#events">Events</a>
-      <a href="#events">Book Event</a>
       <a href="#contact">Contact</a>
-      <a href="#account">👤 Sign In</a>
+      <button type="button" data-open="signinModal">👤 Sign In</button>
     </nav>
+
+    <form class="site-search desktop-search" id="siteSearchForm" role="search" novalidate>
+      <label class="sr-only" for="siteSearchInput">Search this website</label>
+      <input
+        type="search"
+        id="siteSearchInput"
+        name="siteSearchInput"
+        placeholder="Search programs, events, contact..."
+        aria-label="Search this website"
+      />
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+
+    <button
+      type="button"
+      class="menu-btn"
+      id="menuBtn"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobileNav"
+    >
+      ☰
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="#hero">Home</a>
+    <a href="#about">Services</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+    <button type="button" data-open="signinModal">👤 Sign In</button>
+
+    <form class="site-search mobile-search" id="mobileSearchForm" role="search" novalidate>
+      <label class="sr-only" for="mobileSearchInput">Search this website</label>
+      <input
+        type="search"
+        id="mobileSearchInput"
+        name="mobileSearchInput"
+        placeholder="Search programs, events, contact..."
+        aria-label="Search this website"
+      />
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+  </nav>
+
+  <div class="search-results" id="searchResults" aria-live="polite" hidden>
+    <div class="search-results-inner">
+      <div class="search-results-head">
+        <h3>Search Results</h3>
+        <button type="button" class="clear-search-btn" id="clearSearchBtn">Clear</button>
+      </div>
+      <p class="search-status" id="searchStatus"></p>
+      <div class="search-results-list" id="searchResultsList"></div>
+      <p class="search-helper">
+        If you can’t find what you are looking for here, check the
+        <a href="index.html">main site</a>.
+      </p>
+    </div>
   </div>
 </header>
 
 <main>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="circle-bg"></div>
+  <section class="hero searchable-section" id="hero">
+    <div class="circle-bg"></div>
 
-  <div class="hero-inner">
-    <div class="icon">💼</div>
-    <h1>Adults Hub</h1>
-    <p>Professional development, wellness programs, and community support for working adults (25–64)</p>
+    <div class="hero-inner">
+      <div class="icon">💼</div>
+      <h1>Work Life Hub</h1>
+      <p>Professional development, wellness programs, and community support for working adults (25–64)</p>
 
-    <div class="hero-actions">
-      <a href="#programs" class="btn primary">Explore Programs</a>
-      <a href="index.html" class="btn outline">Main Website</a>
+      <div class="hero-actions">
+        <a href="#programs" class="btn primary">Explore Programs</a>
+        <a href="index.html" class="btn outline">Main Website</a>
+      </div>
+
+      <span class="sub">Part of <a href="index.html">Harmony House</a></span>
+    </div>
+  </section>
+
+  <section class="section light searchable-section" id="about">
+    <h2>Supporting Your Journey</h2>
+    <p>A dedicated space for working adults focused on career growth, work-life balance, and personal wellness.</p>
+
+    <div class="grid three">
+      <div class="card searchable-card">
+        <span>📈</span>
+        <h3>Career Development</h3>
+        <p>Workshops, mentorship programs, and networking opportunities.</p>
+      </div>
+
+      <div class="card searchable-card">
+        <span>🧘</span>
+        <h3>Wellness Programs</h3>
+        <p>Stress management, fitness classes, and mental health support.</p>
+      </div>
+
+      <div class="card searchable-card">
+        <span>👥</span>
+        <h3>Community Network</h3>
+        <p>Connect with peers and build lasting professional relationships.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light searchable-section" id="programs">
+    <h2>Programs &amp; Services</h2>
+
+    <div class="grid two">
+      <div class="card big searchable-card">
+        <h3>Professional Skills Workshops</h3>
+        <p>Leadership training, public speaking, and digital skills.</p>
+        <span>Tuesdays, 6:30 PM - 8:00 PM</span>
+      </div>
+
+      <div class="card big searchable-card">
+        <h3>Financial Wellness Seminars</h3>
+        <p>Budgeting, investments, and retirement strategies.</p>
+        <span>Thursdays, 7:00 PM - 8:30 PM</span>
+      </div>
+
+      <div class="card big searchable-card">
+        <h3>Work-Life Balance Programs</h3>
+        <p>Time management and stress reduction techniques.</p>
+        <span>Wednesdays, 12:00 PM - 1:00 PM</span>
+      </div>
+
+      <div class="card big searchable-card">
+        <h3>Networking Events</h3>
+        <p>Professional mixers and industry meetups.</p>
+        <span>First Friday, 6:00 PM</span>
+      </div>
     </div>
 
-    <span class="sub">Part of <a href="index.html">Harmony House</a></span>
-  </div>
-</section>
+    <div class="notice">
+      Looking for programs for other age groups? <a href="index.html">Visit the main Harmony House website</a>
+    </div>
+  </section>
 
-<!-- ABOUT -->
-<section class="section light" id="about">
-  <h2>Supporting Your Journey</h2>
-  <p>A dedicated space for working adults focused on career growth, work-life balance, and personal wellness.</p>
+  <section class="section light searchable-section" id="events">
+    <h2>Upcoming Events</h2>
 
-  <div class="grid three">
-    <div class="card">
-      <span>📈</span>
-      <h3>Career Development</h3>
-      <p>Workshops, mentorship programs, and networking opportunities.</p>
+    <div class="grid three">
+      <div class="event searchable-card">
+        <img src="placeholder.jpg" alt="Leadership Excellence Workshop">
+        <h3>Leadership Excellence Workshop</h3>
+        <p>Develop leadership skills for career advancement.</p>
+        <span>Tuesday, Apr 14 • 6:30 PM</span>
+        <button class="btn primary" data-open="registerModal" data-event="Leadership Excellence Workshop" data-date="Tuesday, Apr 14 at 6:30 PM">Register Now</button>
+      </div>
+
+      <div class="event searchable-card">
+        <img src="placeholder.jpg" alt="Financial Planning Seminar">
+        <h3>Financial Planning Seminar</h3>
+        <p>Expert guidance on investments and financial planning.</p>
+        <span>Thursday, Apr 17 • 7:00 PM</span>
+        <button class="btn primary" data-open="registerModal" data-event="Financial Planning Seminar" data-date="Thursday, Apr 17 at 7:00 PM">Register Now</button>
+      </div>
+
+      <div class="event searchable-card">
+        <img src="placeholder.jpg" alt="Professional Networking Mixer">
+        <h3>Professional Networking Mixer</h3>
+        <p>Connect with professionals over refreshments.</p>
+        <span>Friday, Apr 24 • 6:00 PM</span>
+        <button class="btn primary" data-open="registerModal" data-event="Professional Networking Mixer" data-date="Friday, Apr 24 at 6:00 PM">Register Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section teal searchable-section" id="contact">
+    <h2>Get in Touch</h2>
+    <p>Have questions? We're here to help.</p>
+
+    <div class="grid three">
+      <div class="card contact searchable-card">
+        📞
+        <strong>(555) 123-4567</strong>
+      </div>
+
+      <div class="card contact searchable-card">
+        ✉️
+        <strong>adults@harmonyhouse.org</strong>
+      </div>
+
+      <div class="card contact searchable-card">
+        📍
+        <strong>123 Community Way</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light center searchable-section" id="account">
+    <div id="guestView">
+      <div class="account-icon">👤</div>
+      <h2>Your Account</h2>
+      <p>Sign in to manage your registrations and track your progress</p>
+
+      <div class="account-box">
+        <button class="btn primary" data-open="signinModal">Sign In</button>
+        <button class="btn outline" data-open="signupModal">Create Account</button>
+        <div class="account-note">Looking for other age groups? <a href="index.html">Visit main site</a></div>
+      </div>
     </div>
 
-    <div class="card">
-      <span>🧘</span>
-      <h3>Wellness Programs</h3>
-      <p>Stress management, fitness classes, and mental health support.</p>
+    <div id="dashboardView" class="dashboard-view" hidden>
+      <div class="dashboard-hero">
+        <div>
+          <p class="dashboard-eyebrow">✨ Your account</p>
+          <h2 class="dashboard-title" id="dashboardWelcome">Welcome!</h2>
+          <p class="dashboard-subtitle">Manage your event registrations and account activity.</p>
+        </div>
+
+        <button type="button" class="btn outline" id="signOutBtn">Sign Out</button>
+      </div>
+
+      <div class="dashboard-stats">
+        <article class="dashboard-stat-card">
+          <span class="dashboard-stat-number" id="statRegistered">0</span>
+          <span class="dashboard-stat-label">Registered Events</span>
+        </article>
+
+        <article class="dashboard-stat-card">
+          <span class="dashboard-stat-number" id="statUpcoming">0</span>
+          <span class="dashboard-stat-label">Upcoming Events</span>
+        </article>
+
+        <article class="dashboard-stat-card">
+          <span class="dashboard-stat-number">1</span>
+          <span class="dashboard-stat-label">Active Account</span>
+        </article>
+      </div>
+
+      <div class="dashboard-section">
+        <h3 class="dashboard-section-title">🎟 Your Registered Events</h3>
+        <div class="dashboard-cards" id="registeredEventsList">
+          <div class="dashboard-empty">You have not registered for any events yet.</div>
+        </div>
+      </div>
     </div>
-
-    <div class="card">
-      <span>👥</span>
-      <h3>Community Network</h3>
-      <p>Connect with peers and build lasting professional relationships.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PROGRAMS -->
-<section class="section light" id="programs">
-  <h2>Programs & Services</h2>
-
-  <div class="grid two">
-    <div class="card big">
-      <h3>Professional Skills Workshops</h3>
-      <p>Leadership training, public speaking, and digital skills.</p>
-      <span>Tuesdays, 6:30 PM - 8:00 PM</span>
-    </div>
-
-    <div class="card big">
-      <h3>Financial Wellness Seminars</h3>
-      <p>Budgeting, investments, and retirement strategies.</p>
-      <span>Thursdays, 7:00 PM - 8:30 PM</span>
-    </div>
-
-    <div class="card big">
-      <h3>Work-Life Balance Programs</h3>
-      <p>Time management and stress reduction techniques.</p>
-      <span>Wednesdays, 12:00 PM - 1:00 PM</span>
-    </div>
-
-    <div class="card big">
-      <h3>Networking Events</h3>
-      <p>Professional mixers and industry meetups.</p>
-      <span>First Friday, 6:00 PM</span>
-    </div>
-  </div>
-
-  <div class="notice">
-    Looking for programs for other age groups? <a href="index.html">Visit the main Harmony House website</a>
-  </div>
-</section>
-
-<!-- EVENTS -->
-<section class="section light" id="events">
-  <h2>Upcoming Events</h2>
-
-  <div class="grid three">
-    <div class="event">
-      <img src="placeholder.jpg">
-      <h3>Leadership Excellence Workshop</h3>
-      <p>Develop leadership skills for career advancement.</p>
-      <button class="btn primary" data-open="registerModal">Register Now</button>
-    </div>
-
-    <div class="event">
-      <img src="placeholder.jpg">
-      <h3>Financial Planning Seminar</h3>
-      <p>Expert guidance on investments and financial planning.</p>
-      <button class="btn primary" data-open="registerModal">Register Now</button>
-    </div>
-
-    <div class="event">
-      <img src="placeholder.jpg">
-      <h3>Professional Networking Mixer</h3>
-      <p>Connect with professionals over refreshments.</p>
-      <button class="btn primary" data-open="registerModal">Register Now</button>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section teal" id="contact">
-  <h2>Get in Touch</h2>
-  <p>Have questions? We're here to help.</p>
-
-  <div class="grid three">
-    <div class="card contact">
-      📞
-      <strong>(555) 123-4567</strong>
-    </div>
-
-    <div class="card contact">
-      ✉️
-      <strong>adults@harmonyhouse.org</strong>
-    </div>
-
-    <div class="card contact">
-      📍
-      <strong>123 Community Way</strong>
-    </div>
-  </div>
-</section>
-
-<!-- ACCOUNT -->
-<section class="section light center" id="account">
-  <h2>Your Account</h2>
-  <p>Sign in to manage your registrations</p>
-
-  <div class="account-box">
-    <button class="btn primary" data-open="signinModal">Sign In</button>
-    <button class="btn outline" data-open="signupModal">Create Account</button>
-  </div>
-</section>
-
-    <section class="section light center">
-  <div class="account-icon">👤</div>
-  <h2>Your Account</h2>
-  <p>Sign in to manage your registrations and track your progress</p>
-
-  <div class="account-box">
-    <button class="btn primary" data-open="signinModal">Sign In</button>
-    <button class="btn outline" data-open="signupModal">Create Account</button>
-    <div class="account-note">Looking for other age groups? <a href="index.html">Visit main site</a></div>
-  </div>
-</section>
+  </section>
 
 </main>
 
@@ -203,7 +285,7 @@
       <h4>Age Groups</h4>
       <a href="kids.html">Kids Hub</a>
       <a href="teens.html">Teens Hub</a>
-      <a href="#">Adults Hub</a>
+      <a href="#">Work Life Hub</a>
       <a href="seniors.html">Seniors Hub</a>
     </div>
 
@@ -232,31 +314,31 @@
 
 <div class="modal" id="registerModal" aria-hidden="true">
   <div class="modal-card">
-    <button class="modal-close" data-close>&times;</button>
+    <button class="modal-close" type="button" data-close>&times;</button>
     <div class="modal-icon">📝</div>
     <h3 class="modal-title">Event Registration</h3>
-    <p class="modal-subtitle">Financial Planning Seminar</p>
-    <p class="modal-date">Thursday, Apr 17 at 7:00 PM</p>
+    <p class="modal-subtitle" id="modalEventName">Financial Planning Seminar</p>
+    <p class="modal-date" id="modalEventDate">Thursday, Apr 17 at 7:00 PM</p>
 
-    <form class="modal-form">
+    <form class="modal-form" id="registerForm">
       <label>Full Name *
-        <input type="text" placeholder="John Smith">
+        <input id="registerFullName" type="text" placeholder="John Smith">
       </label>
 
       <label>Email *
-        <input type="email" placeholder="john.smith@example.com">
+        <input id="registerEmail" type="email" placeholder="john.smith@example.com">
       </label>
 
       <label>Phone *
-        <input type="text" placeholder="(555) 123-4567">
+        <input id="registerPhone" type="text" placeholder="(555) 123-4567">
       </label>
 
       <label>Company/Organization (Optional)
-        <input type="text" placeholder="Your company name">
+        <input id="registerCompany" type="text" placeholder="Your company name">
       </label>
 
       <label>Additional Information (Optional)
-        <textarea placeholder="Any questions or special requirements?"></textarea>
+        <textarea id="registerNotes" placeholder="Any questions or special requirements?"></textarea>
       </label>
 
       <button type="submit" class="btn primary full">Complete Registration</button>
@@ -268,31 +350,31 @@
 
 <div class="modal" id="signupModal" aria-hidden="true">
   <div class="modal-card">
-    <button class="modal-close" data-close>&times;</button>
+    <button class="modal-close" type="button" data-close>&times;</button>
     <div class="modal-icon">💼</div>
     <h3 class="modal-title">Create Account</h3>
-    <p class="modal-subtitle">Join the Adults Hub community</p>
+    <p class="modal-subtitle">Join the Work Life Hub community</p>
 
     <div class="auth-toggle">
-      <button class="toggle-btn" data-switch="signinModal">Sign In</button>
-      <button class="toggle-btn active">Sign Up</button>
+      <button type="button" class="toggle-btn" data-switch="signinModal">Sign In</button>
+      <button type="button" class="toggle-btn active">Sign Up</button>
     </div>
 
-    <form class="modal-form">
+    <form class="modal-form" id="signupForm">
       <label>First Name *
-        <input type="text" placeholder="John">
+        <input id="signupFirstName" type="text" placeholder="John">
       </label>
 
       <label>Last Name *
-        <input type="text" placeholder="Smith">
+        <input id="signupLastName" type="text" placeholder="Smith">
       </label>
 
       <label>Email *
-        <input type="email" placeholder="john.smith@example.com">
+        <input id="signupEmail" type="email" placeholder="john.smith@example.com">
       </label>
 
       <label>Password *
-        <input type="password" placeholder="••••••••" required minlength="8">
+        <input id="signupPassword" type="password" placeholder="••••••••">
       </label>
 
       <button type="submit" class="btn primary full">Create Account</button>
@@ -304,23 +386,23 @@
 
 <div class="modal" id="signinModal" aria-hidden="true">
   <div class="modal-card">
-    <button class="modal-close" data-close>&times;</button>
+    <button class="modal-close" type="button" data-close>&times;</button>
     <div class="modal-icon">💼</div>
     <h3 class="modal-title">Welcome Back</h3>
-    <p class="modal-subtitle">Sign in to your Adults Hub account</p>
+    <p class="modal-subtitle">Sign in to your Work Life Hub account</p>
 
     <div class="auth-toggle">
-      <button class="toggle-btn active">Sign In</button>
-      <button class="toggle-btn" data-switch="signupModal">Sign Up</button>
+      <button type="button" class="toggle-btn active">Sign In</button>
+      <button type="button" class="toggle-btn" data-switch="signupModal">Sign Up</button>
     </div>
 
-    <form class="modal-form">
+    <form class="modal-form" id="signinForm">
       <label>Email *
-        <input type="email" placeholder="john.smith@example.com">
+        <input id="signinEmail" type="email" placeholder="john.smith@example.com">
       </label>
 
       <label>Password *
-        <input type="password" placeholder="••••••••">
+        <input id="signinPassword" type="password" placeholder="••••••••">
       </label>
 
       <button type="submit" class="btn primary full">Sign In</button>
@@ -331,6 +413,5 @@
 </div>
 
 <script src="js/adults.js"></script>
-
 </body>
 </html>
