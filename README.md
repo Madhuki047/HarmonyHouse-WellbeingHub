@@ -77,15 +77,24 @@ These evaluations informed improvements in responsiveness, structure, and usabil
 ---
 
 ## 📁 Project Structure
+
 /HarmonyHouse-WellbeingHub
-─ index.html
-─ kids.html
-─ teens.html
-─ adults.html
-─ seniors.html
-─ /css
-─ /js
-─ /images
+│── index.html              # Main landing page
+│── kids.html               # Kids hub
+│── teens.html              # Teens hub
+│── adults.html             # Work Life hub
+│── seniors.html            # Seniors hub
+│── services.html           # Services directory page
+│── events.html             # Events page
+│── booking.html            # Event registration page
+│── contact.html            # Contact page
+│── account.html            # User account page
+│── news.html               # Updates/news page
+│── thank-you-contact.html  # Form confirmation page
+│
+│── css/                    # Stylesheets
+│── js/                     # JavaScript functionality
+│── images/                 # Media assets
 
 
 ---
