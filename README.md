@@ -78,6 +78,7 @@ These evaluations informed improvements in responsiveness, structure, and usabil
 
 ## 📁 Project Structure
 
+```text
 /HarmonyHouse-WellbeingHub
 │── index.html              # Main landing page
 │── kids.html               # Kids hub
@@ -95,7 +96,7 @@ These evaluations informed improvements in responsiveness, structure, and usabil
 │── css/                    # Stylesheets
 │── js/                     # JavaScript functionality
 │── images/                 # Media assets
-
+```
 
 ---
 
