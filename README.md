@@ -78,14 +78,14 @@ These evaluations informed improvements in responsiveness, structure, and usabil
 
 ## 📁 Project Structure
 /HarmonyHouse-WellbeingHub
-│── index.html
-│── kids.html
-│── teens.html
-│── adults.html
-│── seniors.html
-│── /css
-│── /js
-│── /images
+─ index.html
+─ kids.html
+─ teens.html
+─ adults.html
+─ seniors.html
+─ /css
+─ /js
+─ /images
 
 
 ---
