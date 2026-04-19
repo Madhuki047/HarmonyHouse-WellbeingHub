@@ -6,10 +6,10 @@ A responsive, multi-portal digital wellbeing platform designed to support divers
 
 Harmony House is a front-end web system that provides a unified wellbeing hub while segmenting user journeys based on demographic needs. The platform is structured into four dedicated portals:
 
-- 👶 Kids Hub  
-- 🧑‍🎓 Teens Hub  
-- 🧑 Adults Hub  
-- 👵 Seniors Hub  
+- 👶 Kids Hub (Under 12)
+- 🧑‍🎓 Teens Hub (Between 13-25)
+- 🧑 Work Life Hub (Between 25-64)
+- 👵 Seniors Hub (Above 65)
 
 Each portal is designed to deliver relevant services, events, and interactions in a way that minimises cognitive overload and improves usability.
 
